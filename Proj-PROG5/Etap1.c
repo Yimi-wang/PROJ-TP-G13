@@ -37,7 +37,7 @@ void etap1(Elf32_Ehdr* ehdr, FILE * fp){
     case 0xffff: printf("HIPROC (Processor-specific)\n"); break;
   }
   
-  printf("%d\n", ehdr->e_phoff);
+  printf("debut de la table des programmes (offset): %d octets\n", ehdr->e_phoff);
 
   printf("la specication de la table des sections :\n");
   printf("--position dans le fichier (offset): %d octets\n", ehdr->e_shoff);

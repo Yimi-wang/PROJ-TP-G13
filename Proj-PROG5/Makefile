@@ -5,6 +5,9 @@ OBJ=$(patsubst %.c, %.o, $(SOURCES))
 
 all: Pharse1
 
+clean:
+	rm *.o
+
 Pharse1: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 
