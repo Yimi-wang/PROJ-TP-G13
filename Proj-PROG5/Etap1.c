@@ -15,6 +15,7 @@ void etap1(Elf32_Ehdr* ehdr, FILE * fp){
         case 7 : printf("Intel 80860\n"); break;
         case 8 : printf("MIPS RS3000 Big-Endian\n"); break;
         case 10 : printf("MIPS RS4000 Big-Endian\n"); break;
+        case 40 : printf("ARM\n"); break;
         case 62 : printf("Advanced Micro Devices X86-64\n"); break;
   }
 
