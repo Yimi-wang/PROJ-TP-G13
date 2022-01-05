@@ -71,6 +71,12 @@ void etap2(Elf32_Ehdr* ehdr, FILE * fp){
             case 0x6ffffff6 : printf("SHT_GNU_HASH\t"); break;
             case 0x6fffffff : printf("SHT_GNU_versym\t"); break;
             case 0x6ffffffe : printf("SHT_GNU_verneed\t"); break;
+            //ELF for ARM sections types
+            case 0x70000001 : printf("SHT_ARM_EXIDX\t");break;
+            case 0x70000002 : printf("SHT_ARM_PREEMPTMAP\t");break;
+            case 0x70000003 : printf("SHT_ARM_ATTRIBUTES \t");break;
+            case 0x70000004 : printf("SHT_ARM_DEBUGOVERLAY \t");break;
+            case 0x70000005 : printf("SHT_ARM_OVERLAYSECTION \t");break;
             default: printf("\t%u",shdr[i].sh_type);break;
         }
         unsigned int flags = shdr[i].sh_flags;
