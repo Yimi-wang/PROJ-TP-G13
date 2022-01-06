@@ -17,6 +17,7 @@ void etap1(Elf32_Ehdr* ehdr, FILE * fp){
         case 10 : printf("MIPS RS4000 Big-Endian\n"); break;
         case 40 : printf("ARM\n"); break;
         case 62 : printf("Advanced Micro Devices X86-64\n"); break;
+        default : printf("\n"); break;
   }
 
   printf("la taille des mots:\t\t");
@@ -24,6 +25,7 @@ void etap1(Elf32_Ehdr* ehdr, FILE * fp){
     case 0 : printf("Invalid class\n"); break;
     case 1 : printf("32-bit objects\n"); break;
     case 2 : printf("64-bit objects\n"); break;
+    default : printf("\n"); break;
   }
 
   printf("le type de fichier ELF:\t\t");
@@ -35,6 +37,7 @@ void etap1(Elf32_Ehdr* ehdr, FILE * fp){
     case 4 : printf("CORE (Core file)\n"); break;
     case 0xff00: printf("LOPROC (Processor-specific)\n"); break;
     case 0xffff: printf("HIPROC (Processor-specific)\n"); break;
+    default : printf("\n"); break;
   }
 
   printf("debut de la table des programmes (offset): %d octets\n", ehdr->e_phoff);
