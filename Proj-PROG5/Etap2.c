@@ -26,7 +26,7 @@ void etap2(Elf32_Ehdr* ehdr, FILE * fp){
     assert(a != 0);
     
     printf("[numero]\t");
-    printf("nom\t\t\t\t\t\t\t");
+    printf("nom\t\t\t");
     printf("taille\t\t");
     printf("type\t\t\t");
     printf("attributs\t\t");
@@ -51,7 +51,7 @@ void etap2(Elf32_Ehdr* ehdr, FILE * fp){
         uint8_t flag = 0;
         switch(shdr[i].sh_type) {               
             case 0 : printf("SHT_NULL\t"); break;
-            case 1 : printf("SHT_PROGBITS"); break;
+            case 1 : printf("SHT_PROGBITS\t"); break;
             case 2 : printf("SHT_SYMTAB\t"); break;
             case 3 : printf("SHT_STRTAB\t"); break;
             case 4 : printf("SHT_RELA\t"); break;
@@ -87,10 +87,8 @@ void etap2(Elf32_Ehdr* ehdr, FILE * fp){
             		break; 
         }
         unsigned int flags = shdr[i].sh_flags;
-        if (flags < 0x10)
-          printf("\t0x%x\t", flags); //%lu -> décimal
-        else
-          printf("\t0x%x", flags);
+        printf("\t0x%x", flags); //%lu -> décimal
+
         unsigned int offset = shdr[i].sh_offset;
         printf("\t\t\t0x%x\t", offset);
         
