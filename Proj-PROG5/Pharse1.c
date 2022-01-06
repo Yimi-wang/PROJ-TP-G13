@@ -57,6 +57,10 @@ int main(int argc, char *argv[])
     	printf("Affichage des tables de réimplantation du fichier %s: \n", argv[1]);
     	etap5(ehdr,fp);
     	break;
+    
+    default:
+    	printf("Ce programme ne serve que pour les étapes 1 ~ 5.\n");
+    	break;
   }
   
   fclose(fp);

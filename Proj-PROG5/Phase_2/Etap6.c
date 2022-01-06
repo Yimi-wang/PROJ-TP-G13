@@ -12,7 +12,7 @@ static unsigned int index_section_str(unsigned int index_str, unsigned int index
 
 int etap6(FILE *fp, char *sec_but) {
 	char *temp;
-	int count = 0, index_sec_but = -1;
+	int count = 0, index_sec_but = -1, index_group = 0;
 	int a = 0; // Error flag
 	Elf32_Shdr cible_shdr;
   	
@@ -44,7 +44,7 @@ int etap6(FILE *fp, char *sec_but) {
 			index_sec_but = i;
 			ehdr->e_shstrndx = index_section_str(ehdr->e_shstrndx, i);
   			ehdr->e_shnum--;
-			break;
+  			break;
 		}
 	}	
   	
@@ -82,6 +82,32 @@ int etap6(FILE *fp, char *sec_but) {
 	a = fwrite(&data_sec, sizeof(cible_shdr.sh_size), 1, fp);
 	assert(a >= 1);
 	free(data_sec);
+	
+	/* Ré-écrit la section '.group' (s'il existe) */
+	for (int i = 0; i < count; i++) {
+		temp = shstrtab;
+		temp = temp + shdr[i].sh_name;
+		if(strcmp(temp, ".group") == 0) 
+			index_group = i;
+	}		
+	if (index_group != -1) {
+		uint8_t *data_sec1 = (uint8_t *)malloc(sizeof(uint8_t)*shdr[index_group].sh_size);
+		a = fseek(fp, shdr[index_group].sh_offset, SEEK_SET);
+		assert(a == 0);
+		a = fread(data_sec1, sizeof(uint8_t)*shdr[index_group].sh_size, 1, fp);
+		assert(a > 0);
+		for (int j = 1; j < shdr[index_group].sh_size; j++) {
+			if (data_sec1[j] > index_sec_but)
+				data_sec1[j] = data_sec1[j] - 1;
+			else if (data_sec[j] == index_sec_but)
+				data_sec1[j] = 0;
+		}
+		a = fseek(fp, shdr[index_group].sh_offset, SEEK_SET);
+		assert(a == 0);
+		a = fwrite(data_sec1, sizeof(uint8_t)*shdr[index_group].sh_size, 1, fp);
+		assert(a >= 1);
+		free(data_sec1);
+	}
 	
   	free(ehdr);
 	free(shdr);

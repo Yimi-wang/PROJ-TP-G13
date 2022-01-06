@@ -56,26 +56,23 @@ void etap4(Elf32_Ehdr* ehdr, FILE * fp) {
     printf("Size\t");
     printf("Type\t");
     printf("Bind (Portée)\t");
-    printf("Ndx\t\t");
+    printf("Ndx\t");
     printf("Nom");
     printf("\n");
     
     for (int j = 0; j < nb_entries_SymTab; j++) {	
-      	if(sym[j].st_value<1000)
-    		printf("%u\t\t", sym[j].st_value);
-    	else 
-      		printf("%u\t", sym[j].st_value);
+      	printf("%08x\t", sym[j].st_value);
 
-    	printf("\t%u\t\t", sym[j].st_size);
+    	printf("%u\t", sym[j].st_size);
     	
     	switch((sym[j].st_info & 0xf)) {
-    		case 0 : printf("NOTYPE\t\t"); break;
-    		case 1 : printf("OBJECT\t\t"); break;
-    		case 2 : printf("FUNC\t\t"); break;
-    		case 3 : printf("SECTION\t\t"); break;
-    		case 4 : printf("FILE\t\t"); break;
-    		case 13 : printf("LOPROC\t\t"); break;
-    		case 15 : printf("HIPROC\t\t"); break;
+    		case 0 : printf("NOTYPE\t"); break;
+    		case 1 : printf("OBJECT\t"); break;
+    		case 2 : printf("FUNC\t"); break;
+    		case 3 : printf("SECTION\t"); break;
+    		case 4 : printf("FILE\t"); break;
+    		case 13 : printf("LOPROC\t"); break;
+    		case 15 : printf("HIPROC\t"); break;
     	}
     	
     	switch((sym[j].st_info >> 4)) {

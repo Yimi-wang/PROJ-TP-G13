@@ -106,3 +106,4 @@ void etap5(Elf32_Ehdr* ehdr, FILE * fp) {
 	}
 	free(shdr);
 }
+

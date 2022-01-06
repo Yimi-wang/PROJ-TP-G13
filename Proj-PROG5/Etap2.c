@@ -26,11 +26,11 @@ void etap2(Elf32_Ehdr* ehdr, FILE * fp){
     assert(a != 0);
     
     printf("[numero]\t");
-    printf("nom\t\t\t\t\t\t\t");
+    printf("nom\t\t\t");
     printf("taille\t\t");
-    printf("type\t\t\t");
-    printf("attributs\t\t");
-    printf("offset\t");
+    printf("type\t\t");
+    printf("attributs(flags) ");
+    printf("offset");
     printf("\n");
     
     for(int i = 0; i < count; i++) { 
@@ -48,9 +48,10 @@ void etap2(Elf32_Ehdr* ehdr, FILE * fp){
           printf("\t");
         
         //type
+        uint8_t flag = 0;
         switch(shdr[i].sh_type) {               
             case 0 : printf("SHT_NULL\t"); break;
-            case 1 : printf("SHT_PROGBITS"); break;
+            case 1 : printf("SHT_PROGBITS\t"); break;
             case 2 : printf("SHT_SYMTAB\t"); break;
             case 3 : printf("SHT_STRTAB\t"); break;
             case 4 : printf("SHT_RELA\t"); break;
@@ -63,7 +64,6 @@ void etap2(Elf32_Ehdr* ehdr, FILE * fp){
             case 11 : printf("SHT_DYNSYM\t"); break;
             case 14 : printf("SHT_INIT_ARRAY\t"); break;
             case 15 : printf("SHT_FINI_ARRAY\t"); break;
-            case 17 : printf("SHT_GROUP\t");break;
             case 0x70000000 : printf("SHT_LOPROC\t"); break;
             case 0x7fffffff : printf("SHT_HIPROC\t"); break;
             case 0x80000000 : printf("SHT_LOUSER\t"); break;
@@ -77,17 +77,19 @@ void etap2(Elf32_Ehdr* ehdr, FILE * fp){
             case 0x70000003 : printf("SHT_ARM_ATTRIBUTES \t");break;
             case 0x70000004 : printf("SHT_ARM_DEBUGOVERLAY \t");break;
             case 0x70000005 : printf("SHT_ARM_OVERLAYSECTION \t");break;
-            default: printf("\t%u",shdr[i].sh_type);break;
+            default :	fseek(fp, shdr[i].sh_offset, SEEK_SET);
+            		fread(&flag, 1, 1, fp);
+            		if (flag == 1)
+            			printf("SHT_GROUP\t");
+            		else
+            			printf("\t%u\t",shdr[i].sh_type);
+            		break; 
         }
-        unsigned int flags = shdr[i].sh_flags;
-        if (flags < 0x10)
-          printf("\t0x%x\t", flags); //%lu -> décimal
-        else
-          printf("\t0x%x", flags);
-        unsigned int offset = shdr[i].sh_offset;
-        printf("\t\t\t0x%x\t", offset);
-        
-    	printf("\n");    
+
+        printf("0x%08x\t ", shdr[i].sh_flags); //%lu -> décimal
+
+        printf("0x%06x\n", shdr[i].sh_offset);
     }
     free(shdr);
 }
+

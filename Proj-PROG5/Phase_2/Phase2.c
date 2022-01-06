@@ -4,6 +4,7 @@
 #include <elf.h>
 #include "Etap6.h"
 #include "Etap7.h"
+#include "Etap8_9.h"
 
 static char* new_name1(char *original_name) {
 	char *delim = ".";
@@ -27,6 +28,7 @@ int main(int argc, char *argv[])
   FILE *fp, *fp_sortie;
   char str[20], str_section[20];
   char *newfilename;
+  int flag = 0;
   
   fp = fopen(argv[1], "rb");
   if(fp == NULL) {
@@ -56,11 +58,17 @@ int main(int argc, char *argv[])
   		a = fwrite(bintemp, 1024, 1, fp_sortie);
   	assert(a >= 1);
   }
-
-  printf("Quelle section sera modifiée? : ");
-  scanf("%20s", str_section);
-  index_modif = etap6(fp_sortie, str_section);
-  etap7(fp_sortie, index_modif, ".text", 0x40);
+  
+  flag = 1;
+  if (flag == 0) {
+	printf("Quelle section sera modifiée? : ");
+	scanf("%20s", str_section);
+	index_modif = etap6(fp_sortie, str_section);
+	corrige_ndx(fp_sortie, index_modif);
+	addr_charge(fp_sortie,".text", 0x40);
+  }else{
+  	addr_charge(fp_sortie,".text", 0x40);
+  }
   
   fclose(fp);
   fclose(fp_sortie);
