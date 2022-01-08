@@ -7,6 +7,6 @@
 #include <elf.h>
 #include <assert.h>
 
-void proc_reimplants(FILE *fp, int index_sec_charge, unsigned int addr_charge);
+void proc_reimplants(FILE *fp);
 
 #endif

@@ -1,32 +1,64 @@
 #include "Etap5.h"
 
-static void type_reimplantation(unsigned char index) {
-	switch(index) {
-		case 0 : printf("R_386_NONE\t"); break;
-		case 1 : printf("R_386_64\t"); break;
-		case 2 : printf("R_386_PC32\t"); break;
-		case 3 : printf("R_386_GOT32\t"); break;
-		case 4 : printf("R_386_PLT32\t"); break;
-		case 5 : printf("R_386_COPY\t"); break;
-		case 6 : printf("R_386_GLOB_DAT\t"); break;
-		case 7 : printf("R_386_JUMP_SLOT\t"); break;
-		case 8 : printf("R_386_RELATIVE\t"); break;
-		case 9 : printf("R_386_GOTOFF\t"); break;
-		case 10 : printf("R_386_GOTPC\t"); break;
-		case 11 : printf("R_386_32S\t"); break;
-		case 12 : printf("R_386_16\t"); break;
-		case 13 : printf("R_386_PC16\t"); break;
-		case 14 : printf("R_386_8\t"); break;
-		case 15 : printf("R_386_PC8\t"); break;
-		case 24 : printf("R_386_PC64\t"); break;
-		case 25 : printf("R_386_GOTOFF64\t"); break;
-		case 26 : printf("R_386_GOTPC32\t"); break;
-		case 32 : printf("R_386_SIZE32\t"); break;
-		case 33 : printf("R_386_SIZE64\t"); break;
-		case 43 : printf("R_386_GOT32X\t"); break;
-		default : printf("%d\t", index); break;
-	}
-
+static void type_reimplantation(unsigned char index, int flag_ARM) {
+	if (flag_ARM == 1) {
+		switch(index) {
+			case 0 : printf("R_ARM_NONE\t"); break;
+			case 1 : printf("R_ARM_PC24\t"); break;
+			case 2 : printf("R_ARM_ABS32\t"); break;
+			case 3 : printf("R_ARM_REL32\t"); break;
+			case 4 : printf("R_ARM_LDR_PC_G0\t"); break;
+			case 5 : printf("R_ARM_ABS16\t"); break;
+			case 6 : printf("R_ARM_ABS12\t"); break;
+			case 7 : printf("R_ARM_THM_ABS5\t"); break;
+			case 8 : printf("R_ARM_ABS8\t"); break;
+			case 9 : printf("R_ARM_SBREL32\t"); break;
+			case 10 : printf("R_ARM_THM_CALL\t"); break;
+			case 11 : printf("R_ARM_THM_PC8\t"); break;
+			case 12 : printf("R_ARM_BREL_ADJ\t"); break;
+			case 13 : printf("R_ARM_TLS_DESC\t"); break;
+			case 17 : printf("R_ARM_TLS_DTPMOD32\t"); break;
+			case 18 : printf("R_ARM_TLS_DTPOFF32\t"); break;
+			case 19 : printf("R_ARM_TLS_TPOFF32\t"); break;
+			case 21 : printf("R_ARM_GLOB_DAT\t"); break;
+			case 22 : printf("R_ARM_JUMP_SLOT\t"); break;
+			case 23 : printf("R_ARM_RELATIVE\t"); break;
+			case 24 : printf("R_ARM_GOTOFF32\t"); break;
+			case 25 : printf("R_ARM_BASE_PREL\t"); break;
+			case 26 : printf("R_ARM_GOT_BREL\t"); break;
+			case 27 : printf("R_ARM_PLT32\t"); break;
+			case 28 : printf("R_ARM_CALL\t"); break;
+			case 29 : printf("R_ARM_JUMP24\t"); break;
+			case 30 : printf("R_ARM_THM_JUMP24\t"); break;
+			default : printf("%d\t", index); break;
+		}
+	}else{
+		switch(index) {
+			case 0 : printf("R_386_NONE\t"); break;
+			case 1 : printf("R_386_64\t"); break;
+			case 2 : printf("R_386_PC32\t"); break;
+			case 3 : printf("R_386_GOT32\t"); break;
+			case 4 : printf("R_386_PLT32\t"); break;
+			case 5 : printf("R_386_COPY\t"); break;
+			case 6 : printf("R_386_GLOB_DAT\t"); break;
+			case 7 : printf("R_386_JUMP_SLOT\t"); break;
+			case 8 : printf("R_386_RELATIVE\t"); break;
+			case 9 : printf("R_386_GOTOFF\t"); break;
+			case 10 : printf("R_386_GOTPC\t"); break;
+			case 11 : printf("R_386_32S\t"); break;
+			case 12 : printf("R_386_16\t"); break;
+			case 13 : printf("R_386_PC16\t"); break;
+			case 14 : printf("R_386_8\t"); break;
+			case 15 : printf("R_386_PC8\t"); break;
+			case 24 : printf("R_386_PC64\t"); break;
+			case 25 : printf("R_386_GOTOFF64\t"); break;
+			case 26 : printf("R_386_GOTPC32\t"); break;
+			case 32 : printf("R_386_SIZE32\t"); break;
+			case 33 : printf("R_386_SIZE64\t"); break;
+			case 43 : printf("R_386_GOT32X\t"); break;
+			default : printf("%d\t", index); break;
+		}
+	}	
 }
 
 void etap5(Elf32_Ehdr* ehdr, FILE * fp) {
@@ -82,8 +114,10 @@ void etap5(Elf32_Ehdr* ehdr, FILE * fp) {
         			assert(a != 0);
 				for (int j = 0; j < nb_entries_rel_a; j++) {
 					printf("%012x\t", rela[j].r_offset);
-					//type_reimplantation(rela[j].r_info & 0xff); // %ld
-					type_reimplantation((unsigned char) rela[j].r_info);
+					if (ehdr->e_machine == 40) // si la machine cible est ARM
+						type_reimplantation((unsigned char) rela[j].r_info, 1);
+					else
+						type_reimplantation((unsigned char) rela[j].r_info, 0);
 					printf("%u\t", (rela[j].r_info >> 8));
 					printf("\n");
 				}
@@ -95,8 +129,10 @@ void etap5(Elf32_Ehdr* ehdr, FILE * fp) {
         			assert(a != 0);
 				for (int j = 0; j < nb_entries_rel_a; j++) {
 					printf("%012x\t", rel[j].r_offset);
-					//type_reimplantation(rel[j].r_info & 0xff); // %ld
-					type_reimplantation((unsigned char) rel[j].r_info);
+					if (ehdr->e_machine == 40) // si la machine cible est ARM
+						type_reimplantation((unsigned char) rel[j].r_info, 1);
+					else
+						type_reimplantation((unsigned char) rel[j].r_info, 0);
 					printf("%u\t", (rel[j].r_info >> 8));
 					printf("\n");
 				}

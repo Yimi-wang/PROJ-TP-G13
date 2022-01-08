@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
   	exit(0);
   }
   
-  int index_modif = 0;
+  int index_modif1 = 0, index_modif2 = 0;
   unsigned int a = 0;
   uint8_t *bintemp = NULL;
   FILE *fp, *fp_sortie;
@@ -63,11 +63,14 @@ int main(int argc, char *argv[])
   if (flag == 0) {
 	printf("Quelle section sera modifiée? : ");
 	scanf("%20s", str_section);
-	index_modif = etap6(fp_sortie, str_section);
-	corrige_ndx(fp_sortie, index_modif);
-	addr_charge(fp_sortie,".text", 0x40);
+	index_modif1 = etap6(fp_sortie, str_section);
+	corrige_ndx(fp_sortie, index_modif1);
+	addr_charge(fp_sortie, ".text", 0x40);
   }else{
-  	addr_charge(fp_sortie,".text", 0x40);
+  	index_modif1 = addr_charge(fp_sortie, ".text", 0x58);
+  	index_modif2 = addr_charge(fp_sortie, ".data", 0x1000);
+  	printf(".text: %d, .data: %d\n", index_modif1, index_modif2);
+  	proc_reimplants(fp_sortie);
   }
   
   fclose(fp);

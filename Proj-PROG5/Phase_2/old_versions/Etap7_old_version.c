@@ -2,7 +2,8 @@
 #include "read_data_auxiliaries.h"
 
 void corrige_ndx(FILE *fp, int index_supprime) {
-	int count = 0, index_sec_symtab = -1, nb_sym_tab_entry = -1, index = 0;
+	char *temp_str;
+	int count = 0, index_sec_symtab = -1;
 	int a = 0; // Error flag
 	
 	Elf32_Ehdr *ehdr = read_header_ELF(fp);
@@ -17,21 +18,28 @@ void corrige_ndx(FILE *fp, int index_supprime) {
 	a = fread(shstrtab, shdr[ehdr->e_shstrndx].sh_size, 1, fp);
 	assert(a != 0);
 	
-	index_sec_symtab = chercher_index_de_section(shdr, shstrtab, count, ".symtab");
-	assert(index_sec_symtab >= 0);
-
-	nb_sym_tab_entry = calcul_nombre_entrees(shdr, index_sec_symtab);
-	assert(nb_sym_tab_entry >= 0);
+	for (int i = 0; i < count; i++) {
+		temp_str = shstrtab;
+		temp_str = temp_str + shdr[i].sh_name;
+		if (shdr[i].sh_type == 2) //SHT_SYMTAB = 2
+			index_sec_symtab = i;
+	}
 	
-	Elf32_Sym *temp = read_sym_tab(fp, shdr, index_sec_symtab, nb_sym_tab_entry);
+	assert(shdr[index_sec_symtab].sh_entsize != 0);
+	int nb_sym_tab_entry = shdr[index_sec_symtab].sh_size / shdr[index_sec_symtab].sh_entsize;
 	
-	Elf32_Sym *symdr = (Elf32_Sym *)malloc(sizeof(Elf32_Sym)*nb_sym_tab_entry);
-	assert(symdr != NULL);
 	a = fseek(fp, shdr[index_sec_symtab].sh_offset, SEEK_SET);
 	assert(a == 0);
 	
+	Elf32_Sym *symdr = (Elf32_Sym *)malloc(sizeof(Elf32_Sym)*nb_sym_tab_entry);
+	Elf32_Sym *temp = (Elf32_Sym *)malloc(sizeof(Elf32_Sym)*nb_sym_tab_entry);
+	a = fread(temp, shdr[index_sec_symtab].sh_size, 1, fp);
+	assert(a != 0);
+	
+	a = fseek(fp, shdr[index_sec_symtab].sh_offset, SEEK_SET);
+	assert(a == 0);
+	int index = 0;
 	for (int j = 0; j < nb_sym_tab_entry; j++) {
-		// Passer les symboles ayant une indice étant déjà supprimée
 		if (temp[j].st_shndx != index_supprime) {
 			fread(&symdr[index], sizeof(Elf32_Sym), 1, fp);
 			if ((temp[j].st_shndx > index_supprime) && (temp[j].st_shndx < 0xfff1))
@@ -39,8 +47,6 @@ void corrige_ndx(FILE *fp, int index_supprime) {
 			index++;
 		}
 	}
-	
-	/* Ré-écrit la table de symboles */
 	a = fseek(fp, shdr[index_sec_symtab].sh_offset, SEEK_SET);
 	assert(a == 0);
 	a = fwrite(symdr, sizeof(uint8_t)*shdr[index_sec_symtab].sh_size, 1, fp);
@@ -53,7 +59,8 @@ void corrige_ndx(FILE *fp, int index_supprime) {
 }
 
 int addr_charge(FILE *fp, char *sec_charge, uint32_t addr) {
-	int count = 0, index_sec_charge = -1, index_sec_symtab = -1, nb_sym_tab_entry = 0;
+	char *temp;
+	int count = 0, index_sec_charge = -1, index_sec_symtab = -1;
 	int a = 0; // Error flag
   	
 	Elf32_Ehdr *ehdr = read_header_ELF(fp);
@@ -68,33 +75,35 @@ int addr_charge(FILE *fp, char *sec_charge, uint32_t addr) {
 	a = fread(shstrtab, shdr[ehdr->e_shstrndx].sh_size, 1, fp);
 	assert(a != 0);
 	
-	index_sec_symtab = chercher_index_de_section(shdr, shstrtab, count, ".symtab");
-	assert(index_sec_symtab >= 0);
-	index_sec_charge = chercher_index_de_section(shdr, shstrtab, count, sec_charge);
-	assert(index_sec_charge >= 0);
+	for (int i = 0; i < count; i++) {
+		temp = shstrtab;
+		temp = temp + shdr[i].sh_name;
+		if (shdr[i].sh_type == 2) //SHT_SYMTAB = 2
+			index_sec_symtab = i;
+		else if (strcmp(temp, sec_charge) == 0) 
+			index_sec_charge = i;			
+	}
 	
-	nb_sym_tab_entry = calcul_nombre_entrees(shdr, index_sec_symtab);
-	Elf32_Sym *symdr = read_sym_tab(fp, shdr, index_sec_symtab, nb_sym_tab_entry);
+	assert(shdr[index_sec_symtab].sh_entsize != 0);
+	int nb_sym_tab_entry = shdr[index_sec_symtab].sh_size / shdr[index_sec_symtab].sh_entsize;
 	
-	/* Corriger la valeur de chaque symbole par l'addresse chargée */
+	//Elf32_Sym *symdr = read_sym_tab(fp, shdr, index_sec_symtab);
+	
+	a = fseek(fp, shdr[index_sec_symtab].sh_offset, SEEK_SET);
+	assert(a == 0);
+	
+	Elf32_Sym *symdr = (Elf32_Sym *)malloc(sizeof(Elf32_Sym)*nb_sym_tab_entry);
+	a = fread(symdr, shdr[index_sec_symtab].sh_size, 1, fp);
+	assert(a != 0);
+	
 	for (int j = 0; j < nb_sym_tab_entry; j++) {
 		if (symdr[j].st_shndx == index_sec_charge) 
 			symdr[j].st_value = symdr[j].st_value + addr;
 	}
 	
-	/* Corriger l'addresse de la section chargée */
-	shdr[index_sec_charge].sh_addr = addr;
-	
-	/* Ré-écrit la table de symboles */
 	a = fseek(fp, shdr[index_sec_symtab].sh_offset, SEEK_SET);
 	assert(a == 0);
 	a = fwrite(symdr, shdr[index_sec_symtab].sh_size, 1, fp);
-	assert(a >= 1);
-	
-	/* Ré-écrit la table de sections */
-	a = fseek(fp, ehdr->e_shoff, SEEK_SET);
-	assert(a == 0);
-	a = fwrite(shdr, (ehdr->e_shnum * ehdr->e_shentsize), 1, fp);
 	assert(a >= 1);
 	
 	free(symdr);

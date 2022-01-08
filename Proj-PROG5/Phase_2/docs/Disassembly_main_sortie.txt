@@ -1,0 +1,3455 @@
+
+main_sortie:     file format elf32-i386
+main_sortie
+architecture: i386, flags 0x00000011:
+HAS_RELOC, HAS_SYMS
+start address 0x00000000
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .group        00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, READONLY, GROUP, LINK_ONCE_DISCARD
+  1 .text         00002103  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  2 .data         00000000  00000000  00000000  0000213f  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000074  00000000  00000000  00002140  2**5
+                  ALLOC
+  4 .rodata       00000bc9  00000000  00000000  00002140  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+  5 .text.__x86.get_pc_thunk.bx 00000004  00000000  00000000  00002d09  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .comment      0000002b  00000000  00000000  00002d0d  2**0
+                  CONTENTS, READONLY
+  7 .note.GNU-stack 00000000  00000000  00000000  00002d38  2**0
+                  CONTENTS, READONLY
+  8 .note.gnu.property 0000001c  00000000  00000000  00002d38  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .eh_frame     00000184  00000000  00000000  00002d54  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, DATA
+SYMBOL TABLE:
+00000000 l    df *ABS*	00000000 main.c
+00000040 l    d  .text	00000000 .text
+00000000 l    d  .data	00000000 .data
+00000000 l    d  .bss	00000000 .bss
+00000000 l    d  .rodata	00000000 .rodata
+00000000 l     O .bss	00000040 ehdr.3143
+00000040 l     O .bss	00000034 ehdr.3148
+00000000 l    d  .text.__x86.get_pc_thunk.bx	00000000 .text.__x86.get_pc_thunk.bx
+00000000 l    d  .note.GNU-stack	00000000 .note.GNU-stack
+00000000 l    d  .note.gnu.property	00000000 .note.gnu.property
+000002e2 l       .text	00000000 .L14
+000008d1 l       .text	00000000 .L35
+000011a0 l       .text	00000000 .L101
+00001791 l       .text	00000000 .L122
+00000000 l    d  .eh_frame	00000000 .eh_frame
+00000153 l       .text	00000000 .L12
+00000167 l       .text	00000000 .L11
+0000017b l       .text	00000000 .L10
+0000018f l       .text	00000000 .L9
+000001a3 l       .text	00000000 .L7
+00000212 l       .text	00000000 .L25
+00000229 l       .text	00000000 .L24
+00000240 l       .text	00000000 .L23
+00000257 l       .text	00000000 .L22
+0000026b l       .text	00000000 .L21
+0000027f l       .text	00000000 .L20
+00000293 l       .text	00000000 .L19
+000002a7 l       .text	00000000 .L18
+000002bb l       .text	00000000 .L17
+000002cf l       .text	00000000 .L15
+00000704 l       .text	00000000 .L55
+0000071b l       .text	00000000 .L54
+00000732 l       .text	00000000 .L53
+00000749 l       .text	00000000 .L52
+00000760 l       .text	00000000 .L51
+00000777 l       .text	00000000 .L50
+0000078e l       .text	00000000 .L49
+000007a5 l       .text	00000000 .L48
+000007bc l       .text	00000000 .L47
+000007d3 l       .text	00000000 .L46
+000007ea l       .text	00000000 .L45
+00000801 l       .text	00000000 .L44
+00000818 l       .text	00000000 .L43
+0000082f l       .text	00000000 .L41
+00000bee l       .text	00000000 .L74
+00000c05 l       .text	00000000 .L73
+00000c1c l       .text	00000000 .L72
+00000c33 l       .text	00000000 .L71
+00000c4a l       .text	00000000 .L70
+00000c61 l       .text	00000000 .L69
+00000c75 l       .text	00000000 .L67
+00000d26 l       .text	00000000 .L85
+00000d3a l       .text	00000000 .L84
+00000d49 l       .text	00000000 .L83
+00000d58 l       .text	00000000 .L82
+00000d6c l       .text	00000000 .L81
+00000d7b l       .text	00000000 .L80
+00000d8f l       .text	00000000 .L79
+00000da3 l       .text	00000000 .L77
+00001011 l       .text	00000000 .L99
+00001025 l       .text	00000000 .L98
+00001039 l       .text	00000000 .L97
+0000104d l       .text	00000000 .L96
+00001061 l       .text	00000000 .L94
+000010d0 l       .text	00000000 .L112
+000010e7 l       .text	00000000 .L111
+000010fe l       .text	00000000 .L110
+00001115 l       .text	00000000 .L109
+00001129 l       .text	00000000 .L108
+0000113d l       .text	00000000 .L107
+00001151 l       .text	00000000 .L106
+00001165 l       .text	00000000 .L105
+00001179 l       .text	00000000 .L104
+0000118d l       .text	00000000 .L102
+000015c4 l       .text	00000000 .L142
+000015db l       .text	00000000 .L141
+000015f2 l       .text	00000000 .L140
+00001609 l       .text	00000000 .L139
+00001620 l       .text	00000000 .L138
+00001637 l       .text	00000000 .L137
+0000164e l       .text	00000000 .L136
+00001665 l       .text	00000000 .L135
+0000167c l       .text	00000000 .L134
+00001693 l       .text	00000000 .L133
+000016aa l       .text	00000000 .L132
+000016c1 l       .text	00000000 .L131
+000016d8 l       .text	00000000 .L130
+000016ef l       .text	00000000 .L128
+00001ad3 l       .text	00000000 .L162
+00001aea l       .text	00000000 .L161
+00001b01 l       .text	00000000 .L160
+00001b18 l       .text	00000000 .L159
+00001b2f l       .text	00000000 .L158
+00001b46 l       .text	00000000 .L157
+00001b5d l       .text	00000000 .L155
+00001c22 l       .text	00000000 .L173
+00001c36 l       .text	00000000 .L172
+00001c45 l       .text	00000000 .L171
+00001c54 l       .text	00000000 .L170
+00001c68 l       .text	00000000 .L169
+00001c77 l       .text	00000000 .L168
+00001c8b l       .text	00000000 .L167
+00001c9f l       .text	00000000 .L165
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .group	00000000 .group
+00000004       O *COM*	00000004 OStype
+00000004       O *COM*	00000004 fp
+00000004       O *COM*	00000004 fname
+0000270f       O *COM*	00000020 strtable
+00000040 g     F .text	00000410 ELF_header_64_parse
+00000000 g     F .text.__x86.get_pc_thunk.bx	00000000 .hidden __x86.get_pc_thunk.bx
+00000000         *UND*	00000000 _GLOBAL_OFFSET_TABLE_
+00000000         *UND*	00000000 fseek
+00000000         *UND*	00000000 fread
+00000000         *UND*	00000000 puts
+00000000         *UND*	00000000 printf
+00000450 g     F .text	0000060c section_header_64_parse
+00000000         *UND*	00000000 putchar
+00000000         *UND*	00000000 strlen
+00000000         *UND*	00000000 .hidden __stack_chk_fail_local
+00000a5c g     F .text	000004a2 program_header_64_parse
+00000efe g     F .text	00000404 ELF_header_32_parse
+00001302 g     F .text	00000637 section_header_32_parse
+00001939 g     F .text	000004a6 program_header_32_parse
+00001ddf g     F .text	000000a6 print64
+00000000         *UND*	00000000 stdout
+00000000         *UND*	00000000 freopen
+00001e85 g     F .text	000000a6 print32
+00001f2b g     F .text	00000218 main
+00000000         *UND*	00000000 __isoc99_scanf
+00000000         *UND*	00000000 fopen
+00000000         *UND*	00000000 exit
+00000000         *UND*	00000000 memset
+
+
+
+Disassembly of section .text:
+
+00000000 <ELF_header_64_parse-0x40>:
+       0:	f3 0f 1e fb          	endbr32 
+       4:	55                   	push   %ebp
+       5:	89 e5                	mov    %esp,%ebp
+       7:	53                   	push   %ebx
+       8:	83 ec 14             	sub    $0x14,%esp
+       b:	e8 fc ff ff ff       	call   c <ELF_header_64_parse-0x34>
+			c: R_386_PC32	__x86.get_pc_thunk.bx
+      10:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			12: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+      16:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			18: R_386_GOT32X	fp
+      1c:	8b 00                	mov    (%eax),%eax
+      1e:	83 ec 04             	sub    $0x4,%esp
+      21:	6a 00                	push   $0x0
+      23:	6a 00                	push   $0x0
+      25:	50                   	push   %eax
+      26:	e8 fc ff ff ff       	call   27 <ELF_header_64_parse-0x19>
+			27: R_386_PLT32	fseek
+      2b:	83 c4 10             	add    $0x10,%esp
+      2e:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			30: R_386_GOT32X	fp
+      34:	8b 00                	mov    (%eax),%eax
+      36:	50                   	push   %eax
+      37:	6a 01                	push   $0x1
+      39:	6a 40                	push   $0x40
+      3b:	ff 75 08             	pushl  0x8(%ebp)
+      3e:	e8                   	.byte 0xe8
+      3f:	fc                   	cld    
+			3f: R_386_PLT32	fread
+
+00000040 <ELF_header_64_parse>:
+      40:	ff                   	(bad)  
+      41:	ff                   	(bad)  
+      42:	ff 83 c4 10 83 ec    	incl   -0x137cef3c(%ebx)
+      48:	0c 8d                	or     $0x8d,%al
+      4a:	83 00 00             	addl   $0x0,(%eax)
+			4b: R_386_GOTOFF	.rodata
+      4d:	00 00                	add    %al,(%eax)
+      4f:	50                   	push   %eax
+      50:	e8 fc ff ff ff       	call   51 <ELF_header_64_parse+0x11>
+			51: R_386_PLT32	puts
+      55:	83 c4 10             	add    $0x10,%esp
+      58:	83 ec 0c             	sub    $0xc,%esp
+      5b:	8d 83 6e 00 00 00    	lea    0x6e(%ebx),%eax
+			5d: R_386_GOTOFF	.rodata
+      61:	50                   	push   %eax
+      62:	e8 fc ff ff ff       	call   63 <ELF_header_64_parse+0x23>
+			63: R_386_PLT32	puts
+      67:	83 c4 10             	add    $0x10,%esp
+      6a:	83 ec 0c             	sub    $0xc,%esp
+      6d:	8d 83 76 00 00 00    	lea    0x76(%ebx),%eax
+			6f: R_386_GOTOFF	.rodata
+      73:	50                   	push   %eax
+      74:	e8 fc ff ff ff       	call   75 <ELF_header_64_parse+0x35>
+			75: R_386_PLT32	printf
+      79:	83 c4 10             	add    $0x10,%esp
+      7c:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+      83:	eb 25                	jmp    aa <ELF_header_64_parse+0x6a>
+      85:	8b 55 08             	mov    0x8(%ebp),%edx
+      88:	8b 45 f4             	mov    -0xc(%ebp),%eax
+      8b:	01 d0                	add    %edx,%eax
+      8d:	0f b6 00             	movzbl (%eax),%eax
+      90:	0f b6 c0             	movzbl %al,%eax
+      93:	83 ec 08             	sub    $0x8,%esp
+      96:	50                   	push   %eax
+      97:	8d 83 80 00 00 00    	lea    0x80(%ebx),%eax
+			99: R_386_GOTOFF	.rodata
+      9d:	50                   	push   %eax
+      9e:	e8 fc ff ff ff       	call   9f <ELF_header_64_parse+0x5f>
+			9f: R_386_PLT32	printf
+      a3:	83 c4 10             	add    $0x10,%esp
+      a6:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+      aa:	83 7d f4 0f          	cmpl   $0xf,-0xc(%ebp)
+      ae:	7e d5                	jle    85 <ELF_header_64_parse+0x45>
+      b0:	83 ec 0c             	sub    $0xc,%esp
+      b3:	8d 83 86 00 00 00    	lea    0x86(%ebx),%eax
+			b5: R_386_GOTOFF	.rodata
+      b9:	50                   	push   %eax
+      ba:	e8 fc ff ff ff       	call   bb <ELF_header_64_parse+0x7b>
+			bb: R_386_PLT32	printf
+      bf:	83 c4 10             	add    $0x10,%esp
+      c2:	8b 45 08             	mov    0x8(%ebp),%eax
+      c5:	0f b7 40 10          	movzwl 0x10(%eax),%eax
+      c9:	0f b7 c0             	movzwl %ax,%eax
+      cc:	3d ff ff 00 00       	cmp    $0xffff,%eax
+      d1:	0f 84 b4 00 00 00    	je     18b <.L10+0x10>
+      d7:	3d ff ff 00 00       	cmp    $0xffff,%eax
+      dc:	0f 8f bc 00 00 00    	jg     19e <.L9+0xf>
+      e2:	83 f8 04             	cmp    $0x4,%eax
+      e5:	7f 20                	jg     107 <ELF_header_64_parse+0xc7>
+      e7:	85 c0                	test   %eax,%eax
+      e9:	0f 88 af 00 00 00    	js     19e <.L9+0xf>
+      ef:	83 f8 04             	cmp    $0x4,%eax
+      f2:	0f 87 a6 00 00 00    	ja     19e <.L9+0xf>
+      f8:	c1 e0 02             	shl    $0x2,%eax
+      fb:	8b 84 18 74 03 00 00 	mov    0x374(%eax,%ebx,1),%eax
+			fe: R_386_GOTOFF	.rodata
+     102:	01 d8                	add    %ebx,%eax
+     104:	3e ff e0             	notrack jmp *%eax
+     107:	3d 00 ff 00 00       	cmp    $0xff00,%eax
+     10c:	74 69                	je     177 <.L11+0x10>
+     10e:	e9 8b 00 00 00       	jmp    19e <.L9+0xf>
+     113:	83 ec 0c             	sub    $0xc,%esp
+     116:	8d 83 92 00 00 00    	lea    0x92(%ebx),%eax
+			118: R_386_GOTOFF	.rodata
+     11c:	50                   	push   %eax
+     11d:	e8 fc ff ff ff       	call   11e <ELF_header_64_parse+0xde>
+			11e: R_386_PLT32	puts
+     122:	83 c4 10             	add    $0x10,%esp
+     125:	eb 77                	jmp    19e <.L9+0xf>
+     127:	83 ec 0c             	sub    $0xc,%esp
+     12a:	8d 83 a5 00 00 00    	lea    0xa5(%ebx),%eax
+			12c: R_386_GOTOFF	.rodata
+     130:	50                   	push   %eax
+     131:	e8 fc ff ff ff       	call   132 <ELF_header_64_parse+0xf2>
+			132: R_386_PLT32	puts
+     136:	83 c4 10             	add    $0x10,%esp
+     139:	eb 63                	jmp    19e <.L9+0xf>
+     13b:	83 ec 0c             	sub    $0xc,%esp
+     13e:	8d 83 b8 00 00 00    	lea    0xb8(%ebx),%eax
+			140: R_386_GOTOFF	.rodata
+     144:	50                   	push   %eax
+     145:	e8 fc ff ff ff       	call   146 <ELF_header_64_parse+0x106>
+			146: R_386_PLT32	puts
+     14a:	83 c4 10             	add    $0x10,%esp
+     14d:	eb 4f                	jmp    19e <.L9+0xf>
+     14f:	83 ec 0c             	sub    $0xc,%esp
+     152:	8d                   	.byte 0x8d
+
+00000153 <.L12>:
+     153:	83 c8 00             	or     $0x0,%eax
+			154: R_386_GOTOFF	.rodata
+     156:	00 00                	add    %al,(%eax)
+     158:	50                   	push   %eax
+     159:	e8 fc ff ff ff       	call   15a <.L12+0x7>
+			15a: R_386_PLT32	puts
+     15e:	83 c4 10             	add    $0x10,%esp
+     161:	eb 3b                	jmp    19e <.L9+0xf>
+     163:	83 ec 0c             	sub    $0xc,%esp
+     166:	8d                   	.byte 0x8d
+
+00000167 <.L11>:
+     167:	83 de 00             	sbb    $0x0,%esi
+			168: R_386_GOTOFF	.rodata
+     16a:	00 00                	add    %al,(%eax)
+     16c:	50                   	push   %eax
+     16d:	e8 fc ff ff ff       	call   16e <.L11+0x7>
+			16e: R_386_PLT32	puts
+     172:	83 c4 10             	add    $0x10,%esp
+     175:	eb 27                	jmp    19e <.L9+0xf>
+     177:	83 ec 0c             	sub    $0xc,%esp
+     17a:	8d                   	.byte 0x8d
+
+0000017b <.L10>:
+     17b:	83 ec 00             	sub    $0x0,%esp
+			17c: R_386_GOTOFF	.rodata
+     17e:	00 00                	add    %al,(%eax)
+     180:	50                   	push   %eax
+     181:	e8 fc ff ff ff       	call   182 <.L10+0x7>
+			182: R_386_PLT32	puts
+     186:	83 c4 10             	add    $0x10,%esp
+     189:	eb 13                	jmp    19e <.L9+0xf>
+     18b:	83 ec 0c             	sub    $0xc,%esp
+     18e:	8d                   	.byte 0x8d
+
+0000018f <.L9>:
+     18f:	83 14 01 00          	adcl   $0x0,(%ecx,%eax,1)
+			190: R_386_GOTOFF	.rodata
+     193:	00 50 e8             	add    %dl,-0x18(%eax)
+     196:	fc                   	cld    
+			196: R_386_PLT32	puts
+     197:	ff                   	(bad)  
+     198:	ff                   	(bad)  
+     199:	ff 83 c4 10 90 83    	incl   -0x7c6fef3c(%ebx)
+     19f:	ec                   	in     (%dx),%al
+     1a0:	0c 8d                	or     $0x8d,%al
+     1a2:	83                   	.byte 0x83
+
+000001a3 <.L7>:
+     1a3:	39 01                	cmp    %eax,(%ecx)
+			1a3: R_386_GOTOFF	.rodata
+     1a5:	00 00                	add    %al,(%eax)
+     1a7:	50                   	push   %eax
+     1a8:	e8 fc ff ff ff       	call   1a9 <.L7+0x6>
+			1a9: R_386_PLT32	printf
+     1ad:	83 c4 10             	add    $0x10,%esp
+     1b0:	8b 45 08             	mov    0x8(%ebp),%eax
+     1b3:	0f b7 40 12          	movzwl 0x12(%eax),%eax
+     1b7:	0f b7 c0             	movzwl %ax,%eax
+     1ba:	83 f8 3e             	cmp    $0x3e,%eax
+     1bd:	0f 87 df 00 00 00    	ja     2a2 <.L19+0xf>
+     1c3:	c1 e0 02             	shl    $0x2,%eax
+     1c6:	8b 84 18 88 03 00 00 	mov    0x388(%eax,%ebx,1),%eax
+			1c9: R_386_GOTOFF	.rodata
+     1cd:	01 d8                	add    %ebx,%eax
+     1cf:	3e ff e0             	notrack jmp *%eax
+     1d2:	83 ec 0c             	sub    $0xc,%esp
+     1d5:	8d 83 52 01 00 00    	lea    0x152(%ebx),%eax
+			1d7: R_386_GOTOFF	.rodata
+     1db:	50                   	push   %eax
+     1dc:	e8 fc ff ff ff       	call   1dd <.L7+0x3a>
+			1dd: R_386_PLT32	puts
+     1e1:	83 c4 10             	add    $0x10,%esp
+     1e4:	e9 b9 00 00 00       	jmp    2a2 <.L19+0xf>
+     1e9:	83 ec 0c             	sub    $0xc,%esp
+     1ec:	8d 83 65 01 00 00    	lea    0x165(%ebx),%eax
+			1ee: R_386_GOTOFF	.rodata
+     1f2:	50                   	push   %eax
+     1f3:	e8 fc ff ff ff       	call   1f4 <.L7+0x51>
+			1f4: R_386_PLT32	puts
+     1f8:	83 c4 10             	add    $0x10,%esp
+     1fb:	e9 a2 00 00 00       	jmp    2a2 <.L19+0xf>
+     200:	83 ec 0c             	sub    $0xc,%esp
+     203:	8d 83 73 01 00 00    	lea    0x173(%ebx),%eax
+			205: R_386_GOTOFF	.rodata
+     209:	50                   	push   %eax
+     20a:	e8 fc ff ff ff       	call   20b <.L7+0x68>
+			20b: R_386_PLT32	puts
+     20f:	83 c4 10             	add    $0x10,%esp
+
+00000212 <.L25>:
+     212:	e9 8b 00 00 00       	jmp    2a2 <.L19+0xf>
+     217:	83 ec 0c             	sub    $0xc,%esp
+     21a:	8d 83 79 01 00 00    	lea    0x179(%ebx),%eax
+			21c: R_386_GOTOFF	.rodata
+     220:	50                   	push   %eax
+     221:	e8 fc ff ff ff       	call   222 <.L25+0x10>
+			222: R_386_PLT32	puts
+     226:	83 c4 10             	add    $0x10,%esp
+
+00000229 <.L24>:
+     229:	eb 77                	jmp    2a2 <.L19+0xf>
+     22b:	83 ec 0c             	sub    $0xc,%esp
+     22e:	8d 83 8c 01 00 00    	lea    0x18c(%ebx),%eax
+			230: R_386_GOTOFF	.rodata
+     234:	50                   	push   %eax
+     235:	e8 fc ff ff ff       	call   236 <.L24+0xd>
+			236: R_386_PLT32	puts
+     23a:	83 c4 10             	add    $0x10,%esp
+     23d:	eb 63                	jmp    2a2 <.L19+0xf>
+     23f:	83                   	.byte 0x83
+
+00000240 <.L23>:
+     240:	ec                   	in     (%dx),%al
+     241:	0c 8d                	or     $0x8d,%al
+     243:	83 9b 01 00 00 50 e8 	sbbl   $0xffffffe8,0x50000001(%ebx)
+			244: R_386_GOTOFF	.rodata
+     24a:	fc                   	cld    
+			24a: R_386_PLT32	puts
+     24b:	ff                   	(bad)  
+     24c:	ff                   	(bad)  
+     24d:	ff 83 c4 10 eb 4f    	incl   0x4feb10c4(%ebx)
+     253:	83 ec 0c             	sub    $0xc,%esp
+     256:	8d                   	.byte 0x8d
+
+00000257 <.L22>:
+     257:	83 aa 01 00 00 50 e8 	subl   $0xffffffe8,0x50000001(%edx)
+			258: R_386_GOTOFF	.rodata
+     25e:	fc                   	cld    
+			25e: R_386_PLT32	puts
+     25f:	ff                   	(bad)  
+     260:	ff                   	(bad)  
+     261:	ff 83 c4 10 eb 3b    	incl   0x3beb10c4(%ebx)
+     267:	83 ec 0c             	sub    $0xc,%esp
+     26a:	8d                   	.byte 0x8d
+
+0000026b <.L21>:
+     26b:	83 b6 01 00 00 50 e8 	xorl   $0xffffffe8,0x50000001(%esi)
+			26c: R_386_GOTOFF	.rodata
+     272:	fc                   	cld    
+			272: R_386_PLT32	puts
+     273:	ff                   	(bad)  
+     274:	ff                   	(bad)  
+     275:	ff 83 c4 10 eb 27    	incl   0x27eb10c4(%ebx)
+     27b:	83 ec 0c             	sub    $0xc,%esp
+     27e:	8d                   	.byte 0x8d
+
+0000027f <.L20>:
+     27f:	83 cd 01             	or     $0x1,%ebp
+			280: R_386_GOTOFF	.rodata
+     282:	00 00                	add    %al,(%eax)
+     284:	50                   	push   %eax
+     285:	e8 fc ff ff ff       	call   286 <.L20+0x7>
+			286: R_386_PLT32	puts
+     28a:	83 c4 10             	add    $0x10,%esp
+     28d:	eb 13                	jmp    2a2 <.L19+0xf>
+     28f:	83 ec 0c             	sub    $0xc,%esp
+     292:	8d                   	.byte 0x8d
+
+00000293 <.L19>:
+     293:	83 e4 01             	and    $0x1,%esp
+			294: R_386_GOTOFF	.rodata
+     296:	00 00                	add    %al,(%eax)
+     298:	50                   	push   %eax
+     299:	e8 fc ff ff ff       	call   29a <.L19+0x7>
+			29a: R_386_PLT32	puts
+     29e:	83 c4 10             	add    $0x10,%esp
+     2a1:	90                   	nop
+     2a2:	83 ec 0c             	sub    $0xc,%esp
+     2a5:	8d                   	.byte 0x8d
+     2a6:	83                   	.byte 0x83
+
+000002a7 <.L18>:
+     2a7:	fc                   	cld    
+			2a7: R_386_GOTOFF	.rodata
+     2a8:	01 00                	add    %eax,(%eax)
+     2aa:	00 50 e8             	add    %dl,-0x18(%eax)
+     2ad:	fc                   	cld    
+			2ad: R_386_PLT32	printf
+     2ae:	ff                   	(bad)  
+     2af:	ff                   	(bad)  
+     2b0:	ff 83 c4 10 8b 45    	incl   0x458b10c4(%ebx)
+     2b6:	08                   	.byte 0x8
+     2b7:	8b 40 14             	mov    0x14(%eax),%eax
+     2ba:	85                   	.byte 0x85
+
+000002bb <.L17>:
+     2bb:	c0 74 07 83 f8       	shlb   $0xf8,-0x7d(%edi,%eax,1)
+     2c0:	01 74 16 eb          	add    %esi,-0x15(%esi,%edx,1)
+     2c4:	27                   	daa    
+     2c5:	83 ec 0c             	sub    $0xc,%esp
+     2c8:	8d 83 07 02 00 00    	lea    0x207(%ebx),%eax
+			2ca: R_386_GOTOFF	.rodata
+     2ce:	50                   	push   %eax
+
+000002cf <.L15>:
+     2cf:	e8 fc ff ff ff       	call   2d0 <.L15+0x1>
+			2d0: R_386_PLT32	puts
+     2d4:	83 c4 10             	add    $0x10,%esp
+     2d7:	eb 13                	jmp    2ec <.L14+0xa>
+     2d9:	83 ec 0c             	sub    $0xc,%esp
+     2dc:	8d 83 17 02 00 00    	lea    0x217(%ebx),%eax
+			2de: R_386_GOTOFF	.rodata
+
+000002e2 <.L14>:
+     2e2:	50                   	push   %eax
+     2e3:	e8 fc ff ff ff       	call   2e4 <.L14+0x2>
+			2e4: R_386_PLT32	puts
+     2e8:	83 c4 10             	add    $0x10,%esp
+     2eb:	90                   	nop
+     2ec:	8b 45 08             	mov    0x8(%ebp),%eax
+     2ef:	8b 50 1c             	mov    0x1c(%eax),%edx
+     2f2:	8b 40 18             	mov    0x18(%eax),%eax
+     2f5:	83 ec 04             	sub    $0x4,%esp
+     2f8:	52                   	push   %edx
+     2f9:	50                   	push   %eax
+     2fa:	8d 83 27 02 00 00    	lea    0x227(%ebx),%eax
+			2fc: R_386_GOTOFF	.rodata
+     300:	50                   	push   %eax
+     301:	e8 fc ff ff ff       	call   302 <.L14+0x20>
+			302: R_386_PLT32	printf
+     306:	83 c4 10             	add    $0x10,%esp
+     309:	8b 45 08             	mov    0x8(%ebp),%eax
+     30c:	8b 50 24             	mov    0x24(%eax),%edx
+     30f:	8b 40 20             	mov    0x20(%eax),%eax
+     312:	83 ec 04             	sub    $0x4,%esp
+     315:	52                   	push   %edx
+     316:	50                   	push   %eax
+     317:	8d 83 48 02 00 00    	lea    0x248(%ebx),%eax
+			319: R_386_GOTOFF	.rodata
+     31d:	50                   	push   %eax
+     31e:	e8 fc ff ff ff       	call   31f <.L14+0x3d>
+			31f: R_386_PLT32	printf
+     323:	83 c4 10             	add    $0x10,%esp
+     326:	8b 45 08             	mov    0x8(%ebp),%eax
+     329:	8b 50 2c             	mov    0x2c(%eax),%edx
+     32c:	8b 40 28             	mov    0x28(%eax),%eax
+     32f:	83 ec 04             	sub    $0x4,%esp
+     332:	52                   	push   %edx
+     333:	50                   	push   %eax
+     334:	8d 83 68 02 00 00    	lea    0x268(%ebx),%eax
+			336: R_386_GOTOFF	.rodata
+     33a:	50                   	push   %eax
+     33b:	e8 fc ff ff ff       	call   33c <.L14+0x5a>
+			33c: R_386_PLT32	printf
+     340:	83 c4 10             	add    $0x10,%esp
+     343:	8b 45 08             	mov    0x8(%ebp),%eax
+     346:	8b 40 30             	mov    0x30(%eax),%eax
+     349:	83 ec 08             	sub    $0x8,%esp
+     34c:	50                   	push   %eax
+     34d:	8d 83 85 02 00 00    	lea    0x285(%ebx),%eax
+			34f: R_386_GOTOFF	.rodata
+     353:	50                   	push   %eax
+     354:	e8 fc ff ff ff       	call   355 <.L14+0x73>
+			355: R_386_PLT32	printf
+     359:	83 c4 10             	add    $0x10,%esp
+     35c:	8b 45 08             	mov    0x8(%ebp),%eax
+     35f:	0f b7 40 34          	movzwl 0x34(%eax),%eax
+     363:	0f b7 c0             	movzwl %ax,%eax
+     366:	83 ec 08             	sub    $0x8,%esp
+     369:	50                   	push   %eax
+     36a:	8d 83 a0 02 00 00    	lea    0x2a0(%ebx),%eax
+			36c: R_386_GOTOFF	.rodata
+     370:	50                   	push   %eax
+     371:	e8 fc ff ff ff       	call   372 <.L14+0x90>
+			372: R_386_PLT32	printf
+     376:	83 c4 10             	add    $0x10,%esp
+     379:	8b 45 08             	mov    0x8(%ebp),%eax
+     37c:	0f b7 40 36          	movzwl 0x36(%eax),%eax
+     380:	0f b7 c0             	movzwl %ax,%eax
+     383:	83 ec 08             	sub    $0x8,%esp
+     386:	50                   	push   %eax
+     387:	8d 83 c0 02 00 00    	lea    0x2c0(%ebx),%eax
+			389: R_386_GOTOFF	.rodata
+     38d:	50                   	push   %eax
+     38e:	e8 fc ff ff ff       	call   38f <.L14+0xad>
+			38f: R_386_PLT32	printf
+     393:	83 c4 10             	add    $0x10,%esp
+     396:	8b 45 08             	mov    0x8(%ebp),%eax
+     399:	0f b7 40 38          	movzwl 0x38(%eax),%eax
+     39d:	0f b7 c0             	movzwl %ax,%eax
+     3a0:	83 ec 08             	sub    $0x8,%esp
+     3a3:	50                   	push   %eax
+     3a4:	8d 83 ea 02 00 00    	lea    0x2ea(%ebx),%eax
+			3a6: R_386_GOTOFF	.rodata
+     3aa:	50                   	push   %eax
+     3ab:	e8 fc ff ff ff       	call   3ac <.L14+0xca>
+			3ac: R_386_PLT32	printf
+     3b0:	83 c4 10             	add    $0x10,%esp
+     3b3:	8b 45 08             	mov    0x8(%ebp),%eax
+     3b6:	0f b7 40 3a          	movzwl 0x3a(%eax),%eax
+     3ba:	0f b7 c0             	movzwl %ax,%eax
+     3bd:	83 ec 08             	sub    $0x8,%esp
+     3c0:	50                   	push   %eax
+     3c1:	8d 83 08 03 00 00    	lea    0x308(%ebx),%eax
+			3c3: R_386_GOTOFF	.rodata
+     3c7:	50                   	push   %eax
+     3c8:	e8 fc ff ff ff       	call   3c9 <.L14+0xe7>
+			3c9: R_386_PLT32	printf
+     3cd:	83 c4 10             	add    $0x10,%esp
+     3d0:	8b 45 08             	mov    0x8(%ebp),%eax
+     3d3:	0f b7 40 3c          	movzwl 0x3c(%eax),%eax
+     3d7:	0f b7 c0             	movzwl %ax,%eax
+     3da:	83 ec 08             	sub    $0x8,%esp
+     3dd:	50                   	push   %eax
+     3de:	8d 83 2f 03 00 00    	lea    0x32f(%ebx),%eax
+			3e0: R_386_GOTOFF	.rodata
+     3e4:	50                   	push   %eax
+     3e5:	e8 fc ff ff ff       	call   3e6 <.L14+0x104>
+			3e6: R_386_PLT32	printf
+     3ea:	83 c4 10             	add    $0x10,%esp
+     3ed:	8b 45 08             	mov    0x8(%ebp),%eax
+     3f0:	0f b7 40 3e          	movzwl 0x3e(%eax),%eax
+     3f4:	0f b7 c0             	movzwl %ax,%eax
+     3f7:	83 ec 08             	sub    $0x8,%esp
+     3fa:	50                   	push   %eax
+     3fb:	8d 83 4c 03 00 00    	lea    0x34c(%ebx),%eax
+			3fd: R_386_GOTOFF	.rodata
+     401:	50                   	push   %eax
+     402:	e8 fc ff ff ff       	call   403 <.L14+0x121>
+			403: R_386_PLT32	printf
+     407:	83 c4 10             	add    $0x10,%esp
+     40a:	90                   	nop
+     40b:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+     40e:	c9                   	leave  
+     40f:	c3                   	ret    
+     410:	f3 0f 1e fb          	endbr32 
+     414:	55                   	push   %ebp
+     415:	89 e5                	mov    %esp,%ebp
+     417:	53                   	push   %ebx
+     418:	81 ec 00 10 00 00    	sub    $0x1000,%esp
+     41e:	83 0c 24 00          	orl    $0x0,(%esp)
+     422:	81 ec e4 08 00 00    	sub    $0x8e4,%esp
+     428:	e8 fc ff ff ff       	call   429 <.L14+0x147>
+			429: R_386_PC32	__x86.get_pc_thunk.bx
+     42d:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			42f: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+     433:	8b 45 08             	mov    0x8(%ebp),%eax
+     436:	89 85 24 e7 ff ff    	mov    %eax,-0x18dc(%ebp)
+     43c:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+     442:	89 45 f4             	mov    %eax,-0xc(%ebp)
+     445:	31 c0                	xor    %eax,%eax
+     447:	8b 85 24 e7 ff ff    	mov    -0x18dc(%ebp),%eax
+     44d:	0f                   	.byte 0xf
+     44e:	b7 40                	mov    $0x40,%bh
+
+00000450 <section_header_64_parse>:
+     450:	3c 0f                	cmp    $0xf,%al
+     452:	b7 c0                	mov    $0xc0,%bh
+     454:	89 85 30 e7 ff ff    	mov    %eax,-0x18d0(%ebp)
+     45a:	8b 85 24 e7 ff ff    	mov    -0x18dc(%ebp),%eax
+     460:	8b 50 2c             	mov    0x2c(%eax),%edx
+     463:	8b 40 28             	mov    0x28(%eax),%eax
+     466:	89 c2                	mov    %eax,%edx
+     468:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			46a: R_386_GOT32X	fp
+     46e:	8b 00                	mov    (%eax),%eax
+     470:	83 ec 04             	sub    $0x4,%esp
+     473:	6a 00                	push   $0x0
+     475:	52                   	push   %edx
+     476:	50                   	push   %eax
+     477:	e8 fc ff ff ff       	call   478 <section_header_64_parse+0x28>
+			478: R_386_PLT32	fseek
+     47c:	83 c4 10             	add    $0x10,%esp
+     47f:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			481: R_386_GOT32X	fp
+     485:	8b 10                	mov    (%eax),%edx
+     487:	8b 85 30 e7 ff ff    	mov    -0x18d0(%ebp),%eax
+     48d:	52                   	push   %edx
+     48e:	50                   	push   %eax
+     48f:	6a 40                	push   $0x40
+     491:	8d 85 34 e7 ff ff    	lea    -0x18cc(%ebp),%eax
+     497:	50                   	push   %eax
+     498:	e8 fc ff ff ff       	call   499 <section_header_64_parse+0x49>
+			499: R_386_PLT32	fread
+     49d:	83 c4 10             	add    $0x10,%esp
+     4a0:	8b 85 24 e7 ff ff    	mov    -0x18dc(%ebp),%eax
+     4a6:	0f b7 40 3e          	movzwl 0x3e(%eax),%eax
+     4aa:	0f b7 c0             	movzwl %ax,%eax
+     4ad:	c1 e0 06             	shl    $0x6,%eax
+     4b0:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     4b3:	01 c8                	add    %ecx,%eax
+     4b5:	2d b4 18 00 00       	sub    $0x18b4,%eax
+     4ba:	8b 50 0c             	mov    0xc(%eax),%edx
+     4bd:	8b 40 08             	mov    0x8(%eax),%eax
+     4c0:	89 c2                	mov    %eax,%edx
+     4c2:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			4c4: R_386_GOT32X	fp
+     4c8:	8b 00                	mov    (%eax),%eax
+     4ca:	83 ec 04             	sub    $0x4,%esp
+     4cd:	6a 00                	push   $0x0
+     4cf:	52                   	push   %edx
+     4d0:	50                   	push   %eax
+     4d1:	e8 fc ff ff ff       	call   4d2 <section_header_64_parse+0x82>
+			4d2: R_386_PLT32	fseek
+     4d6:	83 c4 10             	add    $0x10,%esp
+     4d9:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			4db: R_386_GOT32X	fp
+     4df:	8b 08                	mov    (%eax),%ecx
+     4e1:	8b 85 24 e7 ff ff    	mov    -0x18dc(%ebp),%eax
+     4e7:	0f b7 40 3e          	movzwl 0x3e(%eax),%eax
+     4eb:	0f b7 c0             	movzwl %ax,%eax
+     4ee:	c1 e0 06             	shl    $0x6,%eax
+     4f1:	8d 55 f8             	lea    -0x8(%ebp),%edx
+     4f4:	01 d0                	add    %edx,%eax
+     4f6:	2d a4 18 00 00       	sub    $0x18a4,%eax
+     4fb:	8b 50 04             	mov    0x4(%eax),%edx
+     4fe:	8b 00                	mov    (%eax),%eax
+     500:	51                   	push   %ecx
+     501:	50                   	push   %eax
+     502:	6a 01                	push   $0x1
+     504:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			506: R_386_GOT32X	strtable
+     50a:	50                   	push   %eax
+     50b:	e8 fc ff ff ff       	call   50c <section_header_64_parse+0xbc>
+			50c: R_386_PLT32	fread
+     510:	83 c4 10             	add    $0x10,%esp
+     513:	83 ec 0c             	sub    $0xc,%esp
+     516:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			518: R_386_GOTOFF	.rodata
+     51c:	50                   	push   %eax
+     51d:	e8 fc ff ff ff       	call   51e <section_header_64_parse+0xce>
+			51e: R_386_PLT32	puts
+     522:	83 c4 10             	add    $0x10,%esp
+     525:	8b 85 24 e7 ff ff    	mov    -0x18dc(%ebp),%eax
+     52b:	8b 50 2c             	mov    0x2c(%eax),%edx
+     52e:	8b 40 28             	mov    0x28(%eax),%eax
+     531:	52                   	push   %edx
+     532:	50                   	push   %eax
+     533:	ff b5 30 e7 ff ff    	pushl  -0x18d0(%ebp)
+     539:	8d 83 84 04 00 00    	lea    0x484(%ebx),%eax
+			53b: R_386_GOTOFF	.rodata
+     53f:	50                   	push   %eax
+     540:	e8 fc ff ff ff       	call   541 <section_header_64_parse+0xf1>
+			541: R_386_PLT32	printf
+     545:	83 c4 10             	add    $0x10,%esp
+     548:	83 ec 0c             	sub    $0xc,%esp
+     54b:	8d 83 bf 04 00 00    	lea    0x4bf(%ebx),%eax
+			54d: R_386_GOTOFF	.rodata
+     551:	50                   	push   %eax
+     552:	e8 fc ff ff ff       	call   553 <section_header_64_parse+0x103>
+			553: R_386_PLT32	puts
+     557:	83 c4 10             	add    $0x10,%esp
+     55a:	83 ec 0c             	sub    $0xc,%esp
+     55d:	8d 83 cc 04 00 00    	lea    0x4cc(%ebx),%eax
+			55f: R_386_GOTOFF	.rodata
+     563:	50                   	push   %eax
+     564:	e8 fc ff ff ff       	call   565 <section_header_64_parse+0x115>
+			565: R_386_PLT32	puts
+     569:	83 c4 10             	add    $0x10,%esp
+     56c:	c7 85 28 e7 ff ff 00 	movl   $0x0,-0x18d8(%ebp)
+     573:	00 00 00 
+     576:	e9 78 04 00 00       	jmp    9f3 <.L35+0x122>
+     57b:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     581:	c1 e0 06             	shl    $0x6,%eax
+     584:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     587:	01 c8                	add    %ecx,%eax
+     589:	2d c4 18 00 00       	sub    $0x18c4,%eax
+     58e:	8b 00                	mov    (%eax),%eax
+     590:	8b 93 00 00 00 00    	mov    0x0(%ebx),%edx
+			592: R_386_GOT32X	strtable
+     596:	01 d0                	add    %edx,%eax
+     598:	83 ec 04             	sub    $0x4,%esp
+     59b:	50                   	push   %eax
+     59c:	ff b5 28 e7 ff ff    	pushl  -0x18d8(%ebp)
+     5a2:	8d 83 3c 05 00 00    	lea    0x53c(%ebx),%eax
+			5a4: R_386_GOTOFF	.rodata
+     5a8:	50                   	push   %eax
+     5a9:	e8 fc ff ff ff       	call   5aa <section_header_64_parse+0x15a>
+			5aa: R_386_PLT32	printf
+     5ae:	83 c4 10             	add    $0x10,%esp
+     5b1:	c7 85 2c e7 ff ff 00 	movl   $0x0,-0x18d4(%ebp)
+     5b8:	00 00 00 
+     5bb:	eb 14                	jmp    5d1 <section_header_64_parse+0x181>
+     5bd:	83 ec 0c             	sub    $0xc,%esp
+     5c0:	6a 20                	push   $0x20
+     5c2:	e8 fc ff ff ff       	call   5c3 <section_header_64_parse+0x173>
+			5c3: R_386_PLT32	putchar
+     5c7:	83 c4 10             	add    $0x10,%esp
+     5ca:	83 85 2c e7 ff ff 01 	addl   $0x1,-0x18d4(%ebp)
+     5d1:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     5d7:	c1 e0 06             	shl    $0x6,%eax
+     5da:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     5dd:	01 c8                	add    %ecx,%eax
+     5df:	2d c4 18 00 00       	sub    $0x18c4,%eax
+     5e4:	8b 00                	mov    (%eax),%eax
+     5e6:	8b 93 00 00 00 00    	mov    0x0(%ebx),%edx
+			5e8: R_386_GOT32X	strtable
+     5ec:	01 d0                	add    %edx,%eax
+     5ee:	83 ec 0c             	sub    $0xc,%esp
+     5f1:	50                   	push   %eax
+     5f2:	e8 fc ff ff ff       	call   5f3 <section_header_64_parse+0x1a3>
+			5f3: R_386_PLT32	strlen
+     5f7:	83 c4 10             	add    $0x10,%esp
+     5fa:	ba 14 00 00 00       	mov    $0x14,%edx
+     5ff:	29 c2                	sub    %eax,%edx
+     601:	8b 85 2c e7 ff ff    	mov    -0x18d4(%ebp),%eax
+     607:	39 c2                	cmp    %eax,%edx
+     609:	77 b2                	ja     5bd <section_header_64_parse+0x16d>
+     60b:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     611:	c1 e0 06             	shl    $0x6,%eax
+     614:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     617:	01 c8                	add    %ecx,%eax
+     619:	2d c0 18 00 00       	sub    $0x18c0,%eax
+     61e:	8b 00                	mov    (%eax),%eax
+     620:	83 f8 ff             	cmp    $0xffffffff,%eax
+     623:	0f 84 19 02 00 00    	je     842 <.L41+0x13>
+     629:	3d 00 00 00 80       	cmp    $0x80000000,%eax
+     62e:	0f 84 fa 01 00 00    	je     82e <.L43+0x16>
+     634:	3d 00 00 00 80       	cmp    $0x80000000,%eax
+     639:	0f 87 52 02 00 00    	ja     891 <.L41+0x62>
+     63f:	3d ff ff ff 7f       	cmp    $0x7fffffff,%eax
+     644:	0f 84 d0 01 00 00    	je     81a <.L43+0x2>
+     64a:	3d ff ff ff 7f       	cmp    $0x7fffffff,%eax
+     64f:	0f 87 3c 02 00 00    	ja     891 <.L41+0x62>
+     655:	3d 00 00 00 70       	cmp    $0x70000000,%eax
+     65a:	0f 84 a6 01 00 00    	je     806 <.L44+0x5>
+     660:	3d 00 00 00 70       	cmp    $0x70000000,%eax
+     665:	0f 87 26 02 00 00    	ja     891 <.L41+0x62>
+     66b:	3d ff ff ff 6f       	cmp    $0x6fffffff,%eax
+     670:	0f 84 f4 01 00 00    	je     86a <.L41+0x3b>
+     676:	3d ff ff ff 6f       	cmp    $0x6fffffff,%eax
+     67b:	0f 87 10 02 00 00    	ja     891 <.L41+0x62>
+     681:	3d fe ff ff 6f       	cmp    $0x6ffffffe,%eax
+     686:	0f 84 f2 01 00 00    	je     87e <.L41+0x4f>
+     68c:	3d fe ff ff 6f       	cmp    $0x6ffffffe,%eax
+     691:	0f 87 fa 01 00 00    	ja     891 <.L41+0x62>
+     697:	83 f8 0f             	cmp    $0xf,%eax
+     69a:	77 18                	ja     6b4 <section_header_64_parse+0x264>
+     69c:	83 f8 0f             	cmp    $0xf,%eax
+     69f:	0f 87 ec 01 00 00    	ja     891 <.L41+0x62>
+     6a5:	c1 e0 02             	shl    $0x2,%eax
+     6a8:	8b 84 18 7c 06 00 00 	mov    0x67c(%eax,%ebx,1),%eax
+			6ab: R_386_GOTOFF	.rodata
+     6af:	01 d8                	add    %ebx,%eax
+     6b1:	3e ff e0             	notrack jmp *%eax
+     6b4:	3d f6 ff ff 6f       	cmp    $0x6ffffff6,%eax
+     6b9:	0f 84 97 01 00 00    	je     856 <.L41+0x27>
+     6bf:	e9 cd 01 00 00       	jmp    891 <.L41+0x62>
+     6c4:	83 ec 0c             	sub    $0xc,%esp
+     6c7:	8d 83 46 05 00 00    	lea    0x546(%ebx),%eax
+			6c9: R_386_GOTOFF	.rodata
+     6cd:	50                   	push   %eax
+     6ce:	e8 fc ff ff ff       	call   6cf <section_header_64_parse+0x27f>
+			6cf: R_386_PLT32	printf
+     6d3:	83 c4 10             	add    $0x10,%esp
+     6d6:	e9 b6 01 00 00       	jmp    891 <.L41+0x62>
+     6db:	83 ec 0c             	sub    $0xc,%esp
+     6de:	8d 83 50 05 00 00    	lea    0x550(%ebx),%eax
+			6e0: R_386_GOTOFF	.rodata
+     6e4:	50                   	push   %eax
+     6e5:	e8 fc ff ff ff       	call   6e6 <section_header_64_parse+0x296>
+			6e6: R_386_PLT32	printf
+     6ea:	83 c4 10             	add    $0x10,%esp
+     6ed:	e9 9f 01 00 00       	jmp    891 <.L41+0x62>
+     6f2:	83 ec 0c             	sub    $0xc,%esp
+     6f5:	8d 83 5d 05 00 00    	lea    0x55d(%ebx),%eax
+			6f7: R_386_GOTOFF	.rodata
+     6fb:	50                   	push   %eax
+     6fc:	e8 fc ff ff ff       	call   6fd <section_header_64_parse+0x2ad>
+			6fd: R_386_PLT32	printf
+     701:	83 c4 10             	add    $0x10,%esp
+
+00000704 <.L55>:
+     704:	e9 88 01 00 00       	jmp    891 <.L41+0x62>
+     709:	83 ec 0c             	sub    $0xc,%esp
+     70c:	8d 83 69 05 00 00    	lea    0x569(%ebx),%eax
+			70e: R_386_GOTOFF	.rodata
+     712:	50                   	push   %eax
+     713:	e8 fc ff ff ff       	call   714 <.L55+0x10>
+			714: R_386_PLT32	printf
+     718:	83 c4 10             	add    $0x10,%esp
+
+0000071b <.L54>:
+     71b:	e9 71 01 00 00       	jmp    891 <.L41+0x62>
+     720:	83 ec 0c             	sub    $0xc,%esp
+     723:	8d 83 75 05 00 00    	lea    0x575(%ebx),%eax
+			725: R_386_GOTOFF	.rodata
+     729:	50                   	push   %eax
+     72a:	e8 fc ff ff ff       	call   72b <.L54+0x10>
+			72b: R_386_PLT32	printf
+     72f:	83 c4 10             	add    $0x10,%esp
+
+00000732 <.L53>:
+     732:	e9 5a 01 00 00       	jmp    891 <.L41+0x62>
+     737:	83 ec 0c             	sub    $0xc,%esp
+     73a:	8d 83 7f 05 00 00    	lea    0x57f(%ebx),%eax
+			73c: R_386_GOTOFF	.rodata
+     740:	50                   	push   %eax
+     741:	e8 fc ff ff ff       	call   742 <.L53+0x10>
+			742: R_386_PLT32	printf
+     746:	83 c4 10             	add    $0x10,%esp
+
+00000749 <.L52>:
+     749:	e9 43 01 00 00       	jmp    891 <.L41+0x62>
+     74e:	83 ec 0c             	sub    $0xc,%esp
+     751:	8d 83 89 05 00 00    	lea    0x589(%ebx),%eax
+			753: R_386_GOTOFF	.rodata
+     757:	50                   	push   %eax
+     758:	e8 fc ff ff ff       	call   759 <.L52+0x10>
+			759: R_386_PLT32	printf
+     75d:	83 c4 10             	add    $0x10,%esp
+
+00000760 <.L51>:
+     760:	e9 2c 01 00 00       	jmp    891 <.L41+0x62>
+     765:	83 ec 0c             	sub    $0xc,%esp
+     768:	8d 83 96 05 00 00    	lea    0x596(%ebx),%eax
+			76a: R_386_GOTOFF	.rodata
+     76e:	50                   	push   %eax
+     76f:	e8 fc ff ff ff       	call   770 <.L51+0x10>
+			770: R_386_PLT32	printf
+     774:	83 c4 10             	add    $0x10,%esp
+
+00000777 <.L50>:
+     777:	e9 15 01 00 00       	jmp    891 <.L41+0x62>
+     77c:	83 ec 0c             	sub    $0xc,%esp
+     77f:	8d 83 a0 05 00 00    	lea    0x5a0(%ebx),%eax
+			781: R_386_GOTOFF	.rodata
+     785:	50                   	push   %eax
+     786:	e8 fc ff ff ff       	call   787 <.L50+0x10>
+			787: R_386_PLT32	printf
+     78b:	83 c4 10             	add    $0x10,%esp
+
+0000078e <.L49>:
+     78e:	e9 fe 00 00 00       	jmp    891 <.L41+0x62>
+     793:	83 ec 0c             	sub    $0xc,%esp
+     796:	8d 83 ac 05 00 00    	lea    0x5ac(%ebx),%eax
+			798: R_386_GOTOFF	.rodata
+     79c:	50                   	push   %eax
+     79d:	e8 fc ff ff ff       	call   79e <.L49+0x10>
+			79e: R_386_PLT32	printf
+     7a2:	83 c4 10             	add    $0x10,%esp
+
+000007a5 <.L48>:
+     7a5:	e9 e7 00 00 00       	jmp    891 <.L41+0x62>
+     7aa:	83 ec 0c             	sub    $0xc,%esp
+     7ad:	8d 83 b5 05 00 00    	lea    0x5b5(%ebx),%eax
+			7af: R_386_GOTOFF	.rodata
+     7b3:	50                   	push   %eax
+     7b4:	e8 fc ff ff ff       	call   7b5 <.L48+0x10>
+			7b5: R_386_PLT32	printf
+     7b9:	83 c4 10             	add    $0x10,%esp
+
+000007bc <.L47>:
+     7bc:	e9 d0 00 00 00       	jmp    891 <.L41+0x62>
+     7c1:	83 ec 0c             	sub    $0xc,%esp
+     7c4:	8d 83 c0 05 00 00    	lea    0x5c0(%ebx),%eax
+			7c6: R_386_GOTOFF	.rodata
+     7ca:	50                   	push   %eax
+     7cb:	e8 fc ff ff ff       	call   7cc <.L47+0x10>
+			7cc: R_386_PLT32	printf
+     7d0:	83 c4 10             	add    $0x10,%esp
+
+000007d3 <.L46>:
+     7d3:	e9 b9 00 00 00       	jmp    891 <.L41+0x62>
+     7d8:	83 ec 0c             	sub    $0xc,%esp
+     7db:	8d 83 cc 05 00 00    	lea    0x5cc(%ebx),%eax
+			7dd: R_386_GOTOFF	.rodata
+     7e1:	50                   	push   %eax
+     7e2:	e8 fc ff ff ff       	call   7e3 <.L46+0x10>
+			7e3: R_386_PLT32	printf
+     7e7:	83 c4 10             	add    $0x10,%esp
+
+000007ea <.L45>:
+     7ea:	e9 a2 00 00 00       	jmp    891 <.L41+0x62>
+     7ef:	83 ec 0c             	sub    $0xc,%esp
+     7f2:	8d 83 db 05 00 00    	lea    0x5db(%ebx),%eax
+			7f4: R_386_GOTOFF	.rodata
+     7f8:	50                   	push   %eax
+     7f9:	e8 fc ff ff ff       	call   7fa <.L45+0x10>
+			7fa: R_386_PLT32	printf
+     7fe:	83 c4 10             	add    $0x10,%esp
+
+00000801 <.L44>:
+     801:	e9 8b 00 00 00       	jmp    891 <.L41+0x62>
+     806:	83 ec 0c             	sub    $0xc,%esp
+     809:	8d 83 ea 05 00 00    	lea    0x5ea(%ebx),%eax
+			80b: R_386_GOTOFF	.rodata
+     80f:	50                   	push   %eax
+     810:	e8 fc ff ff ff       	call   811 <.L44+0x10>
+			811: R_386_PLT32	printf
+     815:	83 c4 10             	add    $0x10,%esp
+
+00000818 <.L43>:
+     818:	eb 77                	jmp    891 <.L41+0x62>
+     81a:	83 ec 0c             	sub    $0xc,%esp
+     81d:	8d 83 f5 05 00 00    	lea    0x5f5(%ebx),%eax
+			81f: R_386_GOTOFF	.rodata
+     823:	50                   	push   %eax
+     824:	e8 fc ff ff ff       	call   825 <.L43+0xd>
+			825: R_386_PLT32	printf
+     829:	83 c4 10             	add    $0x10,%esp
+     82c:	eb 63                	jmp    891 <.L41+0x62>
+     82e:	83                   	.byte 0x83
+
+0000082f <.L41>:
+     82f:	ec                   	in     (%dx),%al
+     830:	0c 8d                	or     $0x8d,%al
+     832:	83 00 06             	addl   $0x6,(%eax)
+			833: R_386_GOTOFF	.rodata
+     835:	00 00                	add    %al,(%eax)
+     837:	50                   	push   %eax
+     838:	e8 fc ff ff ff       	call   839 <.L41+0xa>
+			839: R_386_PLT32	printf
+     83d:	83 c4 10             	add    $0x10,%esp
+     840:	eb 4f                	jmp    891 <.L41+0x62>
+     842:	83 ec 0c             	sub    $0xc,%esp
+     845:	8d 83 0b 06 00 00    	lea    0x60b(%ebx),%eax
+			847: R_386_GOTOFF	.rodata
+     84b:	50                   	push   %eax
+     84c:	e8 fc ff ff ff       	call   84d <.L41+0x1e>
+			84d: R_386_PLT32	printf
+     851:	83 c4 10             	add    $0x10,%esp
+     854:	eb 3b                	jmp    891 <.L41+0x62>
+     856:	83 ec 0c             	sub    $0xc,%esp
+     859:	8d 83 16 06 00 00    	lea    0x616(%ebx),%eax
+			85b: R_386_GOTOFF	.rodata
+     85f:	50                   	push   %eax
+     860:	e8 fc ff ff ff       	call   861 <.L41+0x32>
+			861: R_386_PLT32	printf
+     865:	83 c4 10             	add    $0x10,%esp
+     868:	eb 27                	jmp    891 <.L41+0x62>
+     86a:	83 ec 0c             	sub    $0xc,%esp
+     86d:	8d 83 23 06 00 00    	lea    0x623(%ebx),%eax
+			86f: R_386_GOTOFF	.rodata
+     873:	50                   	push   %eax
+     874:	e8 fc ff ff ff       	call   875 <.L41+0x46>
+			875: R_386_PLT32	printf
+     879:	83 c4 10             	add    $0x10,%esp
+     87c:	eb 13                	jmp    891 <.L41+0x62>
+     87e:	83 ec 0c             	sub    $0xc,%esp
+     881:	8d 83 32 06 00 00    	lea    0x632(%ebx),%eax
+			883: R_386_GOTOFF	.rodata
+     887:	50                   	push   %eax
+     888:	e8 fc ff ff ff       	call   889 <.L41+0x5a>
+			889: R_386_PLT32	printf
+     88d:	83 c4 10             	add    $0x10,%esp
+     890:	90                   	nop
+     891:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     897:	c1 e0 06             	shl    $0x6,%eax
+     89a:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     89d:	01 c8                	add    %ecx,%eax
+     89f:	2d c4 18 00 00       	sub    $0x18c4,%eax
+     8a4:	8b 50 0c             	mov    0xc(%eax),%edx
+     8a7:	8b 40 08             	mov    0x8(%eax),%eax
+     8aa:	83 ec 04             	sub    $0x4,%esp
+     8ad:	52                   	push   %edx
+     8ae:	50                   	push   %eax
+     8af:	8d 83 42 06 00 00    	lea    0x642(%ebx),%eax
+			8b1: R_386_GOTOFF	.rodata
+     8b5:	50                   	push   %eax
+     8b6:	e8 fc ff ff ff       	call   8b7 <.L41+0x88>
+			8b7: R_386_PLT32	printf
+     8bb:	83 c4 10             	add    $0x10,%esp
+     8be:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     8c4:	c1 e0 06             	shl    $0x6,%eax
+     8c7:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     8ca:	01 c8                	add    %ecx,%eax
+     8cc:	2d b4 18 00 00       	sub    $0x18b4,%eax
+
+000008d1 <.L35>:
+     8d1:	8b 50 04             	mov    0x4(%eax),%edx
+     8d4:	8b 00                	mov    (%eax),%eax
+     8d6:	83 ec 04             	sub    $0x4,%esp
+     8d9:	52                   	push   %edx
+     8da:	50                   	push   %eax
+     8db:	8d 83 49 06 00 00    	lea    0x649(%ebx),%eax
+			8dd: R_386_GOTOFF	.rodata
+     8e1:	50                   	push   %eax
+     8e2:	e8 fc ff ff ff       	call   8e3 <.L35+0x12>
+			8e3: R_386_PLT32	printf
+     8e7:	83 c4 10             	add    $0x10,%esp
+     8ea:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     8f0:	c1 e0 06             	shl    $0x6,%eax
+     8f3:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     8f6:	01 c8                	add    %ecx,%eax
+     8f8:	2d b4 18 00 00       	sub    $0x18b4,%eax
+     8fd:	8b 50 0c             	mov    0xc(%eax),%edx
+     900:	8b 40 08             	mov    0x8(%eax),%eax
+     903:	83 ec 04             	sub    $0x4,%esp
+     906:	52                   	push   %edx
+     907:	50                   	push   %eax
+     908:	8d 83 52 06 00 00    	lea    0x652(%ebx),%eax
+			90a: R_386_GOTOFF	.rodata
+     90e:	50                   	push   %eax
+     90f:	e8 fc ff ff ff       	call   910 <.L35+0x3f>
+			910: R_386_PLT32	printf
+     914:	83 c4 10             	add    $0x10,%esp
+     917:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     91d:	c1 e0 06             	shl    $0x6,%eax
+     920:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     923:	01 c8                	add    %ecx,%eax
+     925:	2d a4 18 00 00       	sub    $0x18a4,%eax
+     92a:	8b 50 04             	mov    0x4(%eax),%edx
+     92d:	8b 00                	mov    (%eax),%eax
+     92f:	83 ec 04             	sub    $0x4,%esp
+     932:	52                   	push   %edx
+     933:	50                   	push   %eax
+     934:	8d 83 5a 06 00 00    	lea    0x65a(%ebx),%eax
+			936: R_386_GOTOFF	.rodata
+     93a:	50                   	push   %eax
+     93b:	e8 fc ff ff ff       	call   93c <.L35+0x6b>
+			93c: R_386_PLT32	printf
+     940:	83 c4 10             	add    $0x10,%esp
+     943:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     949:	c1 e0 06             	shl    $0x6,%eax
+     94c:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     94f:	01 c8                	add    %ecx,%eax
+     951:	2d 9c 18 00 00       	sub    $0x189c,%eax
+     956:	8b 00                	mov    (%eax),%eax
+     958:	83 ec 08             	sub    $0x8,%esp
+     95b:	50                   	push   %eax
+     95c:	8d 83 66 06 00 00    	lea    0x666(%ebx),%eax
+			95e: R_386_GOTOFF	.rodata
+     962:	50                   	push   %eax
+     963:	e8 fc ff ff ff       	call   964 <.L35+0x93>
+			964: R_386_PLT32	printf
+     968:	83 c4 10             	add    $0x10,%esp
+     96b:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     971:	c1 e0 06             	shl    $0x6,%eax
+     974:	8d 55 f8             	lea    -0x8(%ebp),%edx
+     977:	01 d0                	add    %edx,%eax
+     979:	2d 98 18 00 00       	sub    $0x1898,%eax
+     97e:	8b 00                	mov    (%eax),%eax
+     980:	83 ec 08             	sub    $0x8,%esp
+     983:	50                   	push   %eax
+     984:	8d 83 66 06 00 00    	lea    0x666(%ebx),%eax
+			986: R_386_GOTOFF	.rodata
+     98a:	50                   	push   %eax
+     98b:	e8 fc ff ff ff       	call   98c <.L35+0xbb>
+			98c: R_386_PLT32	printf
+     990:	83 c4 10             	add    $0x10,%esp
+     993:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     999:	c1 e0 06             	shl    $0x6,%eax
+     99c:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     99f:	01 c8                	add    %ecx,%eax
+     9a1:	2d 94 18 00 00       	sub    $0x1894,%eax
+     9a6:	8b 50 04             	mov    0x4(%eax),%edx
+     9a9:	8b 00                	mov    (%eax),%eax
+     9ab:	83 ec 04             	sub    $0x4,%esp
+     9ae:	52                   	push   %edx
+     9af:	50                   	push   %eax
+     9b0:	8d 83 6a 06 00 00    	lea    0x66a(%ebx),%eax
+			9b2: R_386_GOTOFF	.rodata
+     9b6:	50                   	push   %eax
+     9b7:	e8 fc ff ff ff       	call   9b8 <.L35+0xe7>
+			9b8: R_386_PLT32	printf
+     9bc:	83 c4 10             	add    $0x10,%esp
+     9bf:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     9c5:	c1 e0 06             	shl    $0x6,%eax
+     9c8:	8d 55 f8             	lea    -0x8(%ebp),%edx
+     9cb:	01 d0                	add    %edx,%eax
+     9cd:	2d 94 18 00 00       	sub    $0x1894,%eax
+     9d2:	8b 50 0c             	mov    0xc(%eax),%edx
+     9d5:	8b 40 08             	mov    0x8(%eax),%eax
+     9d8:	83 ec 04             	sub    $0x4,%esp
+     9db:	52                   	push   %edx
+     9dc:	50                   	push   %eax
+     9dd:	8d 83 76 06 00 00    	lea    0x676(%ebx),%eax
+			9df: R_386_GOTOFF	.rodata
+     9e3:	50                   	push   %eax
+     9e4:	e8 fc ff ff ff       	call   9e5 <.L35+0x114>
+			9e5: R_386_PLT32	printf
+     9e9:	83 c4 10             	add    $0x10,%esp
+     9ec:	83 85 28 e7 ff ff 01 	addl   $0x1,-0x18d8(%ebp)
+     9f3:	8b 85 28 e7 ff ff    	mov    -0x18d8(%ebp),%eax
+     9f9:	3b 85 30 e7 ff ff    	cmp    -0x18d0(%ebp),%eax
+     9ff:	0f 8c 76 fb ff ff    	jl     57b <section_header_64_parse+0x12b>
+     a05:	90                   	nop
+     a06:	8b 45 f4             	mov    -0xc(%ebp),%eax
+     a09:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+     a10:	74 05                	je     a17 <.L35+0x146>
+     a12:	e8 fc ff ff ff       	call   a13 <.L35+0x142>
+			a13: R_386_PC32	__stack_chk_fail_local
+     a17:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+     a1a:	c9                   	leave  
+     a1b:	c3                   	ret    
+     a1c:	f3 0f 1e fb          	endbr32 
+     a20:	55                   	push   %ebp
+     a21:	89 e5                	mov    %esp,%ebp
+     a23:	53                   	push   %ebx
+     a24:	81 ec 00 10 00 00    	sub    $0x1000,%esp
+     a2a:	83 0c 24 00          	orl    $0x0,(%esp)
+     a2e:	81 ec d4 05 00 00    	sub    $0x5d4,%esp
+     a34:	e8 fc ff ff ff       	call   a35 <.L35+0x164>
+			a35: R_386_PC32	__x86.get_pc_thunk.bx
+     a39:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			a3b: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+     a3f:	8b 45 08             	mov    0x8(%ebp),%eax
+     a42:	89 85 34 ea ff ff    	mov    %eax,-0x15cc(%ebp)
+     a48:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+     a4e:	89 45 f4             	mov    %eax,-0xc(%ebp)
+     a51:	31 c0                	xor    %eax,%eax
+     a53:	8b 85 34 ea ff ff    	mov    -0x15cc(%ebp),%eax
+     a59:	8b 50 24             	mov    0x24(%eax),%edx
+
+00000a5c <program_header_64_parse>:
+     a5c:	8b 40 20             	mov    0x20(%eax),%eax
+     a5f:	89 c2                	mov    %eax,%edx
+     a61:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			a63: R_386_GOT32X	fp
+     a67:	8b 00                	mov    (%eax),%eax
+     a69:	83 ec 04             	sub    $0x4,%esp
+     a6c:	6a 00                	push   $0x0
+     a6e:	52                   	push   %edx
+     a6f:	50                   	push   %eax
+     a70:	e8 fc ff ff ff       	call   a71 <program_header_64_parse+0x15>
+			a71: R_386_PLT32	fseek
+     a75:	83 c4 10             	add    $0x10,%esp
+     a78:	8b 85 34 ea ff ff    	mov    -0x15cc(%ebp),%eax
+     a7e:	0f b7 40 38          	movzwl 0x38(%eax),%eax
+     a82:	0f b7 c0             	movzwl %ax,%eax
+     a85:	89 85 48 ea ff ff    	mov    %eax,-0x15b8(%ebp)
+     a8b:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			a8d: R_386_GOT32X	fp
+     a91:	8b 10                	mov    (%eax),%edx
+     a93:	8b 85 48 ea ff ff    	mov    -0x15b8(%ebp),%eax
+     a99:	52                   	push   %edx
+     a9a:	50                   	push   %eax
+     a9b:	6a 38                	push   $0x38
+     a9d:	8d 85 4c ea ff ff    	lea    -0x15b4(%ebp),%eax
+     aa3:	50                   	push   %eax
+     aa4:	e8 fc ff ff ff       	call   aa5 <program_header_64_parse+0x49>
+			aa5: R_386_PLT32	fread
+     aa9:	83 c4 10             	add    $0x10,%esp
+     aac:	83 ec 0c             	sub    $0xc,%esp
+     aaf:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			ab1: R_386_GOTOFF	.rodata
+     ab5:	50                   	push   %eax
+     ab6:	e8 fc ff ff ff       	call   ab7 <program_header_64_parse+0x5b>
+			ab7: R_386_PLT32	puts
+     abb:	83 c4 10             	add    $0x10,%esp
+     abe:	8b 85 34 ea ff ff    	mov    -0x15cc(%ebp),%eax
+     ac4:	8b 50 24             	mov    0x24(%eax),%edx
+     ac7:	8b 40 20             	mov    0x20(%eax),%eax
+     aca:	52                   	push   %edx
+     acb:	50                   	push   %eax
+     acc:	ff b5 48 ea ff ff    	pushl  -0x15b8(%ebp)
+     ad2:	8d 83 bc 06 00 00    	lea    0x6bc(%ebx),%eax
+			ad4: R_386_GOTOFF	.rodata
+     ad8:	50                   	push   %eax
+     ad9:	e8 fc ff ff ff       	call   ada <program_header_64_parse+0x7e>
+			ada: R_386_PLT32	printf
+     ade:	83 c4 10             	add    $0x10,%esp
+     ae1:	83 ec 0c             	sub    $0xc,%esp
+     ae4:	8d 83 f7 06 00 00    	lea    0x6f7(%ebx),%eax
+			ae6: R_386_GOTOFF	.rodata
+     aea:	50                   	push   %eax
+     aeb:	e8 fc ff ff ff       	call   aec <program_header_64_parse+0x90>
+			aec: R_386_PLT32	puts
+     af0:	83 c4 10             	add    $0x10,%esp
+     af3:	83 ec 0c             	sub    $0xc,%esp
+     af6:	8d 83 08 07 00 00    	lea    0x708(%ebx),%eax
+			af8: R_386_GOTOFF	.rodata
+     afc:	50                   	push   %eax
+     afd:	e8 fc ff ff ff       	call   afe <program_header_64_parse+0xa2>
+			afe: R_386_PLT32	puts
+     b02:	83 c4 10             	add    $0x10,%esp
+     b05:	c7 85 44 ea ff ff 00 	movl   $0x0,-0x15bc(%ebp)
+     b0c:	00 00 00 
+     b0f:	e9 81 03 00 00       	jmp    e95 <.L77+0xf2>
+     b14:	8b 85 44 ea ff ff    	mov    -0x15bc(%ebp),%eax
+     b1a:	6b c0 38             	imul   $0x38,%eax,%eax
+     b1d:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     b20:	01 c8                	add    %ecx,%eax
+     b22:	2d ac 15 00 00       	sub    $0x15ac,%eax
+     b27:	8b 00                	mov    (%eax),%eax
+     b29:	3d ff ff ff 7f       	cmp    $0x7fffffff,%eax
+     b2e:	0f 84 65 01 00 00    	je     c99 <.L67+0x24>
+     b34:	3d ff ff ff 7f       	cmp    $0x7fffffff,%eax
+     b39:	0f 87 6d 01 00 00    	ja     cac <.L67+0x37>
+     b3f:	3d 00 00 00 70       	cmp    $0x70000000,%eax
+     b44:	0f 84 3b 01 00 00    	je     c85 <.L67+0x10>
+     b4a:	3d 00 00 00 70       	cmp    $0x70000000,%eax
+     b4f:	0f 87 57 01 00 00    	ja     cac <.L67+0x37>
+     b55:	3d 52 e5 74 64       	cmp    $0x6474e552,%eax
+     b5a:	0f 84 11 01 00 00    	je     c71 <.L69+0x10>
+     b60:	3d 52 e5 74 64       	cmp    $0x6474e552,%eax
+     b65:	0f 87 41 01 00 00    	ja     cac <.L67+0x37>
+     b6b:	3d 51 e5 74 64       	cmp    $0x6474e551,%eax
+     b70:	0f 84 e7 00 00 00    	je     c5d <.L70+0x13>
+     b76:	3d 51 e5 74 64       	cmp    $0x6474e551,%eax
+     b7b:	0f 87 2b 01 00 00    	ja     cac <.L67+0x37>
+     b81:	83 f8 06             	cmp    $0x6,%eax
+     b84:	77 18                	ja     b9e <program_header_64_parse+0x142>
+     b86:	83 f8 06             	cmp    $0x6,%eax
+     b89:	0f 87 1d 01 00 00    	ja     cac <.L67+0x37>
+     b8f:	c1 e0 02             	shl    $0x2,%eax
+     b92:	8b 84 18 18 08 00 00 	mov    0x818(%eax,%ebx,1),%eax
+			b95: R_386_GOTOFF	.rodata
+     b99:	01 d8                	add    %ebx,%eax
+     b9b:	3e ff e0             	notrack jmp *%eax
+     b9e:	3d 50 e5 74 64       	cmp    $0x6474e550,%eax
+     ba3:	0f 84 a0 00 00 00    	je     c49 <.L71+0x16>
+     ba9:	e9 fe 00 00 00       	jmp    cac <.L67+0x37>
+     bae:	83 ec 0c             	sub    $0xc,%esp
+     bb1:	8d 83 65 07 00 00    	lea    0x765(%ebx),%eax
+			bb3: R_386_GOTOFF	.rodata
+     bb7:	50                   	push   %eax
+     bb8:	e8 fc ff ff ff       	call   bb9 <program_header_64_parse+0x15d>
+			bb9: R_386_PLT32	printf
+     bbd:	83 c4 10             	add    $0x10,%esp
+     bc0:	e9 e7 00 00 00       	jmp    cac <.L67+0x37>
+     bc5:	83 ec 0c             	sub    $0xc,%esp
+     bc8:	8d 83 6e 07 00 00    	lea    0x76e(%ebx),%eax
+			bca: R_386_GOTOFF	.rodata
+     bce:	50                   	push   %eax
+     bcf:	e8 fc ff ff ff       	call   bd0 <program_header_64_parse+0x174>
+			bd0: R_386_PLT32	printf
+     bd4:	83 c4 10             	add    $0x10,%esp
+     bd7:	e9 d0 00 00 00       	jmp    cac <.L67+0x37>
+     bdc:	83 ec 0c             	sub    $0xc,%esp
+     bdf:	8d 83 77 07 00 00    	lea    0x777(%ebx),%eax
+			be1: R_386_GOTOFF	.rodata
+     be5:	50                   	push   %eax
+     be6:	e8 fc ff ff ff       	call   be7 <program_header_64_parse+0x18b>
+			be7: R_386_PLT32	printf
+     beb:	83 c4 10             	add    $0x10,%esp
+
+00000bee <.L74>:
+     bee:	e9 b9 00 00 00       	jmp    cac <.L67+0x37>
+     bf3:	83 ec 0c             	sub    $0xc,%esp
+     bf6:	8d 83 82 07 00 00    	lea    0x782(%ebx),%eax
+			bf8: R_386_GOTOFF	.rodata
+     bfc:	50                   	push   %eax
+     bfd:	e8 fc ff ff ff       	call   bfe <.L74+0x10>
+			bfe: R_386_PLT32	printf
+     c02:	83 c4 10             	add    $0x10,%esp
+
+00000c05 <.L73>:
+     c05:	e9 a2 00 00 00       	jmp    cac <.L67+0x37>
+     c0a:	83 ec 0c             	sub    $0xc,%esp
+     c0d:	8d 83 8c 07 00 00    	lea    0x78c(%ebx),%eax
+			c0f: R_386_GOTOFF	.rodata
+     c13:	50                   	push   %eax
+     c14:	e8 fc ff ff ff       	call   c15 <.L73+0x10>
+			c15: R_386_PLT32	printf
+     c19:	83 c4 10             	add    $0x10,%esp
+
+00000c1c <.L72>:
+     c1c:	e9 8b 00 00 00       	jmp    cac <.L67+0x37>
+     c21:	83 ec 0c             	sub    $0xc,%esp
+     c24:	8d 83 95 07 00 00    	lea    0x795(%ebx),%eax
+			c26: R_386_GOTOFF	.rodata
+     c2a:	50                   	push   %eax
+     c2b:	e8 fc ff ff ff       	call   c2c <.L72+0x10>
+			c2c: R_386_PLT32	printf
+     c30:	83 c4 10             	add    $0x10,%esp
+
+00000c33 <.L71>:
+     c33:	eb 77                	jmp    cac <.L67+0x37>
+     c35:	83 ec 0c             	sub    $0xc,%esp
+     c38:	8d 83 9e 07 00 00    	lea    0x79e(%ebx),%eax
+			c3a: R_386_GOTOFF	.rodata
+     c3e:	50                   	push   %eax
+     c3f:	e8 fc ff ff ff       	call   c40 <.L71+0xd>
+			c40: R_386_PLT32	printf
+     c44:	83 c4 10             	add    $0x10,%esp
+     c47:	eb 63                	jmp    cac <.L67+0x37>
+     c49:	83                   	.byte 0x83
+
+00000c4a <.L70>:
+     c4a:	ec                   	in     (%dx),%al
+     c4b:	0c 8d                	or     $0x8d,%al
+     c4d:	83 a7 07 00 00 50 e8 	andl   $0xffffffe8,0x50000007(%edi)
+			c4e: R_386_GOTOFF	.rodata
+     c54:	fc                   	cld    
+			c54: R_386_PLT32	printf
+     c55:	ff                   	(bad)  
+     c56:	ff                   	(bad)  
+     c57:	ff 83 c4 10 eb 4f    	incl   0x4feb10c4(%ebx)
+     c5d:	83 ec 0c             	sub    $0xc,%esp
+     c60:	8d                   	.byte 0x8d
+
+00000c61 <.L69>:
+     c61:	83 b4 07 00 00 50 e8 	xorl   $0xfffffffc,-0x17b00000(%edi,%eax,1)
+     c68:	fc 
+			c62: R_386_GOTOFF	.rodata
+			c68: R_386_PLT32	printf
+     c69:	ff                   	(bad)  
+     c6a:	ff                   	(bad)  
+     c6b:	ff 83 c4 10 eb 3b    	incl   0x3beb10c4(%ebx)
+     c71:	83 ec 0c             	sub    $0xc,%esp
+     c74:	8d                   	.byte 0x8d
+
+00000c75 <.L67>:
+     c75:	83 be 07 00 00 50 e8 	cmpl   $0xffffffe8,0x50000007(%esi)
+			c76: R_386_GOTOFF	.rodata
+     c7c:	fc                   	cld    
+			c7c: R_386_PLT32	printf
+     c7d:	ff                   	(bad)  
+     c7e:	ff                   	(bad)  
+     c7f:	ff 83 c4 10 eb 27    	incl   0x27eb10c4(%ebx)
+     c85:	83 ec 0c             	sub    $0xc,%esp
+     c88:	8d 83 c8 07 00 00    	lea    0x7c8(%ebx),%eax
+			c8a: R_386_GOTOFF	.rodata
+     c8e:	50                   	push   %eax
+     c8f:	e8 fc ff ff ff       	call   c90 <.L67+0x1b>
+			c90: R_386_PLT32	printf
+     c94:	83 c4 10             	add    $0x10,%esp
+     c97:	eb 13                	jmp    cac <.L67+0x37>
+     c99:	83 ec 0c             	sub    $0xc,%esp
+     c9c:	8d 83 d2 07 00 00    	lea    0x7d2(%ebx),%eax
+			c9e: R_386_GOTOFF	.rodata
+     ca2:	50                   	push   %eax
+     ca3:	e8 fc ff ff ff       	call   ca4 <.L67+0x2f>
+			ca4: R_386_PLT32	printf
+     ca8:	83 c4 10             	add    $0x10,%esp
+     cab:	90                   	nop
+     cac:	83 ec 0c             	sub    $0xc,%esp
+     caf:	6a 09                	push   $0x9
+     cb1:	e8 fc ff ff ff       	call   cb2 <.L67+0x3d>
+			cb2: R_386_PLT32	putchar
+     cb6:	83 c4 10             	add    $0x10,%esp
+     cb9:	8b 85 44 ea ff ff    	mov    -0x15bc(%ebp),%eax
+     cbf:	6b c0 38             	imul   $0x38,%eax,%eax
+     cc2:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     cc5:	01 c8                	add    %ecx,%eax
+     cc7:	2d a8 15 00 00       	sub    $0x15a8,%eax
+     ccc:	8b 00                	mov    (%eax),%eax
+     cce:	83 f8 07             	cmp    $0x7,%eax
+     cd1:	0f 87 9f 00 00 00    	ja     d76 <.L81+0xa>
+     cd7:	c1 e0 02             	shl    $0x2,%eax
+     cda:	8b 84 18 34 08 00 00 	mov    0x834(%eax,%ebx,1),%eax
+			cdd: R_386_GOTOFF	.rodata
+     ce1:	01 d8                	add    %ebx,%eax
+     ce3:	3e ff e0             	notrack jmp *%eax
+     ce6:	83 ec 0c             	sub    $0xc,%esp
+     ce9:	8d 83 dc 07 00 00    	lea    0x7dc(%ebx),%eax
+			ceb: R_386_GOTOFF	.rodata
+     cef:	50                   	push   %eax
+     cf0:	e8 fc ff ff ff       	call   cf1 <.L67+0x7c>
+			cf1: R_386_PLT32	printf
+     cf5:	83 c4 10             	add    $0x10,%esp
+     cf8:	eb 7c                	jmp    d76 <.L81+0xa>
+     cfa:	83 ec 0c             	sub    $0xc,%esp
+     cfd:	6a 78                	push   $0x78
+     cff:	e8 fc ff ff ff       	call   d00 <.L67+0x8b>
+			d00: R_386_PLT32	putchar
+     d04:	83 c4 10             	add    $0x10,%esp
+     d07:	eb 6d                	jmp    d76 <.L81+0xa>
+     d09:	83 ec 0c             	sub    $0xc,%esp
+     d0c:	6a 77                	push   $0x77
+     d0e:	e8 fc ff ff ff       	call   d0f <.L67+0x9a>
+			d0f: R_386_PLT32	putchar
+     d13:	83 c4 10             	add    $0x10,%esp
+     d16:	eb 5e                	jmp    d76 <.L81+0xa>
+     d18:	83 ec 0c             	sub    $0xc,%esp
+     d1b:	8d 83 e1 07 00 00    	lea    0x7e1(%ebx),%eax
+			d1d: R_386_GOTOFF	.rodata
+     d21:	50                   	push   %eax
+     d22:	e8                   	.byte 0xe8
+     d23:	fc                   	cld    
+			d23: R_386_PLT32	printf
+     d24:	ff                   	(bad)  
+     d25:	ff                   	.byte 0xff
+
+00000d26 <.L85>:
+     d26:	ff 83 c4 10 eb 4a    	incl   0x4aeb10c4(%ebx)
+     d2c:	83 ec 0c             	sub    $0xc,%esp
+     d2f:	6a 72                	push   $0x72
+     d31:	e8 fc ff ff ff       	call   d32 <.L85+0xc>
+			d32: R_386_PLT32	putchar
+     d36:	83 c4 10             	add    $0x10,%esp
+     d39:	eb                   	.byte 0xeb
+
+00000d3a <.L84>:
+     d3a:	3b 83 ec 0c 8d 83    	cmp    -0x7c72f314(%ebx),%eax
+     d40:	e4 07                	in     $0x7,%al
+			d40: R_386_GOTOFF	.rodata
+     d42:	00 00                	add    %al,(%eax)
+     d44:	50                   	push   %eax
+     d45:	e8                   	.byte 0xe8
+     d46:	fc                   	cld    
+			d46: R_386_PLT32	printf
+     d47:	ff                   	(bad)  
+     d48:	ff                   	.byte 0xff
+
+00000d49 <.L83>:
+     d49:	ff 83 c4 10 eb 27    	incl   0x27eb10c4(%ebx)
+     d4f:	83 ec 0c             	sub    $0xc,%esp
+     d52:	8d 83 e7 07 00 00    	lea    0x7e7(%ebx),%eax
+			d54: R_386_GOTOFF	.rodata
+
+00000d58 <.L82>:
+     d58:	50                   	push   %eax
+     d59:	e8 fc ff ff ff       	call   d5a <.L82+0x2>
+			d5a: R_386_PLT32	printf
+     d5e:	83 c4 10             	add    $0x10,%esp
+     d61:	eb 13                	jmp    d76 <.L81+0xa>
+     d63:	83 ec 0c             	sub    $0xc,%esp
+     d66:	8d 83 ea 07 00 00    	lea    0x7ea(%ebx),%eax
+			d68: R_386_GOTOFF	.rodata
+
+00000d6c <.L81>:
+     d6c:	50                   	push   %eax
+     d6d:	e8 fc ff ff ff       	call   d6e <.L81+0x2>
+			d6e: R_386_PLT32	printf
+     d72:	83 c4 10             	add    $0x10,%esp
+     d75:	90                   	nop
+     d76:	8b                   	.byte 0x8b
+     d77:	85 44 ea ff          	test   %eax,-0x1(%edx,%ebp,8)
+
+00000d7b <.L80>:
+     d7b:	ff 6b c0             	ljmp   *-0x40(%ebx)
+     d7e:	38 8d 55 f8 01 d0    	cmp    %cl,-0x2ffe07ab(%ebp)
+     d84:	2d ac 15 00 00       	sub    $0x15ac,%eax
+     d89:	8b 50 0c             	mov    0xc(%eax),%edx
+     d8c:	8b 40 08             	mov    0x8(%eax),%eax
+
+00000d8f <.L79>:
+     d8f:	83 ec 04             	sub    $0x4,%esp
+     d92:	52                   	push   %edx
+     d93:	50                   	push   %eax
+     d94:	8d 83 ee 07 00 00    	lea    0x7ee(%ebx),%eax
+			d96: R_386_GOTOFF	.rodata
+     d9a:	50                   	push   %eax
+     d9b:	e8 fc ff ff ff       	call   d9c <.L79+0xd>
+			d9c: R_386_PLT32	printf
+     da0:	83 c4 10             	add    $0x10,%esp
+
+00000da3 <.L77>:
+     da3:	8b 85 44 ea ff ff    	mov    -0x15bc(%ebp),%eax
+     da9:	6b c0 38             	imul   $0x38,%eax,%eax
+     dac:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     daf:	01 c8                	add    %ecx,%eax
+     db1:	2d 9c 15 00 00       	sub    $0x159c,%eax
+     db6:	8b 50 04             	mov    0x4(%eax),%edx
+     db9:	8b 00                	mov    (%eax),%eax
+     dbb:	83 ec 04             	sub    $0x4,%esp
+     dbe:	52                   	push   %edx
+     dbf:	50                   	push   %eax
+     dc0:	8d 83 f6 07 00 00    	lea    0x7f6(%ebx),%eax
+			dc2: R_386_GOTOFF	.rodata
+     dc6:	50                   	push   %eax
+     dc7:	e8 fc ff ff ff       	call   dc8 <.L77+0x25>
+			dc8: R_386_PLT32	printf
+     dcc:	83 c4 10             	add    $0x10,%esp
+     dcf:	8b 85 44 ea ff ff    	mov    -0x15bc(%ebp),%eax
+     dd5:	6b c0 38             	imul   $0x38,%eax,%eax
+     dd8:	8d 55 f8             	lea    -0x8(%ebp),%edx
+     ddb:	01 d0                	add    %edx,%eax
+     ddd:	2d 9c 15 00 00       	sub    $0x159c,%eax
+     de2:	8b 50 0c             	mov    0xc(%eax),%edx
+     de5:	8b 40 08             	mov    0x8(%eax),%eax
+     de8:	83 ec 04             	sub    $0x4,%esp
+     deb:	52                   	push   %edx
+     dec:	50                   	push   %eax
+     ded:	8d 83 f6 07 00 00    	lea    0x7f6(%ebx),%eax
+			def: R_386_GOTOFF	.rodata
+     df3:	50                   	push   %eax
+     df4:	e8 fc ff ff ff       	call   df5 <.L77+0x52>
+			df5: R_386_PLT32	printf
+     df9:	83 c4 10             	add    $0x10,%esp
+     dfc:	8b 85 44 ea ff ff    	mov    -0x15bc(%ebp),%eax
+     e02:	6b c0 38             	imul   $0x38,%eax,%eax
+     e05:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     e08:	01 c8                	add    %ecx,%eax
+     e0a:	2d 8c 15 00 00       	sub    $0x158c,%eax
+     e0f:	8b 50 04             	mov    0x4(%eax),%edx
+     e12:	8b 00                	mov    (%eax),%eax
+     e14:	83 ec 04             	sub    $0x4,%esp
+     e17:	52                   	push   %edx
+     e18:	50                   	push   %eax
+     e19:	8d 83 ff 07 00 00    	lea    0x7ff(%ebx),%eax
+			e1b: R_386_GOTOFF	.rodata
+     e1f:	50                   	push   %eax
+     e20:	e8 fc ff ff ff       	call   e21 <.L77+0x7e>
+			e21: R_386_PLT32	printf
+     e25:	83 c4 10             	add    $0x10,%esp
+     e28:	8b 85 44 ea ff ff    	mov    -0x15bc(%ebp),%eax
+     e2e:	6b c0 38             	imul   $0x38,%eax,%eax
+     e31:	8d 55 f8             	lea    -0x8(%ebp),%edx
+     e34:	01 d0                	add    %edx,%eax
+     e36:	2d 8c 15 00 00       	sub    $0x158c,%eax
+     e3b:	8b 50 0c             	mov    0xc(%eax),%edx
+     e3e:	8b 40 08             	mov    0x8(%eax),%eax
+     e41:	83 ec 04             	sub    $0x4,%esp
+     e44:	52                   	push   %edx
+     e45:	50                   	push   %eax
+     e46:	8d 83 ff 07 00 00    	lea    0x7ff(%ebx),%eax
+			e48: R_386_GOTOFF	.rodata
+     e4c:	50                   	push   %eax
+     e4d:	e8 fc ff ff ff       	call   e4e <.L77+0xab>
+			e4e: R_386_PLT32	printf
+     e52:	83 c4 10             	add    $0x10,%esp
+     e55:	8b 85 44 ea ff ff    	mov    -0x15bc(%ebp),%eax
+     e5b:	6b c0 38             	imul   $0x38,%eax,%eax
+     e5e:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+     e61:	01 c8                	add    %ecx,%eax
+     e63:	2d 7c 15 00 00       	sub    $0x157c,%eax
+     e68:	8b 50 04             	mov    0x4(%eax),%edx
+     e6b:	8b 00                	mov    (%eax),%eax
+     e6d:	83 ec 04             	sub    $0x4,%esp
+     e70:	52                   	push   %edx
+     e71:	50                   	push   %eax
+     e72:	8d 83 0a 08 00 00    	lea    0x80a(%ebx),%eax
+			e74: R_386_GOTOFF	.rodata
+     e78:	50                   	push   %eax
+     e79:	e8 fc ff ff ff       	call   e7a <.L77+0xd7>
+			e7a: R_386_PLT32	printf
+     e7e:	83 c4 10             	add    $0x10,%esp
+     e81:	83 ec 0c             	sub    $0xc,%esp
+     e84:	6a 0a                	push   $0xa
+     e86:	e8 fc ff ff ff       	call   e87 <.L77+0xe4>
+			e87: R_386_PLT32	putchar
+     e8b:	83 c4 10             	add    $0x10,%esp
+     e8e:	83 85 44 ea ff ff 01 	addl   $0x1,-0x15bc(%ebp)
+     e95:	8b 85 44 ea ff ff    	mov    -0x15bc(%ebp),%eax
+     e9b:	3b 85 48 ea ff ff    	cmp    -0x15b8(%ebp),%eax
+     ea1:	0f 8c 6d fc ff ff    	jl     b14 <program_header_64_parse+0xb8>
+     ea7:	90                   	nop
+     ea8:	8b 45 f4             	mov    -0xc(%ebp),%eax
+     eab:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+     eb2:	74 05                	je     eb9 <.L77+0x116>
+     eb4:	e8 fc ff ff ff       	call   eb5 <.L77+0x112>
+			eb5: R_386_PC32	__stack_chk_fail_local
+     eb9:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+     ebc:	c9                   	leave  
+     ebd:	c3                   	ret    
+     ebe:	f3 0f 1e fb          	endbr32 
+     ec2:	55                   	push   %ebp
+     ec3:	89 e5                	mov    %esp,%ebp
+     ec5:	53                   	push   %ebx
+     ec6:	83 ec 14             	sub    $0x14,%esp
+     ec9:	e8 fc ff ff ff       	call   eca <.L77+0x127>
+			eca: R_386_PC32	__x86.get_pc_thunk.bx
+     ece:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			ed0: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+     ed4:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			ed6: R_386_GOT32X	fp
+     eda:	8b 00                	mov    (%eax),%eax
+     edc:	83 ec 04             	sub    $0x4,%esp
+     edf:	6a 00                	push   $0x0
+     ee1:	6a 00                	push   $0x0
+     ee3:	50                   	push   %eax
+     ee4:	e8 fc ff ff ff       	call   ee5 <.L77+0x142>
+			ee5: R_386_PLT32	fseek
+     ee9:	83 c4 10             	add    $0x10,%esp
+     eec:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			eee: R_386_GOT32X	fp
+     ef2:	8b 00                	mov    (%eax),%eax
+     ef4:	50                   	push   %eax
+     ef5:	6a 01                	push   $0x1
+     ef7:	6a 34                	push   $0x34
+     ef9:	ff 75 08             	pushl  0x8(%ebp)
+     efc:	e8                   	.byte 0xe8
+     efd:	fc                   	cld    
+			efd: R_386_PLT32	fread
+
+00000efe <ELF_header_32_parse>:
+     efe:	ff                   	(bad)  
+     eff:	ff                   	(bad)  
+     f00:	ff 83 c4 10 83 ec    	incl   -0x137cef3c(%ebx)
+     f06:	0c 8d                	or     $0x8d,%al
+     f08:	83 00 00             	addl   $0x0,(%eax)
+			f09: R_386_GOTOFF	.rodata
+     f0b:	00 00                	add    %al,(%eax)
+     f0d:	50                   	push   %eax
+     f0e:	e8 fc ff ff ff       	call   f0f <ELF_header_32_parse+0x11>
+			f0f: R_386_PLT32	puts
+     f13:	83 c4 10             	add    $0x10,%esp
+     f16:	83 ec 0c             	sub    $0xc,%esp
+     f19:	8d 83 6e 00 00 00    	lea    0x6e(%ebx),%eax
+			f1b: R_386_GOTOFF	.rodata
+     f1f:	50                   	push   %eax
+     f20:	e8 fc ff ff ff       	call   f21 <ELF_header_32_parse+0x23>
+			f21: R_386_PLT32	puts
+     f25:	83 c4 10             	add    $0x10,%esp
+     f28:	83 ec 0c             	sub    $0xc,%esp
+     f2b:	8d 83 76 00 00 00    	lea    0x76(%ebx),%eax
+			f2d: R_386_GOTOFF	.rodata
+     f31:	50                   	push   %eax
+     f32:	e8 fc ff ff ff       	call   f33 <ELF_header_32_parse+0x35>
+			f33: R_386_PLT32	printf
+     f37:	83 c4 10             	add    $0x10,%esp
+     f3a:	c7 45 f4 00 00 00 00 	movl   $0x0,-0xc(%ebp)
+     f41:	eb 25                	jmp    f68 <ELF_header_32_parse+0x6a>
+     f43:	8b 55 08             	mov    0x8(%ebp),%edx
+     f46:	8b 45 f4             	mov    -0xc(%ebp),%eax
+     f49:	01 d0                	add    %edx,%eax
+     f4b:	0f b6 00             	movzbl (%eax),%eax
+     f4e:	0f b6 c0             	movzbl %al,%eax
+     f51:	83 ec 08             	sub    $0x8,%esp
+     f54:	50                   	push   %eax
+     f55:	8d 83 80 00 00 00    	lea    0x80(%ebx),%eax
+			f57: R_386_GOTOFF	.rodata
+     f5b:	50                   	push   %eax
+     f5c:	e8 fc ff ff ff       	call   f5d <ELF_header_32_parse+0x5f>
+			f5d: R_386_PLT32	printf
+     f61:	83 c4 10             	add    $0x10,%esp
+     f64:	83 45 f4 01          	addl   $0x1,-0xc(%ebp)
+     f68:	83 7d f4 0f          	cmpl   $0xf,-0xc(%ebp)
+     f6c:	7e d5                	jle    f43 <ELF_header_32_parse+0x45>
+     f6e:	83 ec 0c             	sub    $0xc,%esp
+     f71:	8d 83 86 00 00 00    	lea    0x86(%ebx),%eax
+			f73: R_386_GOTOFF	.rodata
+     f77:	50                   	push   %eax
+     f78:	e8 fc ff ff ff       	call   f79 <ELF_header_32_parse+0x7b>
+			f79: R_386_PLT32	printf
+     f7d:	83 c4 10             	add    $0x10,%esp
+     f80:	8b 45 08             	mov    0x8(%ebp),%eax
+     f83:	0f b7 40 10          	movzwl 0x10(%eax),%eax
+     f87:	0f b7 c0             	movzwl %ax,%eax
+     f8a:	3d ff ff 00 00       	cmp    $0xffff,%eax
+     f8f:	0f 84 b4 00 00 00    	je     1049 <.L97+0x10>
+     f95:	3d ff ff 00 00       	cmp    $0xffff,%eax
+     f9a:	0f 8f bc 00 00 00    	jg     105c <.L96+0xf>
+     fa0:	83 f8 04             	cmp    $0x4,%eax
+     fa3:	7f 20                	jg     fc5 <ELF_header_32_parse+0xc7>
+     fa5:	85 c0                	test   %eax,%eax
+     fa7:	0f 88 af 00 00 00    	js     105c <.L96+0xf>
+     fad:	83 f8 04             	cmp    $0x4,%eax
+     fb0:	0f 87 a6 00 00 00    	ja     105c <.L96+0xf>
+     fb6:	c1 e0 02             	shl    $0x2,%eax
+     fb9:	8b 84 18 b4 08 00 00 	mov    0x8b4(%eax,%ebx,1),%eax
+			fbc: R_386_GOTOFF	.rodata
+     fc0:	01 d8                	add    %ebx,%eax
+     fc2:	3e ff e0             	notrack jmp *%eax
+     fc5:	3d 00 ff 00 00       	cmp    $0xff00,%eax
+     fca:	74 69                	je     1035 <.L98+0x10>
+     fcc:	e9 8b 00 00 00       	jmp    105c <.L96+0xf>
+     fd1:	83 ec 0c             	sub    $0xc,%esp
+     fd4:	8d 83 92 00 00 00    	lea    0x92(%ebx),%eax
+			fd6: R_386_GOTOFF	.rodata
+     fda:	50                   	push   %eax
+     fdb:	e8 fc ff ff ff       	call   fdc <ELF_header_32_parse+0xde>
+			fdc: R_386_PLT32	puts
+     fe0:	83 c4 10             	add    $0x10,%esp
+     fe3:	eb 77                	jmp    105c <.L96+0xf>
+     fe5:	83 ec 0c             	sub    $0xc,%esp
+     fe8:	8d 83 a5 00 00 00    	lea    0xa5(%ebx),%eax
+			fea: R_386_GOTOFF	.rodata
+     fee:	50                   	push   %eax
+     fef:	e8 fc ff ff ff       	call   ff0 <ELF_header_32_parse+0xf2>
+			ff0: R_386_PLT32	puts
+     ff4:	83 c4 10             	add    $0x10,%esp
+     ff7:	eb 63                	jmp    105c <.L96+0xf>
+     ff9:	83 ec 0c             	sub    $0xc,%esp
+     ffc:	8d 83 b8 00 00 00    	lea    0xb8(%ebx),%eax
+			ffe: R_386_GOTOFF	.rodata
+    1002:	50                   	push   %eax
+    1003:	e8 fc ff ff ff       	call   1004 <ELF_header_32_parse+0x106>
+			1004: R_386_PLT32	puts
+    1008:	83 c4 10             	add    $0x10,%esp
+    100b:	eb 4f                	jmp    105c <.L96+0xf>
+    100d:	83 ec 0c             	sub    $0xc,%esp
+    1010:	8d                   	.byte 0x8d
+
+00001011 <.L99>:
+    1011:	83 c8 00             	or     $0x0,%eax
+			1012: R_386_GOTOFF	.rodata
+    1014:	00 00                	add    %al,(%eax)
+    1016:	50                   	push   %eax
+    1017:	e8 fc ff ff ff       	call   1018 <.L99+0x7>
+			1018: R_386_PLT32	puts
+    101c:	83 c4 10             	add    $0x10,%esp
+    101f:	eb 3b                	jmp    105c <.L96+0xf>
+    1021:	83 ec 0c             	sub    $0xc,%esp
+    1024:	8d                   	.byte 0x8d
+
+00001025 <.L98>:
+    1025:	83 de 00             	sbb    $0x0,%esi
+			1026: R_386_GOTOFF	.rodata
+    1028:	00 00                	add    %al,(%eax)
+    102a:	50                   	push   %eax
+    102b:	e8 fc ff ff ff       	call   102c <.L98+0x7>
+			102c: R_386_PLT32	puts
+    1030:	83 c4 10             	add    $0x10,%esp
+    1033:	eb 27                	jmp    105c <.L96+0xf>
+    1035:	83 ec 0c             	sub    $0xc,%esp
+    1038:	8d                   	.byte 0x8d
+
+00001039 <.L97>:
+    1039:	83 ec 00             	sub    $0x0,%esp
+			103a: R_386_GOTOFF	.rodata
+    103c:	00 00                	add    %al,(%eax)
+    103e:	50                   	push   %eax
+    103f:	e8 fc ff ff ff       	call   1040 <.L97+0x7>
+			1040: R_386_PLT32	puts
+    1044:	83 c4 10             	add    $0x10,%esp
+    1047:	eb 13                	jmp    105c <.L96+0xf>
+    1049:	83 ec 0c             	sub    $0xc,%esp
+    104c:	8d                   	.byte 0x8d
+
+0000104d <.L96>:
+    104d:	83 14 01 00          	adcl   $0x0,(%ecx,%eax,1)
+			104e: R_386_GOTOFF	.rodata
+    1051:	00 50 e8             	add    %dl,-0x18(%eax)
+    1054:	fc                   	cld    
+			1054: R_386_PLT32	puts
+    1055:	ff                   	(bad)  
+    1056:	ff                   	(bad)  
+    1057:	ff 83 c4 10 90 83    	incl   -0x7c6fef3c(%ebx)
+    105d:	ec                   	in     (%dx),%al
+    105e:	0c 8d                	or     $0x8d,%al
+    1060:	83                   	.byte 0x83
+
+00001061 <.L94>:
+    1061:	39 01                	cmp    %eax,(%ecx)
+			1061: R_386_GOTOFF	.rodata
+    1063:	00 00                	add    %al,(%eax)
+    1065:	50                   	push   %eax
+    1066:	e8 fc ff ff ff       	call   1067 <.L94+0x6>
+			1067: R_386_PLT32	printf
+    106b:	83 c4 10             	add    $0x10,%esp
+    106e:	8b 45 08             	mov    0x8(%ebp),%eax
+    1071:	0f b7 40 12          	movzwl 0x12(%eax),%eax
+    1075:	0f b7 c0             	movzwl %ax,%eax
+    1078:	83 f8 3e             	cmp    $0x3e,%eax
+    107b:	0f 87 df 00 00 00    	ja     1160 <.L106+0xf>
+    1081:	c1 e0 02             	shl    $0x2,%eax
+    1084:	8b 84 18 c8 08 00 00 	mov    0x8c8(%eax,%ebx,1),%eax
+			1087: R_386_GOTOFF	.rodata
+    108b:	01 d8                	add    %ebx,%eax
+    108d:	3e ff e0             	notrack jmp *%eax
+    1090:	83 ec 0c             	sub    $0xc,%esp
+    1093:	8d 83 52 01 00 00    	lea    0x152(%ebx),%eax
+			1095: R_386_GOTOFF	.rodata
+    1099:	50                   	push   %eax
+    109a:	e8 fc ff ff ff       	call   109b <.L94+0x3a>
+			109b: R_386_PLT32	puts
+    109f:	83 c4 10             	add    $0x10,%esp
+    10a2:	e9 b9 00 00 00       	jmp    1160 <.L106+0xf>
+    10a7:	83 ec 0c             	sub    $0xc,%esp
+    10aa:	8d 83 65 01 00 00    	lea    0x165(%ebx),%eax
+			10ac: R_386_GOTOFF	.rodata
+    10b0:	50                   	push   %eax
+    10b1:	e8 fc ff ff ff       	call   10b2 <.L94+0x51>
+			10b2: R_386_PLT32	puts
+    10b6:	83 c4 10             	add    $0x10,%esp
+    10b9:	e9 a2 00 00 00       	jmp    1160 <.L106+0xf>
+    10be:	83 ec 0c             	sub    $0xc,%esp
+    10c1:	8d 83 73 01 00 00    	lea    0x173(%ebx),%eax
+			10c3: R_386_GOTOFF	.rodata
+    10c7:	50                   	push   %eax
+    10c8:	e8 fc ff ff ff       	call   10c9 <.L94+0x68>
+			10c9: R_386_PLT32	puts
+    10cd:	83 c4 10             	add    $0x10,%esp
+
+000010d0 <.L112>:
+    10d0:	e9 8b 00 00 00       	jmp    1160 <.L106+0xf>
+    10d5:	83 ec 0c             	sub    $0xc,%esp
+    10d8:	8d 83 79 01 00 00    	lea    0x179(%ebx),%eax
+			10da: R_386_GOTOFF	.rodata
+    10de:	50                   	push   %eax
+    10df:	e8 fc ff ff ff       	call   10e0 <.L112+0x10>
+			10e0: R_386_PLT32	puts
+    10e4:	83 c4 10             	add    $0x10,%esp
+
+000010e7 <.L111>:
+    10e7:	eb 77                	jmp    1160 <.L106+0xf>
+    10e9:	83 ec 0c             	sub    $0xc,%esp
+    10ec:	8d 83 8c 01 00 00    	lea    0x18c(%ebx),%eax
+			10ee: R_386_GOTOFF	.rodata
+    10f2:	50                   	push   %eax
+    10f3:	e8 fc ff ff ff       	call   10f4 <.L111+0xd>
+			10f4: R_386_PLT32	puts
+    10f8:	83 c4 10             	add    $0x10,%esp
+    10fb:	eb 63                	jmp    1160 <.L106+0xf>
+    10fd:	83                   	.byte 0x83
+
+000010fe <.L110>:
+    10fe:	ec                   	in     (%dx),%al
+    10ff:	0c 8d                	or     $0x8d,%al
+    1101:	83 9b 01 00 00 50 e8 	sbbl   $0xffffffe8,0x50000001(%ebx)
+			1102: R_386_GOTOFF	.rodata
+    1108:	fc                   	cld    
+			1108: R_386_PLT32	puts
+    1109:	ff                   	(bad)  
+    110a:	ff                   	(bad)  
+    110b:	ff 83 c4 10 eb 4f    	incl   0x4feb10c4(%ebx)
+    1111:	83 ec 0c             	sub    $0xc,%esp
+    1114:	8d                   	.byte 0x8d
+
+00001115 <.L109>:
+    1115:	83 aa 01 00 00 50 e8 	subl   $0xffffffe8,0x50000001(%edx)
+			1116: R_386_GOTOFF	.rodata
+    111c:	fc                   	cld    
+			111c: R_386_PLT32	puts
+    111d:	ff                   	(bad)  
+    111e:	ff                   	(bad)  
+    111f:	ff 83 c4 10 eb 3b    	incl   0x3beb10c4(%ebx)
+    1125:	83 ec 0c             	sub    $0xc,%esp
+    1128:	8d                   	.byte 0x8d
+
+00001129 <.L108>:
+    1129:	83 b6 01 00 00 50 e8 	xorl   $0xffffffe8,0x50000001(%esi)
+			112a: R_386_GOTOFF	.rodata
+    1130:	fc                   	cld    
+			1130: R_386_PLT32	puts
+    1131:	ff                   	(bad)  
+    1132:	ff                   	(bad)  
+    1133:	ff 83 c4 10 eb 27    	incl   0x27eb10c4(%ebx)
+    1139:	83 ec 0c             	sub    $0xc,%esp
+    113c:	8d                   	.byte 0x8d
+
+0000113d <.L107>:
+    113d:	83 cd 01             	or     $0x1,%ebp
+			113e: R_386_GOTOFF	.rodata
+    1140:	00 00                	add    %al,(%eax)
+    1142:	50                   	push   %eax
+    1143:	e8 fc ff ff ff       	call   1144 <.L107+0x7>
+			1144: R_386_PLT32	puts
+    1148:	83 c4 10             	add    $0x10,%esp
+    114b:	eb 13                	jmp    1160 <.L106+0xf>
+    114d:	83 ec 0c             	sub    $0xc,%esp
+    1150:	8d                   	.byte 0x8d
+
+00001151 <.L106>:
+    1151:	83 e4 01             	and    $0x1,%esp
+			1152: R_386_GOTOFF	.rodata
+    1154:	00 00                	add    %al,(%eax)
+    1156:	50                   	push   %eax
+    1157:	e8 fc ff ff ff       	call   1158 <.L106+0x7>
+			1158: R_386_PLT32	puts
+    115c:	83 c4 10             	add    $0x10,%esp
+    115f:	90                   	nop
+    1160:	83 ec 0c             	sub    $0xc,%esp
+    1163:	8d                   	.byte 0x8d
+    1164:	83                   	.byte 0x83
+
+00001165 <.L105>:
+    1165:	fc                   	cld    
+			1165: R_386_GOTOFF	.rodata
+    1166:	01 00                	add    %eax,(%eax)
+    1168:	00 50 e8             	add    %dl,-0x18(%eax)
+    116b:	fc                   	cld    
+			116b: R_386_PLT32	printf
+    116c:	ff                   	(bad)  
+    116d:	ff                   	(bad)  
+    116e:	ff 83 c4 10 8b 45    	incl   0x458b10c4(%ebx)
+    1174:	08                   	.byte 0x8
+    1175:	8b 40 14             	mov    0x14(%eax),%eax
+    1178:	85                   	.byte 0x85
+
+00001179 <.L104>:
+    1179:	c0 74 07 83 f8       	shlb   $0xf8,-0x7d(%edi,%eax,1)
+    117e:	01 74 16 eb          	add    %esi,-0x15(%esi,%edx,1)
+    1182:	27                   	daa    
+    1183:	83 ec 0c             	sub    $0xc,%esp
+    1186:	8d 83 07 02 00 00    	lea    0x207(%ebx),%eax
+			1188: R_386_GOTOFF	.rodata
+    118c:	50                   	push   %eax
+
+0000118d <.L102>:
+    118d:	e8 fc ff ff ff       	call   118e <.L102+0x1>
+			118e: R_386_PLT32	puts
+    1192:	83 c4 10             	add    $0x10,%esp
+    1195:	eb 13                	jmp    11aa <.L101+0xa>
+    1197:	83 ec 0c             	sub    $0xc,%esp
+    119a:	8d 83 17 02 00 00    	lea    0x217(%ebx),%eax
+			119c: R_386_GOTOFF	.rodata
+
+000011a0 <.L101>:
+    11a0:	50                   	push   %eax
+    11a1:	e8 fc ff ff ff       	call   11a2 <.L101+0x2>
+			11a2: R_386_PLT32	puts
+    11a6:	83 c4 10             	add    $0x10,%esp
+    11a9:	90                   	nop
+    11aa:	8b 45 08             	mov    0x8(%ebp),%eax
+    11ad:	8b 40 18             	mov    0x18(%eax),%eax
+    11b0:	83 ec 08             	sub    $0x8,%esp
+    11b3:	50                   	push   %eax
+    11b4:	8d 83 54 08 00 00    	lea    0x854(%ebx),%eax
+			11b6: R_386_GOTOFF	.rodata
+    11ba:	50                   	push   %eax
+    11bb:	e8 fc ff ff ff       	call   11bc <.L101+0x1c>
+			11bc: R_386_PLT32	printf
+    11c0:	83 c4 10             	add    $0x10,%esp
+    11c3:	8b 45 08             	mov    0x8(%ebp),%eax
+    11c6:	8b 40 1c             	mov    0x1c(%eax),%eax
+    11c9:	83 ec 08             	sub    $0x8,%esp
+    11cc:	50                   	push   %eax
+    11cd:	8d 83 74 08 00 00    	lea    0x874(%ebx),%eax
+			11cf: R_386_GOTOFF	.rodata
+    11d3:	50                   	push   %eax
+    11d4:	e8 fc ff ff ff       	call   11d5 <.L101+0x35>
+			11d5: R_386_PLT32	printf
+    11d9:	83 c4 10             	add    $0x10,%esp
+    11dc:	8b 45 08             	mov    0x8(%ebp),%eax
+    11df:	8b 40 20             	mov    0x20(%eax),%eax
+    11e2:	83 ec 08             	sub    $0x8,%esp
+    11e5:	50                   	push   %eax
+    11e6:	8d 83 94 08 00 00    	lea    0x894(%ebx),%eax
+			11e8: R_386_GOTOFF	.rodata
+    11ec:	50                   	push   %eax
+    11ed:	e8 fc ff ff ff       	call   11ee <.L101+0x4e>
+			11ee: R_386_PLT32	printf
+    11f2:	83 c4 10             	add    $0x10,%esp
+    11f5:	8b 45 08             	mov    0x8(%ebp),%eax
+    11f8:	8b 40 24             	mov    0x24(%eax),%eax
+    11fb:	83 ec 08             	sub    $0x8,%esp
+    11fe:	50                   	push   %eax
+    11ff:	8d 83 85 02 00 00    	lea    0x285(%ebx),%eax
+			1201: R_386_GOTOFF	.rodata
+    1205:	50                   	push   %eax
+    1206:	e8 fc ff ff ff       	call   1207 <.L101+0x67>
+			1207: R_386_PLT32	printf
+    120b:	83 c4 10             	add    $0x10,%esp
+    120e:	8b 45 08             	mov    0x8(%ebp),%eax
+    1211:	0f b7 40 28          	movzwl 0x28(%eax),%eax
+    1215:	0f b7 c0             	movzwl %ax,%eax
+    1218:	83 ec 08             	sub    $0x8,%esp
+    121b:	50                   	push   %eax
+    121c:	8d 83 a0 02 00 00    	lea    0x2a0(%ebx),%eax
+			121e: R_386_GOTOFF	.rodata
+    1222:	50                   	push   %eax
+    1223:	e8 fc ff ff ff       	call   1224 <.L101+0x84>
+			1224: R_386_PLT32	printf
+    1228:	83 c4 10             	add    $0x10,%esp
+    122b:	8b 45 08             	mov    0x8(%ebp),%eax
+    122e:	0f b7 40 2a          	movzwl 0x2a(%eax),%eax
+    1232:	0f b7 c0             	movzwl %ax,%eax
+    1235:	83 ec 08             	sub    $0x8,%esp
+    1238:	50                   	push   %eax
+    1239:	8d 83 c0 02 00 00    	lea    0x2c0(%ebx),%eax
+			123b: R_386_GOTOFF	.rodata
+    123f:	50                   	push   %eax
+    1240:	e8 fc ff ff ff       	call   1241 <.L101+0xa1>
+			1241: R_386_PLT32	printf
+    1245:	83 c4 10             	add    $0x10,%esp
+    1248:	8b 45 08             	mov    0x8(%ebp),%eax
+    124b:	0f b7 40 2c          	movzwl 0x2c(%eax),%eax
+    124f:	0f b7 c0             	movzwl %ax,%eax
+    1252:	83 ec 08             	sub    $0x8,%esp
+    1255:	50                   	push   %eax
+    1256:	8d 83 ea 02 00 00    	lea    0x2ea(%ebx),%eax
+			1258: R_386_GOTOFF	.rodata
+    125c:	50                   	push   %eax
+    125d:	e8 fc ff ff ff       	call   125e <.L101+0xbe>
+			125e: R_386_PLT32	printf
+    1262:	83 c4 10             	add    $0x10,%esp
+    1265:	8b 45 08             	mov    0x8(%ebp),%eax
+    1268:	0f b7 40 2e          	movzwl 0x2e(%eax),%eax
+    126c:	0f b7 c0             	movzwl %ax,%eax
+    126f:	83 ec 08             	sub    $0x8,%esp
+    1272:	50                   	push   %eax
+    1273:	8d 83 08 03 00 00    	lea    0x308(%ebx),%eax
+			1275: R_386_GOTOFF	.rodata
+    1279:	50                   	push   %eax
+    127a:	e8 fc ff ff ff       	call   127b <.L101+0xdb>
+			127b: R_386_PLT32	printf
+    127f:	83 c4 10             	add    $0x10,%esp
+    1282:	8b 45 08             	mov    0x8(%ebp),%eax
+    1285:	0f b7 40 30          	movzwl 0x30(%eax),%eax
+    1289:	0f b7 c0             	movzwl %ax,%eax
+    128c:	83 ec 08             	sub    $0x8,%esp
+    128f:	50                   	push   %eax
+    1290:	8d 83 2f 03 00 00    	lea    0x32f(%ebx),%eax
+			1292: R_386_GOTOFF	.rodata
+    1296:	50                   	push   %eax
+    1297:	e8 fc ff ff ff       	call   1298 <.L101+0xf8>
+			1298: R_386_PLT32	printf
+    129c:	83 c4 10             	add    $0x10,%esp
+    129f:	8b 45 08             	mov    0x8(%ebp),%eax
+    12a2:	0f b7 40 32          	movzwl 0x32(%eax),%eax
+    12a6:	0f b7 c0             	movzwl %ax,%eax
+    12a9:	83 ec 08             	sub    $0x8,%esp
+    12ac:	50                   	push   %eax
+    12ad:	8d 83 4c 03 00 00    	lea    0x34c(%ebx),%eax
+			12af: R_386_GOTOFF	.rodata
+    12b3:	50                   	push   %eax
+    12b4:	e8 fc ff ff ff       	call   12b5 <.L101+0x115>
+			12b5: R_386_PLT32	printf
+    12b9:	83 c4 10             	add    $0x10,%esp
+    12bc:	90                   	nop
+    12bd:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    12c0:	c9                   	leave  
+    12c1:	c3                   	ret    
+    12c2:	f3 0f 1e fb          	endbr32 
+    12c6:	55                   	push   %ebp
+    12c7:	89 e5                	mov    %esp,%ebp
+    12c9:	53                   	push   %ebx
+    12ca:	81 ec a4 0f 00 00    	sub    $0xfa4,%esp
+    12d0:	e8 fc ff ff ff       	call   12d1 <.L101+0x131>
+			12d1: R_386_PC32	__x86.get_pc_thunk.bx
+    12d5:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			12d7: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+    12db:	8b 45 08             	mov    0x8(%ebp),%eax
+    12de:	89 85 64 f0 ff ff    	mov    %eax,-0xf9c(%ebp)
+    12e4:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+    12ea:	89 45 f4             	mov    %eax,-0xc(%ebp)
+    12ed:	31 c0                	xor    %eax,%eax
+    12ef:	8b 85 64 f0 ff ff    	mov    -0xf9c(%ebp),%eax
+    12f5:	0f b7 40 30          	movzwl 0x30(%eax),%eax
+    12f9:	0f b7 c0             	movzwl %ax,%eax
+    12fc:	89 85 78 f0 ff ff    	mov    %eax,-0xf88(%ebp)
+
+00001302 <section_header_32_parse>:
+    1302:	8b 85 64 f0 ff ff    	mov    -0xf9c(%ebp),%eax
+    1308:	8b 40 20             	mov    0x20(%eax),%eax
+    130b:	89 c2                	mov    %eax,%edx
+    130d:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			130f: R_386_GOT32X	fp
+    1313:	8b 00                	mov    (%eax),%eax
+    1315:	83 ec 04             	sub    $0x4,%esp
+    1318:	6a 00                	push   $0x0
+    131a:	52                   	push   %edx
+    131b:	50                   	push   %eax
+    131c:	e8 fc ff ff ff       	call   131d <section_header_32_parse+0x1b>
+			131d: R_386_PLT32	fseek
+    1321:	83 c4 10             	add    $0x10,%esp
+    1324:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1326: R_386_GOT32X	fp
+    132a:	8b 10                	mov    (%eax),%edx
+    132c:	8b 85 78 f0 ff ff    	mov    -0xf88(%ebp),%eax
+    1332:	52                   	push   %edx
+    1333:	50                   	push   %eax
+    1334:	6a 28                	push   $0x28
+    1336:	8d 85 7c f0 ff ff    	lea    -0xf84(%ebp),%eax
+    133c:	50                   	push   %eax
+    133d:	e8 fc ff ff ff       	call   133e <section_header_32_parse+0x3c>
+			133e: R_386_PLT32	fread
+    1342:	83 c4 10             	add    $0x10,%esp
+    1345:	8b 85 64 f0 ff ff    	mov    -0xf9c(%ebp),%eax
+    134b:	0f b7 40 32          	movzwl 0x32(%eax),%eax
+    134f:	0f b7 d0             	movzwl %ax,%edx
+    1352:	89 d0                	mov    %edx,%eax
+    1354:	c1 e0 02             	shl    $0x2,%eax
+    1357:	01 d0                	add    %edx,%eax
+    1359:	c1 e0 03             	shl    $0x3,%eax
+    135c:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    135f:	01 c8                	add    %ecx,%eax
+    1361:	2d 6c 0f 00 00       	sub    $0xf6c,%eax
+    1366:	8b 00                	mov    (%eax),%eax
+    1368:	89 c2                	mov    %eax,%edx
+    136a:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			136c: R_386_GOT32X	fp
+    1370:	8b 00                	mov    (%eax),%eax
+    1372:	83 ec 04             	sub    $0x4,%esp
+    1375:	6a 00                	push   $0x0
+    1377:	52                   	push   %edx
+    1378:	50                   	push   %eax
+    1379:	e8 fc ff ff ff       	call   137a <section_header_32_parse+0x78>
+			137a: R_386_PLT32	fseek
+    137e:	83 c4 10             	add    $0x10,%esp
+    1381:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1383: R_386_GOT32X	fp
+    1387:	8b 08                	mov    (%eax),%ecx
+    1389:	8b 85 64 f0 ff ff    	mov    -0xf9c(%ebp),%eax
+    138f:	0f b7 40 32          	movzwl 0x32(%eax),%eax
+    1393:	0f b7 d0             	movzwl %ax,%edx
+    1396:	89 d0                	mov    %edx,%eax
+    1398:	c1 e0 02             	shl    $0x2,%eax
+    139b:	01 d0                	add    %edx,%eax
+    139d:	c1 e0 03             	shl    $0x3,%eax
+    13a0:	8d 55 f8             	lea    -0x8(%ebp),%edx
+    13a3:	01 d0                	add    %edx,%eax
+    13a5:	2d 68 0f 00 00       	sub    $0xf68,%eax
+    13aa:	8b 00                	mov    (%eax),%eax
+    13ac:	51                   	push   %ecx
+    13ad:	50                   	push   %eax
+    13ae:	6a 01                	push   $0x1
+    13b0:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			13b2: R_386_GOT32X	strtable
+    13b6:	50                   	push   %eax
+    13b7:	e8 fc ff ff ff       	call   13b8 <section_header_32_parse+0xb6>
+			13b8: R_386_PLT32	fread
+    13bc:	83 c4 10             	add    $0x10,%esp
+    13bf:	83 ec 0c             	sub    $0xc,%esp
+    13c2:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			13c4: R_386_GOTOFF	.rodata
+    13c8:	50                   	push   %eax
+    13c9:	e8 fc ff ff ff       	call   13ca <section_header_32_parse+0xc8>
+			13ca: R_386_PLT32	puts
+    13ce:	83 c4 10             	add    $0x10,%esp
+    13d1:	8b 85 64 f0 ff ff    	mov    -0xf9c(%ebp),%eax
+    13d7:	8b 40 20             	mov    0x20(%eax),%eax
+    13da:	83 ec 04             	sub    $0x4,%esp
+    13dd:	50                   	push   %eax
+    13de:	ff b5 78 f0 ff ff    	pushl  -0xf88(%ebp)
+    13e4:	8d 83 84 04 00 00    	lea    0x484(%ebx),%eax
+			13e6: R_386_GOTOFF	.rodata
+    13ea:	50                   	push   %eax
+    13eb:	e8 fc ff ff ff       	call   13ec <section_header_32_parse+0xea>
+			13ec: R_386_PLT32	printf
+    13f0:	83 c4 10             	add    $0x10,%esp
+    13f3:	83 ec 0c             	sub    $0xc,%esp
+    13f6:	8d 83 bf 04 00 00    	lea    0x4bf(%ebx),%eax
+			13f8: R_386_GOTOFF	.rodata
+    13fc:	50                   	push   %eax
+    13fd:	e8 fc ff ff ff       	call   13fe <section_header_32_parse+0xfc>
+			13fe: R_386_PLT32	puts
+    1402:	83 c4 10             	add    $0x10,%esp
+    1405:	83 ec 0c             	sub    $0xc,%esp
+    1408:	8d 83 c4 09 00 00    	lea    0x9c4(%ebx),%eax
+			140a: R_386_GOTOFF	.rodata
+    140e:	50                   	push   %eax
+    140f:	e8 fc ff ff ff       	call   1410 <section_header_32_parse+0x10e>
+			1410: R_386_PLT32	puts
+    1414:	83 c4 10             	add    $0x10,%esp
+    1417:	c7 85 70 f0 ff ff 00 	movl   $0x0,-0xf90(%ebp)
+    141e:	00 00 00 
+    1421:	e9 aa 04 00 00       	jmp    18d0 <.L122+0x13f>
+    1426:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    142c:	89 d0                	mov    %edx,%eax
+    142e:	c1 e0 02             	shl    $0x2,%eax
+    1431:	01 d0                	add    %edx,%eax
+    1433:	c1 e0 03             	shl    $0x3,%eax
+    1436:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    1439:	01 c8                	add    %ecx,%eax
+    143b:	2d 7c 0f 00 00       	sub    $0xf7c,%eax
+    1440:	8b 00                	mov    (%eax),%eax
+    1442:	8b 93 00 00 00 00    	mov    0x0(%ebx),%edx
+			1444: R_386_GOT32X	strtable
+    1448:	01 d0                	add    %edx,%eax
+    144a:	83 ec 04             	sub    $0x4,%esp
+    144d:	50                   	push   %eax
+    144e:	ff b5 70 f0 ff ff    	pushl  -0xf90(%ebp)
+    1454:	8d 83 3c 05 00 00    	lea    0x53c(%ebx),%eax
+			1456: R_386_GOTOFF	.rodata
+    145a:	50                   	push   %eax
+    145b:	e8 fc ff ff ff       	call   145c <section_header_32_parse+0x15a>
+			145c: R_386_PLT32	printf
+    1460:	83 c4 10             	add    $0x10,%esp
+    1463:	c7 85 74 f0 ff ff 00 	movl   $0x0,-0xf8c(%ebp)
+    146a:	00 00 00 
+    146d:	eb 14                	jmp    1483 <section_header_32_parse+0x181>
+    146f:	83 ec 0c             	sub    $0xc,%esp
+    1472:	6a 20                	push   $0x20
+    1474:	e8 fc ff ff ff       	call   1475 <section_header_32_parse+0x173>
+			1475: R_386_PLT32	putchar
+    1479:	83 c4 10             	add    $0x10,%esp
+    147c:	83 85 74 f0 ff ff 01 	addl   $0x1,-0xf8c(%ebp)
+    1483:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    1489:	89 d0                	mov    %edx,%eax
+    148b:	c1 e0 02             	shl    $0x2,%eax
+    148e:	01 d0                	add    %edx,%eax
+    1490:	c1 e0 03             	shl    $0x3,%eax
+    1493:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    1496:	01 c8                	add    %ecx,%eax
+    1498:	2d 7c 0f 00 00       	sub    $0xf7c,%eax
+    149d:	8b 00                	mov    (%eax),%eax
+    149f:	8b 93 00 00 00 00    	mov    0x0(%ebx),%edx
+			14a1: R_386_GOT32X	strtable
+    14a5:	01 d0                	add    %edx,%eax
+    14a7:	83 ec 0c             	sub    $0xc,%esp
+    14aa:	50                   	push   %eax
+    14ab:	e8 fc ff ff ff       	call   14ac <section_header_32_parse+0x1aa>
+			14ac: R_386_PLT32	strlen
+    14b0:	83 c4 10             	add    $0x10,%esp
+    14b3:	ba 14 00 00 00       	mov    $0x14,%edx
+    14b8:	29 c2                	sub    %eax,%edx
+    14ba:	8b 85 74 f0 ff ff    	mov    -0xf8c(%ebp),%eax
+    14c0:	39 c2                	cmp    %eax,%edx
+    14c2:	77 ab                	ja     146f <section_header_32_parse+0x16d>
+    14c4:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    14ca:	89 d0                	mov    %edx,%eax
+    14cc:	c1 e0 02             	shl    $0x2,%eax
+    14cf:	01 d0                	add    %edx,%eax
+    14d1:	c1 e0 03             	shl    $0x3,%eax
+    14d4:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    14d7:	01 c8                	add    %ecx,%eax
+    14d9:	2d 78 0f 00 00       	sub    $0xf78,%eax
+    14de:	8b 00                	mov    (%eax),%eax
+    14e0:	83 f8 ff             	cmp    $0xffffffff,%eax
+    14e3:	0f 84 19 02 00 00    	je     1702 <.L128+0x13>
+    14e9:	3d 00 00 00 80       	cmp    $0x80000000,%eax
+    14ee:	0f 84 fa 01 00 00    	je     16ee <.L130+0x16>
+    14f4:	3d 00 00 00 80       	cmp    $0x80000000,%eax
+    14f9:	0f 87 52 02 00 00    	ja     1751 <.L128+0x62>
+    14ff:	3d ff ff ff 7f       	cmp    $0x7fffffff,%eax
+    1504:	0f 84 d0 01 00 00    	je     16da <.L130+0x2>
+    150a:	3d ff ff ff 7f       	cmp    $0x7fffffff,%eax
+    150f:	0f 87 3c 02 00 00    	ja     1751 <.L128+0x62>
+    1515:	3d 00 00 00 70       	cmp    $0x70000000,%eax
+    151a:	0f 84 a6 01 00 00    	je     16c6 <.L131+0x5>
+    1520:	3d 00 00 00 70       	cmp    $0x70000000,%eax
+    1525:	0f 87 26 02 00 00    	ja     1751 <.L128+0x62>
+    152b:	3d ff ff ff 6f       	cmp    $0x6fffffff,%eax
+    1530:	0f 84 f4 01 00 00    	je     172a <.L128+0x3b>
+    1536:	3d ff ff ff 6f       	cmp    $0x6fffffff,%eax
+    153b:	0f 87 10 02 00 00    	ja     1751 <.L128+0x62>
+    1541:	3d fe ff ff 6f       	cmp    $0x6ffffffe,%eax
+    1546:	0f 84 f2 01 00 00    	je     173e <.L128+0x4f>
+    154c:	3d fe ff ff 6f       	cmp    $0x6ffffffe,%eax
+    1551:	0f 87 fa 01 00 00    	ja     1751 <.L128+0x62>
+    1557:	83 f8 0f             	cmp    $0xf,%eax
+    155a:	77 18                	ja     1574 <section_header_32_parse+0x272>
+    155c:	83 f8 0f             	cmp    $0xf,%eax
+    155f:	0f 87 ec 01 00 00    	ja     1751 <.L128+0x62>
+    1565:	c1 e0 02             	shl    $0x2,%eax
+    1568:	8b 84 18 48 0a 00 00 	mov    0xa48(%eax,%ebx,1),%eax
+			156b: R_386_GOTOFF	.rodata
+    156f:	01 d8                	add    %ebx,%eax
+    1571:	3e ff e0             	notrack jmp *%eax
+    1574:	3d f6 ff ff 6f       	cmp    $0x6ffffff6,%eax
+    1579:	0f 84 97 01 00 00    	je     1716 <.L128+0x27>
+    157f:	e9 cd 01 00 00       	jmp    1751 <.L128+0x62>
+    1584:	83 ec 0c             	sub    $0xc,%esp
+    1587:	8d 83 46 05 00 00    	lea    0x546(%ebx),%eax
+			1589: R_386_GOTOFF	.rodata
+    158d:	50                   	push   %eax
+    158e:	e8 fc ff ff ff       	call   158f <section_header_32_parse+0x28d>
+			158f: R_386_PLT32	printf
+    1593:	83 c4 10             	add    $0x10,%esp
+    1596:	e9 b6 01 00 00       	jmp    1751 <.L128+0x62>
+    159b:	83 ec 0c             	sub    $0xc,%esp
+    159e:	8d 83 50 05 00 00    	lea    0x550(%ebx),%eax
+			15a0: R_386_GOTOFF	.rodata
+    15a4:	50                   	push   %eax
+    15a5:	e8 fc ff ff ff       	call   15a6 <section_header_32_parse+0x2a4>
+			15a6: R_386_PLT32	printf
+    15aa:	83 c4 10             	add    $0x10,%esp
+    15ad:	e9 9f 01 00 00       	jmp    1751 <.L128+0x62>
+    15b2:	83 ec 0c             	sub    $0xc,%esp
+    15b5:	8d 83 5d 05 00 00    	lea    0x55d(%ebx),%eax
+			15b7: R_386_GOTOFF	.rodata
+    15bb:	50                   	push   %eax
+    15bc:	e8 fc ff ff ff       	call   15bd <section_header_32_parse+0x2bb>
+			15bd: R_386_PLT32	printf
+    15c1:	83 c4 10             	add    $0x10,%esp
+
+000015c4 <.L142>:
+    15c4:	e9 88 01 00 00       	jmp    1751 <.L128+0x62>
+    15c9:	83 ec 0c             	sub    $0xc,%esp
+    15cc:	8d 83 69 05 00 00    	lea    0x569(%ebx),%eax
+			15ce: R_386_GOTOFF	.rodata
+    15d2:	50                   	push   %eax
+    15d3:	e8 fc ff ff ff       	call   15d4 <.L142+0x10>
+			15d4: R_386_PLT32	printf
+    15d8:	83 c4 10             	add    $0x10,%esp
+
+000015db <.L141>:
+    15db:	e9 71 01 00 00       	jmp    1751 <.L128+0x62>
+    15e0:	83 ec 0c             	sub    $0xc,%esp
+    15e3:	8d 83 75 05 00 00    	lea    0x575(%ebx),%eax
+			15e5: R_386_GOTOFF	.rodata
+    15e9:	50                   	push   %eax
+    15ea:	e8 fc ff ff ff       	call   15eb <.L141+0x10>
+			15eb: R_386_PLT32	printf
+    15ef:	83 c4 10             	add    $0x10,%esp
+
+000015f2 <.L140>:
+    15f2:	e9 5a 01 00 00       	jmp    1751 <.L128+0x62>
+    15f7:	83 ec 0c             	sub    $0xc,%esp
+    15fa:	8d 83 7f 05 00 00    	lea    0x57f(%ebx),%eax
+			15fc: R_386_GOTOFF	.rodata
+    1600:	50                   	push   %eax
+    1601:	e8 fc ff ff ff       	call   1602 <.L140+0x10>
+			1602: R_386_PLT32	printf
+    1606:	83 c4 10             	add    $0x10,%esp
+
+00001609 <.L139>:
+    1609:	e9 43 01 00 00       	jmp    1751 <.L128+0x62>
+    160e:	83 ec 0c             	sub    $0xc,%esp
+    1611:	8d 83 89 05 00 00    	lea    0x589(%ebx),%eax
+			1613: R_386_GOTOFF	.rodata
+    1617:	50                   	push   %eax
+    1618:	e8 fc ff ff ff       	call   1619 <.L139+0x10>
+			1619: R_386_PLT32	printf
+    161d:	83 c4 10             	add    $0x10,%esp
+
+00001620 <.L138>:
+    1620:	e9 2c 01 00 00       	jmp    1751 <.L128+0x62>
+    1625:	83 ec 0c             	sub    $0xc,%esp
+    1628:	8d 83 96 05 00 00    	lea    0x596(%ebx),%eax
+			162a: R_386_GOTOFF	.rodata
+    162e:	50                   	push   %eax
+    162f:	e8 fc ff ff ff       	call   1630 <.L138+0x10>
+			1630: R_386_PLT32	printf
+    1634:	83 c4 10             	add    $0x10,%esp
+
+00001637 <.L137>:
+    1637:	e9 15 01 00 00       	jmp    1751 <.L128+0x62>
+    163c:	83 ec 0c             	sub    $0xc,%esp
+    163f:	8d 83 a0 05 00 00    	lea    0x5a0(%ebx),%eax
+			1641: R_386_GOTOFF	.rodata
+    1645:	50                   	push   %eax
+    1646:	e8 fc ff ff ff       	call   1647 <.L137+0x10>
+			1647: R_386_PLT32	printf
+    164b:	83 c4 10             	add    $0x10,%esp
+
+0000164e <.L136>:
+    164e:	e9 fe 00 00 00       	jmp    1751 <.L128+0x62>
+    1653:	83 ec 0c             	sub    $0xc,%esp
+    1656:	8d 83 32 0a 00 00    	lea    0xa32(%ebx),%eax
+			1658: R_386_GOTOFF	.rodata
+    165c:	50                   	push   %eax
+    165d:	e8 fc ff ff ff       	call   165e <.L136+0x10>
+			165e: R_386_PLT32	printf
+    1662:	83 c4 10             	add    $0x10,%esp
+
+00001665 <.L135>:
+    1665:	e9 e7 00 00 00       	jmp    1751 <.L128+0x62>
+    166a:	83 ec 0c             	sub    $0xc,%esp
+    166d:	8d 83 b5 05 00 00    	lea    0x5b5(%ebx),%eax
+			166f: R_386_GOTOFF	.rodata
+    1673:	50                   	push   %eax
+    1674:	e8 fc ff ff ff       	call   1675 <.L135+0x10>
+			1675: R_386_PLT32	printf
+    1679:	83 c4 10             	add    $0x10,%esp
+
+0000167c <.L134>:
+    167c:	e9 d0 00 00 00       	jmp    1751 <.L128+0x62>
+    1681:	83 ec 0c             	sub    $0xc,%esp
+    1684:	8d 83 c0 05 00 00    	lea    0x5c0(%ebx),%eax
+			1686: R_386_GOTOFF	.rodata
+    168a:	50                   	push   %eax
+    168b:	e8 fc ff ff ff       	call   168c <.L134+0x10>
+			168c: R_386_PLT32	printf
+    1690:	83 c4 10             	add    $0x10,%esp
+
+00001693 <.L133>:
+    1693:	e9 b9 00 00 00       	jmp    1751 <.L128+0x62>
+    1698:	83 ec 0c             	sub    $0xc,%esp
+    169b:	8d 83 cc 05 00 00    	lea    0x5cc(%ebx),%eax
+			169d: R_386_GOTOFF	.rodata
+    16a1:	50                   	push   %eax
+    16a2:	e8 fc ff ff ff       	call   16a3 <.L133+0x10>
+			16a3: R_386_PLT32	printf
+    16a7:	83 c4 10             	add    $0x10,%esp
+
+000016aa <.L132>:
+    16aa:	e9 a2 00 00 00       	jmp    1751 <.L128+0x62>
+    16af:	83 ec 0c             	sub    $0xc,%esp
+    16b2:	8d 83 db 05 00 00    	lea    0x5db(%ebx),%eax
+			16b4: R_386_GOTOFF	.rodata
+    16b8:	50                   	push   %eax
+    16b9:	e8 fc ff ff ff       	call   16ba <.L132+0x10>
+			16ba: R_386_PLT32	printf
+    16be:	83 c4 10             	add    $0x10,%esp
+
+000016c1 <.L131>:
+    16c1:	e9 8b 00 00 00       	jmp    1751 <.L128+0x62>
+    16c6:	83 ec 0c             	sub    $0xc,%esp
+    16c9:	8d 83 ea 05 00 00    	lea    0x5ea(%ebx),%eax
+			16cb: R_386_GOTOFF	.rodata
+    16cf:	50                   	push   %eax
+    16d0:	e8 fc ff ff ff       	call   16d1 <.L131+0x10>
+			16d1: R_386_PLT32	printf
+    16d5:	83 c4 10             	add    $0x10,%esp
+
+000016d8 <.L130>:
+    16d8:	eb 77                	jmp    1751 <.L128+0x62>
+    16da:	83 ec 0c             	sub    $0xc,%esp
+    16dd:	8d 83 f5 05 00 00    	lea    0x5f5(%ebx),%eax
+			16df: R_386_GOTOFF	.rodata
+    16e3:	50                   	push   %eax
+    16e4:	e8 fc ff ff ff       	call   16e5 <.L130+0xd>
+			16e5: R_386_PLT32	printf
+    16e9:	83 c4 10             	add    $0x10,%esp
+    16ec:	eb 63                	jmp    1751 <.L128+0x62>
+    16ee:	83                   	.byte 0x83
+
+000016ef <.L128>:
+    16ef:	ec                   	in     (%dx),%al
+    16f0:	0c 8d                	or     $0x8d,%al
+    16f2:	83 00 06             	addl   $0x6,(%eax)
+			16f3: R_386_GOTOFF	.rodata
+    16f5:	00 00                	add    %al,(%eax)
+    16f7:	50                   	push   %eax
+    16f8:	e8 fc ff ff ff       	call   16f9 <.L128+0xa>
+			16f9: R_386_PLT32	printf
+    16fd:	83 c4 10             	add    $0x10,%esp
+    1700:	eb 4f                	jmp    1751 <.L128+0x62>
+    1702:	83 ec 0c             	sub    $0xc,%esp
+    1705:	8d 83 0b 06 00 00    	lea    0x60b(%ebx),%eax
+			1707: R_386_GOTOFF	.rodata
+    170b:	50                   	push   %eax
+    170c:	e8 fc ff ff ff       	call   170d <.L128+0x1e>
+			170d: R_386_PLT32	printf
+    1711:	83 c4 10             	add    $0x10,%esp
+    1714:	eb 3b                	jmp    1751 <.L128+0x62>
+    1716:	83 ec 0c             	sub    $0xc,%esp
+    1719:	8d 83 16 06 00 00    	lea    0x616(%ebx),%eax
+			171b: R_386_GOTOFF	.rodata
+    171f:	50                   	push   %eax
+    1720:	e8 fc ff ff ff       	call   1721 <.L128+0x32>
+			1721: R_386_PLT32	printf
+    1725:	83 c4 10             	add    $0x10,%esp
+    1728:	eb 27                	jmp    1751 <.L128+0x62>
+    172a:	83 ec 0c             	sub    $0xc,%esp
+    172d:	8d 83 23 06 00 00    	lea    0x623(%ebx),%eax
+			172f: R_386_GOTOFF	.rodata
+    1733:	50                   	push   %eax
+    1734:	e8 fc ff ff ff       	call   1735 <.L128+0x46>
+			1735: R_386_PLT32	printf
+    1739:	83 c4 10             	add    $0x10,%esp
+    173c:	eb 13                	jmp    1751 <.L128+0x62>
+    173e:	83 ec 0c             	sub    $0xc,%esp
+    1741:	8d 83 32 06 00 00    	lea    0x632(%ebx),%eax
+			1743: R_386_GOTOFF	.rodata
+    1747:	50                   	push   %eax
+    1748:	e8 fc ff ff ff       	call   1749 <.L128+0x5a>
+			1749: R_386_PLT32	printf
+    174d:	83 c4 10             	add    $0x10,%esp
+    1750:	90                   	nop
+    1751:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    1757:	89 d0                	mov    %edx,%eax
+    1759:	c1 e0 02             	shl    $0x2,%eax
+    175c:	01 d0                	add    %edx,%eax
+    175e:	c1 e0 03             	shl    $0x3,%eax
+    1761:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    1764:	01 c8                	add    %ecx,%eax
+    1766:	2d 74 0f 00 00       	sub    $0xf74,%eax
+    176b:	8b 00                	mov    (%eax),%eax
+    176d:	83 ec 08             	sub    $0x8,%esp
+    1770:	50                   	push   %eax
+    1771:	8d 83 42 06 00 00    	lea    0x642(%ebx),%eax
+			1773: R_386_GOTOFF	.rodata
+    1777:	50                   	push   %eax
+    1778:	e8 fc ff ff ff       	call   1779 <.L128+0x8a>
+			1779: R_386_PLT32	printf
+    177d:	83 c4 10             	add    $0x10,%esp
+    1780:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    1786:	89 d0                	mov    %edx,%eax
+    1788:	c1 e0 02             	shl    $0x2,%eax
+    178b:	01 d0                	add    %edx,%eax
+    178d:	c1 e0 03             	shl    $0x3,%eax
+    1790:	8d                   	.byte 0x8d
+
+00001791 <.L122>:
+    1791:	4d                   	dec    %ebp
+    1792:	f8                   	clc    
+    1793:	01 c8                	add    %ecx,%eax
+    1795:	2d 70 0f 00 00       	sub    $0xf70,%eax
+    179a:	8b 00                	mov    (%eax),%eax
+    179c:	83 ec 08             	sub    $0x8,%esp
+    179f:	50                   	push   %eax
+    17a0:	8d 83 52 06 00 00    	lea    0x652(%ebx),%eax
+			17a2: R_386_GOTOFF	.rodata
+    17a6:	50                   	push   %eax
+    17a7:	e8 fc ff ff ff       	call   17a8 <.L122+0x17>
+			17a8: R_386_PLT32	printf
+    17ac:	83 c4 10             	add    $0x10,%esp
+    17af:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    17b5:	89 d0                	mov    %edx,%eax
+    17b7:	c1 e0 02             	shl    $0x2,%eax
+    17ba:	01 d0                	add    %edx,%eax
+    17bc:	c1 e0 03             	shl    $0x3,%eax
+    17bf:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    17c2:	01 c8                	add    %ecx,%eax
+    17c4:	2d 6c 0f 00 00       	sub    $0xf6c,%eax
+    17c9:	8b 00                	mov    (%eax),%eax
+    17cb:	83 ec 08             	sub    $0x8,%esp
+    17ce:	50                   	push   %eax
+    17cf:	8d 83 3e 0a 00 00    	lea    0xa3e(%ebx),%eax
+			17d1: R_386_GOTOFF	.rodata
+    17d5:	50                   	push   %eax
+    17d6:	e8 fc ff ff ff       	call   17d7 <.L122+0x46>
+			17d7: R_386_PLT32	printf
+    17db:	83 c4 10             	add    $0x10,%esp
+    17de:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    17e4:	89 d0                	mov    %edx,%eax
+    17e6:	c1 e0 02             	shl    $0x2,%eax
+    17e9:	01 d0                	add    %edx,%eax
+    17eb:	c1 e0 03             	shl    $0x3,%eax
+    17ee:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    17f1:	01 c8                	add    %ecx,%eax
+    17f3:	2d 68 0f 00 00       	sub    $0xf68,%eax
+    17f8:	8b 00                	mov    (%eax),%eax
+    17fa:	83 ec 08             	sub    $0x8,%esp
+    17fd:	50                   	push   %eax
+    17fe:	8d 83 5a 06 00 00    	lea    0x65a(%ebx),%eax
+			1800: R_386_GOTOFF	.rodata
+    1804:	50                   	push   %eax
+    1805:	e8 fc ff ff ff       	call   1806 <.L122+0x75>
+			1806: R_386_PLT32	printf
+    180a:	83 c4 10             	add    $0x10,%esp
+    180d:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    1813:	89 d0                	mov    %edx,%eax
+    1815:	c1 e0 02             	shl    $0x2,%eax
+    1818:	01 d0                	add    %edx,%eax
+    181a:	c1 e0 03             	shl    $0x3,%eax
+    181d:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    1820:	01 c8                	add    %ecx,%eax
+    1822:	2d 64 0f 00 00       	sub    $0xf64,%eax
+    1827:	8b 00                	mov    (%eax),%eax
+    1829:	83 ec 08             	sub    $0x8,%esp
+    182c:	50                   	push   %eax
+    182d:	8d 83 66 06 00 00    	lea    0x666(%ebx),%eax
+			182f: R_386_GOTOFF	.rodata
+    1833:	50                   	push   %eax
+    1834:	e8 fc ff ff ff       	call   1835 <.L122+0xa4>
+			1835: R_386_PLT32	printf
+    1839:	83 c4 10             	add    $0x10,%esp
+    183c:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    1842:	89 d0                	mov    %edx,%eax
+    1844:	c1 e0 02             	shl    $0x2,%eax
+    1847:	01 d0                	add    %edx,%eax
+    1849:	c1 e0 03             	shl    $0x3,%eax
+    184c:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    184f:	01 c8                	add    %ecx,%eax
+    1851:	2d 60 0f 00 00       	sub    $0xf60,%eax
+    1856:	8b 00                	mov    (%eax),%eax
+    1858:	83 ec 08             	sub    $0x8,%esp
+    185b:	50                   	push   %eax
+    185c:	8d 83 66 06 00 00    	lea    0x666(%ebx),%eax
+			185e: R_386_GOTOFF	.rodata
+    1862:	50                   	push   %eax
+    1863:	e8 fc ff ff ff       	call   1864 <.L122+0xd3>
+			1864: R_386_PLT32	printf
+    1868:	83 c4 10             	add    $0x10,%esp
+    186b:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    1871:	89 d0                	mov    %edx,%eax
+    1873:	c1 e0 02             	shl    $0x2,%eax
+    1876:	01 d0                	add    %edx,%eax
+    1878:	c1 e0 03             	shl    $0x3,%eax
+    187b:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    187e:	01 c8                	add    %ecx,%eax
+    1880:	2d 5c 0f 00 00       	sub    $0xf5c,%eax
+    1885:	8b 00                	mov    (%eax),%eax
+    1887:	83 ec 08             	sub    $0x8,%esp
+    188a:	50                   	push   %eax
+    188b:	8d 83 6a 06 00 00    	lea    0x66a(%ebx),%eax
+			188d: R_386_GOTOFF	.rodata
+    1891:	50                   	push   %eax
+    1892:	e8 fc ff ff ff       	call   1893 <.L122+0x102>
+			1893: R_386_PLT32	printf
+    1897:	83 c4 10             	add    $0x10,%esp
+    189a:	8b 95 70 f0 ff ff    	mov    -0xf90(%ebp),%edx
+    18a0:	89 d0                	mov    %edx,%eax
+    18a2:	c1 e0 02             	shl    $0x2,%eax
+    18a5:	01 d0                	add    %edx,%eax
+    18a7:	c1 e0 03             	shl    $0x3,%eax
+    18aa:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    18ad:	01 c8                	add    %ecx,%eax
+    18af:	2d 58 0f 00 00       	sub    $0xf58,%eax
+    18b4:	8b 00                	mov    (%eax),%eax
+    18b6:	83 ec 08             	sub    $0x8,%esp
+    18b9:	50                   	push   %eax
+    18ba:	8d 83 76 06 00 00    	lea    0x676(%ebx),%eax
+			18bc: R_386_GOTOFF	.rodata
+    18c0:	50                   	push   %eax
+    18c1:	e8 fc ff ff ff       	call   18c2 <.L122+0x131>
+			18c2: R_386_PLT32	printf
+    18c6:	83 c4 10             	add    $0x10,%esp
+    18c9:	83 85 70 f0 ff ff 01 	addl   $0x1,-0xf90(%ebp)
+    18d0:	8b 85 70 f0 ff ff    	mov    -0xf90(%ebp),%eax
+    18d6:	3b 85 78 f0 ff ff    	cmp    -0xf88(%ebp),%eax
+    18dc:	0f 8c 44 fb ff ff    	jl     1426 <section_header_32_parse+0x124>
+    18e2:	90                   	nop
+    18e3:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    18e6:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+    18ed:	74 05                	je     18f4 <.L122+0x163>
+    18ef:	e8 fc ff ff ff       	call   18f0 <.L122+0x15f>
+			18f0: R_386_PC32	__stack_chk_fail_local
+    18f4:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    18f7:	c9                   	leave  
+    18f8:	c3                   	ret    
+    18f9:	f3 0f 1e fb          	endbr32 
+    18fd:	55                   	push   %ebp
+    18fe:	89 e5                	mov    %esp,%ebp
+    1900:	53                   	push   %ebx
+    1901:	81 ec 84 0c 00 00    	sub    $0xc84,%esp
+    1907:	e8 fc ff ff ff       	call   1908 <.L122+0x177>
+			1908: R_386_PC32	__x86.get_pc_thunk.bx
+    190c:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			190e: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+    1912:	8b 45 08             	mov    0x8(%ebp),%eax
+    1915:	89 85 84 f3 ff ff    	mov    %eax,-0xc7c(%ebp)
+    191b:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+    1921:	89 45 f4             	mov    %eax,-0xc(%ebp)
+    1924:	31 c0                	xor    %eax,%eax
+    1926:	8b 85 84 f3 ff ff    	mov    -0xc7c(%ebp),%eax
+    192c:	8b 40 1c             	mov    0x1c(%eax),%eax
+    192f:	89 c2                	mov    %eax,%edx
+    1931:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1933: R_386_GOT32X	fp
+    1937:	8b 00                	mov    (%eax),%eax
+
+00001939 <program_header_32_parse>:
+    1939:	83 ec 04             	sub    $0x4,%esp
+    193c:	6a 00                	push   $0x0
+    193e:	52                   	push   %edx
+    193f:	50                   	push   %eax
+    1940:	e8 fc ff ff ff       	call   1941 <program_header_32_parse+0x8>
+			1941: R_386_PLT32	fseek
+    1945:	83 c4 10             	add    $0x10,%esp
+    1948:	8b 85 84 f3 ff ff    	mov    -0xc7c(%ebp),%eax
+    194e:	0f b7 40 2c          	movzwl 0x2c(%eax),%eax
+    1952:	0f b7 c0             	movzwl %ax,%eax
+    1955:	89 85 90 f3 ff ff    	mov    %eax,-0xc70(%ebp)
+    195b:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			195d: R_386_GOT32X	fp
+    1961:	8b 10                	mov    (%eax),%edx
+    1963:	8b 85 90 f3 ff ff    	mov    -0xc70(%ebp),%eax
+    1969:	52                   	push   %edx
+    196a:	50                   	push   %eax
+    196b:	6a 20                	push   $0x20
+    196d:	8d 85 94 f3 ff ff    	lea    -0xc6c(%ebp),%eax
+    1973:	50                   	push   %eax
+    1974:	e8 fc ff ff ff       	call   1975 <program_header_32_parse+0x3c>
+			1975: R_386_PLT32	fread
+    1979:	83 c4 10             	add    $0x10,%esp
+    197c:	83 ec 0c             	sub    $0xc,%esp
+    197f:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			1981: R_386_GOTOFF	.rodata
+    1985:	50                   	push   %eax
+    1986:	e8 fc ff ff ff       	call   1987 <program_header_32_parse+0x4e>
+			1987: R_386_PLT32	puts
+    198b:	83 c4 10             	add    $0x10,%esp
+    198e:	8b 85 84 f3 ff ff    	mov    -0xc7c(%ebp),%eax
+    1994:	8b 40 1c             	mov    0x1c(%eax),%eax
+    1997:	83 ec 04             	sub    $0x4,%esp
+    199a:	50                   	push   %eax
+    199b:	ff b5 90 f3 ff ff    	pushl  -0xc70(%ebp)
+    19a1:	8d 83 bc 06 00 00    	lea    0x6bc(%ebx),%eax
+			19a3: R_386_GOTOFF	.rodata
+    19a7:	50                   	push   %eax
+    19a8:	e8 fc ff ff ff       	call   19a9 <program_header_32_parse+0x70>
+			19a9: R_386_PLT32	printf
+    19ad:	83 c4 10             	add    $0x10,%esp
+    19b0:	83 ec 0c             	sub    $0xc,%esp
+    19b3:	8d 83 f7 06 00 00    	lea    0x6f7(%ebx),%eax
+			19b5: R_386_GOTOFF	.rodata
+    19b9:	50                   	push   %eax
+    19ba:	e8 fc ff ff ff       	call   19bb <program_header_32_parse+0x82>
+			19bb: R_386_PLT32	puts
+    19bf:	83 c4 10             	add    $0x10,%esp
+    19c2:	83 ec 0c             	sub    $0xc,%esp
+    19c5:	8d 83 88 0a 00 00    	lea    0xa88(%ebx),%eax
+			19c7: R_386_GOTOFF	.rodata
+    19cb:	50                   	push   %eax
+    19cc:	e8 fc ff ff ff       	call   19cd <program_header_32_parse+0x94>
+			19cd: R_386_PLT32	puts
+    19d1:	83 c4 10             	add    $0x10,%esp
+    19d4:	c7 85 8c f3 ff ff 00 	movl   $0x0,-0xc74(%ebp)
+    19db:	00 00 00 
+    19de:	e9 93 03 00 00       	jmp    1d76 <.L165+0xd7>
+    19e3:	8b 85 8c f3 ff ff    	mov    -0xc74(%ebp),%eax
+    19e9:	c1 e0 05             	shl    $0x5,%eax
+    19ec:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    19ef:	01 c8                	add    %ecx,%eax
+    19f1:	2d 64 0c 00 00       	sub    $0xc64,%eax
+    19f6:	8b 00                	mov    (%eax),%eax
+    19f8:	3d ff ff ff 7f       	cmp    $0x7fffffff,%eax
+    19fd:	0f 84 92 01 00 00    	je     1b95 <.L155+0x38>
+    1a03:	3d ff ff ff 7f       	cmp    $0x7fffffff,%eax
+    1a08:	0f 87 9a 01 00 00    	ja     1ba8 <.L155+0x4b>
+    1a0e:	3d 00 00 00 70       	cmp    $0x70000000,%eax
+    1a13:	0f 84 68 01 00 00    	je     1b81 <.L155+0x24>
+    1a19:	3d 00 00 00 70       	cmp    $0x70000000,%eax
+    1a1e:	0f 87 84 01 00 00    	ja     1ba8 <.L155+0x4b>
+    1a24:	3d 53 e5 74 64       	cmp    $0x6474e553,%eax
+    1a29:	0f 84 3e 01 00 00    	je     1b6d <.L155+0x10>
+    1a2f:	3d 53 e5 74 64       	cmp    $0x6474e553,%eax
+    1a34:	0f 87 6e 01 00 00    	ja     1ba8 <.L155+0x4b>
+    1a3a:	3d 52 e5 74 64       	cmp    $0x6474e552,%eax
+    1a3f:	0f 84 14 01 00 00    	je     1b59 <.L157+0x13>
+    1a45:	3d 52 e5 74 64       	cmp    $0x6474e552,%eax
+    1a4a:	0f 87 58 01 00 00    	ja     1ba8 <.L155+0x4b>
+    1a50:	3d 51 e5 74 64       	cmp    $0x6474e551,%eax
+    1a55:	0f 84 ea 00 00 00    	je     1b45 <.L158+0x16>
+    1a5b:	3d 51 e5 74 64       	cmp    $0x6474e551,%eax
+    1a60:	0f 87 42 01 00 00    	ja     1ba8 <.L155+0x4b>
+    1a66:	83 f8 06             	cmp    $0x6,%eax
+    1a69:	77 18                	ja     1a83 <program_header_32_parse+0x14a>
+    1a6b:	83 f8 06             	cmp    $0x6,%eax
+    1a6e:	0f 87 34 01 00 00    	ja     1ba8 <.L155+0x4b>
+    1a74:	c1 e0 02             	shl    $0x2,%eax
+    1a77:	8b 84 18 04 0b 00 00 	mov    0xb04(%eax,%ebx,1),%eax
+			1a7a: R_386_GOTOFF	.rodata
+    1a7e:	01 d8                	add    %ebx,%eax
+    1a80:	3e ff e0             	notrack jmp *%eax
+    1a83:	3d 50 e5 74 64       	cmp    $0x6474e550,%eax
+    1a88:	0f 84 a3 00 00 00    	je     1b31 <.L158+0x2>
+    1a8e:	e9 15 01 00 00       	jmp    1ba8 <.L155+0x4b>
+    1a93:	83 ec 0c             	sub    $0xc,%esp
+    1a96:	8d 83 65 07 00 00    	lea    0x765(%ebx),%eax
+			1a98: R_386_GOTOFF	.rodata
+    1a9c:	50                   	push   %eax
+    1a9d:	e8 fc ff ff ff       	call   1a9e <program_header_32_parse+0x165>
+			1a9e: R_386_PLT32	printf
+    1aa2:	83 c4 10             	add    $0x10,%esp
+    1aa5:	e9 fe 00 00 00       	jmp    1ba8 <.L155+0x4b>
+    1aaa:	83 ec 0c             	sub    $0xc,%esp
+    1aad:	8d 83 6e 07 00 00    	lea    0x76e(%ebx),%eax
+			1aaf: R_386_GOTOFF	.rodata
+    1ab3:	50                   	push   %eax
+    1ab4:	e8 fc ff ff ff       	call   1ab5 <program_header_32_parse+0x17c>
+			1ab5: R_386_PLT32	printf
+    1ab9:	83 c4 10             	add    $0x10,%esp
+    1abc:	e9 e7 00 00 00       	jmp    1ba8 <.L155+0x4b>
+    1ac1:	83 ec 0c             	sub    $0xc,%esp
+    1ac4:	8d 83 77 07 00 00    	lea    0x777(%ebx),%eax
+			1ac6: R_386_GOTOFF	.rodata
+    1aca:	50                   	push   %eax
+    1acb:	e8 fc ff ff ff       	call   1acc <program_header_32_parse+0x193>
+			1acc: R_386_PLT32	printf
+    1ad0:	83 c4 10             	add    $0x10,%esp
+
+00001ad3 <.L162>:
+    1ad3:	e9 d0 00 00 00       	jmp    1ba8 <.L155+0x4b>
+    1ad8:	83 ec 0c             	sub    $0xc,%esp
+    1adb:	8d 83 82 07 00 00    	lea    0x782(%ebx),%eax
+			1add: R_386_GOTOFF	.rodata
+    1ae1:	50                   	push   %eax
+    1ae2:	e8 fc ff ff ff       	call   1ae3 <.L162+0x10>
+			1ae3: R_386_PLT32	printf
+    1ae7:	83 c4 10             	add    $0x10,%esp
+
+00001aea <.L161>:
+    1aea:	e9 b9 00 00 00       	jmp    1ba8 <.L155+0x4b>
+    1aef:	83 ec 0c             	sub    $0xc,%esp
+    1af2:	8d 83 8c 07 00 00    	lea    0x78c(%ebx),%eax
+			1af4: R_386_GOTOFF	.rodata
+    1af8:	50                   	push   %eax
+    1af9:	e8 fc ff ff ff       	call   1afa <.L161+0x10>
+			1afa: R_386_PLT32	printf
+    1afe:	83 c4 10             	add    $0x10,%esp
+
+00001b01 <.L160>:
+    1b01:	e9 a2 00 00 00       	jmp    1ba8 <.L155+0x4b>
+    1b06:	83 ec 0c             	sub    $0xc,%esp
+    1b09:	8d 83 95 07 00 00    	lea    0x795(%ebx),%eax
+			1b0b: R_386_GOTOFF	.rodata
+    1b0f:	50                   	push   %eax
+    1b10:	e8 fc ff ff ff       	call   1b11 <.L160+0x10>
+			1b11: R_386_PLT32	printf
+    1b15:	83 c4 10             	add    $0x10,%esp
+
+00001b18 <.L159>:
+    1b18:	e9 8b 00 00 00       	jmp    1ba8 <.L155+0x4b>
+    1b1d:	83 ec 0c             	sub    $0xc,%esp
+    1b20:	8d 83 9e 07 00 00    	lea    0x79e(%ebx),%eax
+			1b22: R_386_GOTOFF	.rodata
+    1b26:	50                   	push   %eax
+    1b27:	e8 fc ff ff ff       	call   1b28 <.L159+0x10>
+			1b28: R_386_PLT32	printf
+    1b2c:	83 c4 10             	add    $0x10,%esp
+
+00001b2f <.L158>:
+    1b2f:	eb 77                	jmp    1ba8 <.L155+0x4b>
+    1b31:	83 ec 0c             	sub    $0xc,%esp
+    1b34:	8d 83 a7 07 00 00    	lea    0x7a7(%ebx),%eax
+			1b36: R_386_GOTOFF	.rodata
+    1b3a:	50                   	push   %eax
+    1b3b:	e8 fc ff ff ff       	call   1b3c <.L158+0xd>
+			1b3c: R_386_PLT32	printf
+    1b40:	83 c4 10             	add    $0x10,%esp
+    1b43:	eb 63                	jmp    1ba8 <.L155+0x4b>
+    1b45:	83                   	.byte 0x83
+
+00001b46 <.L157>:
+    1b46:	ec                   	in     (%dx),%al
+    1b47:	0c 8d                	or     $0x8d,%al
+    1b49:	83 b4 07 00 00 50 e8 	xorl   $0xfffffffc,-0x17b00000(%edi,%eax,1)
+    1b50:	fc 
+			1b4a: R_386_GOTOFF	.rodata
+			1b50: R_386_PLT32	printf
+    1b51:	ff                   	(bad)  
+    1b52:	ff                   	(bad)  
+    1b53:	ff 83 c4 10 eb 4f    	incl   0x4feb10c4(%ebx)
+    1b59:	83 ec 0c             	sub    $0xc,%esp
+    1b5c:	8d                   	.byte 0x8d
+
+00001b5d <.L155>:
+    1b5d:	83 be 07 00 00 50 e8 	cmpl   $0xffffffe8,0x50000007(%esi)
+			1b5e: R_386_GOTOFF	.rodata
+    1b64:	fc                   	cld    
+			1b64: R_386_PLT32	printf
+    1b65:	ff                   	(bad)  
+    1b66:	ff                   	(bad)  
+    1b67:	ff 83 c4 10 eb 3b    	incl   0x3beb10c4(%ebx)
+    1b6d:	83 ec 0c             	sub    $0xc,%esp
+    1b70:	8d 83 e2 0a 00 00    	lea    0xae2(%ebx),%eax
+			1b72: R_386_GOTOFF	.rodata
+    1b76:	50                   	push   %eax
+    1b77:	e8 fc ff ff ff       	call   1b78 <.L155+0x1b>
+			1b78: R_386_PLT32	printf
+    1b7c:	83 c4 10             	add    $0x10,%esp
+    1b7f:	eb 27                	jmp    1ba8 <.L155+0x4b>
+    1b81:	83 ec 0c             	sub    $0xc,%esp
+    1b84:	8d 83 c8 07 00 00    	lea    0x7c8(%ebx),%eax
+			1b86: R_386_GOTOFF	.rodata
+    1b8a:	50                   	push   %eax
+    1b8b:	e8 fc ff ff ff       	call   1b8c <.L155+0x2f>
+			1b8c: R_386_PLT32	printf
+    1b90:	83 c4 10             	add    $0x10,%esp
+    1b93:	eb 13                	jmp    1ba8 <.L155+0x4b>
+    1b95:	83 ec 0c             	sub    $0xc,%esp
+    1b98:	8d 83 d2 07 00 00    	lea    0x7d2(%ebx),%eax
+			1b9a: R_386_GOTOFF	.rodata
+    1b9e:	50                   	push   %eax
+    1b9f:	e8 fc ff ff ff       	call   1ba0 <.L155+0x43>
+			1ba0: R_386_PLT32	printf
+    1ba4:	83 c4 10             	add    $0x10,%esp
+    1ba7:	90                   	nop
+    1ba8:	83 ec 0c             	sub    $0xc,%esp
+    1bab:	6a 09                	push   $0x9
+    1bad:	e8 fc ff ff ff       	call   1bae <.L155+0x51>
+			1bae: R_386_PLT32	putchar
+    1bb2:	83 c4 10             	add    $0x10,%esp
+    1bb5:	8b 85 8c f3 ff ff    	mov    -0xc74(%ebp),%eax
+    1bbb:	c1 e0 05             	shl    $0x5,%eax
+    1bbe:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    1bc1:	01 c8                	add    %ecx,%eax
+    1bc3:	2d 4c 0c 00 00       	sub    $0xc4c,%eax
+    1bc8:	8b 00                	mov    (%eax),%eax
+    1bca:	83 f8 07             	cmp    $0x7,%eax
+    1bcd:	0f 87 9f 00 00 00    	ja     1c72 <.L169+0xa>
+    1bd3:	c1 e0 02             	shl    $0x2,%eax
+    1bd6:	8b 84 18 20 0b 00 00 	mov    0xb20(%eax,%ebx,1),%eax
+			1bd9: R_386_GOTOFF	.rodata
+    1bdd:	01 d8                	add    %ebx,%eax
+    1bdf:	3e ff e0             	notrack jmp *%eax
+    1be2:	83 ec 0c             	sub    $0xc,%esp
+    1be5:	8d 83 dc 07 00 00    	lea    0x7dc(%ebx),%eax
+			1be7: R_386_GOTOFF	.rodata
+    1beb:	50                   	push   %eax
+    1bec:	e8 fc ff ff ff       	call   1bed <.L155+0x90>
+			1bed: R_386_PLT32	printf
+    1bf1:	83 c4 10             	add    $0x10,%esp
+    1bf4:	eb 7c                	jmp    1c72 <.L169+0xa>
+    1bf6:	83 ec 0c             	sub    $0xc,%esp
+    1bf9:	6a 78                	push   $0x78
+    1bfb:	e8 fc ff ff ff       	call   1bfc <.L155+0x9f>
+			1bfc: R_386_PLT32	putchar
+    1c00:	83 c4 10             	add    $0x10,%esp
+    1c03:	eb 6d                	jmp    1c72 <.L169+0xa>
+    1c05:	83 ec 0c             	sub    $0xc,%esp
+    1c08:	6a 77                	push   $0x77
+    1c0a:	e8 fc ff ff ff       	call   1c0b <.L155+0xae>
+			1c0b: R_386_PLT32	putchar
+    1c0f:	83 c4 10             	add    $0x10,%esp
+    1c12:	eb 5e                	jmp    1c72 <.L169+0xa>
+    1c14:	83 ec 0c             	sub    $0xc,%esp
+    1c17:	8d 83 e1 07 00 00    	lea    0x7e1(%ebx),%eax
+			1c19: R_386_GOTOFF	.rodata
+    1c1d:	50                   	push   %eax
+    1c1e:	e8                   	.byte 0xe8
+    1c1f:	fc                   	cld    
+			1c1f: R_386_PLT32	printf
+    1c20:	ff                   	(bad)  
+    1c21:	ff                   	.byte 0xff
+
+00001c22 <.L173>:
+    1c22:	ff 83 c4 10 eb 4a    	incl   0x4aeb10c4(%ebx)
+    1c28:	83 ec 0c             	sub    $0xc,%esp
+    1c2b:	6a 72                	push   $0x72
+    1c2d:	e8 fc ff ff ff       	call   1c2e <.L173+0xc>
+			1c2e: R_386_PLT32	putchar
+    1c32:	83 c4 10             	add    $0x10,%esp
+    1c35:	eb                   	.byte 0xeb
+
+00001c36 <.L172>:
+    1c36:	3b 83 ec 0c 8d 83    	cmp    -0x7c72f314(%ebx),%eax
+    1c3c:	e4 07                	in     $0x7,%al
+			1c3c: R_386_GOTOFF	.rodata
+    1c3e:	00 00                	add    %al,(%eax)
+    1c40:	50                   	push   %eax
+    1c41:	e8                   	.byte 0xe8
+    1c42:	fc                   	cld    
+			1c42: R_386_PLT32	printf
+    1c43:	ff                   	(bad)  
+    1c44:	ff                   	.byte 0xff
+
+00001c45 <.L171>:
+    1c45:	ff 83 c4 10 eb 27    	incl   0x27eb10c4(%ebx)
+    1c4b:	83 ec 0c             	sub    $0xc,%esp
+    1c4e:	8d 83 e7 07 00 00    	lea    0x7e7(%ebx),%eax
+			1c50: R_386_GOTOFF	.rodata
+
+00001c54 <.L170>:
+    1c54:	50                   	push   %eax
+    1c55:	e8 fc ff ff ff       	call   1c56 <.L170+0x2>
+			1c56: R_386_PLT32	printf
+    1c5a:	83 c4 10             	add    $0x10,%esp
+    1c5d:	eb 13                	jmp    1c72 <.L169+0xa>
+    1c5f:	83 ec 0c             	sub    $0xc,%esp
+    1c62:	8d 83 ea 07 00 00    	lea    0x7ea(%ebx),%eax
+			1c64: R_386_GOTOFF	.rodata
+
+00001c68 <.L169>:
+    1c68:	50                   	push   %eax
+    1c69:	e8 fc ff ff ff       	call   1c6a <.L169+0x2>
+			1c6a: R_386_PLT32	printf
+    1c6e:	83 c4 10             	add    $0x10,%esp
+    1c71:	90                   	nop
+    1c72:	8b                   	.byte 0x8b
+    1c73:	85                   	.byte 0x85
+    1c74:	8c f3                	mov    %?,%ebx
+    1c76:	ff                   	.byte 0xff
+
+00001c77 <.L168>:
+    1c77:	ff c1                	inc    %ecx
+    1c79:	e0 05                	loopne 1c80 <.L168+0x9>
+    1c7b:	8d 55 f8             	lea    -0x8(%ebp),%edx
+    1c7e:	01 d0                	add    %edx,%eax
+    1c80:	2d 60 0c 00 00       	sub    $0xc60,%eax
+    1c85:	8b 00                	mov    (%eax),%eax
+    1c87:	83 ec 08             	sub    $0x8,%esp
+    1c8a:	50                   	push   %eax
+
+00001c8b <.L167>:
+    1c8b:	8d 83 ef 0a 00 00    	lea    0xaef(%ebx),%eax
+			1c8d: R_386_GOTOFF	.rodata
+    1c91:	50                   	push   %eax
+    1c92:	e8 fc ff ff ff       	call   1c93 <.L167+0x8>
+			1c93: R_386_PLT32	printf
+    1c97:	83 c4 10             	add    $0x10,%esp
+    1c9a:	8b                   	.byte 0x8b
+    1c9b:	85                   	.byte 0x85
+    1c9c:	8c f3                	mov    %?,%ebx
+    1c9e:	ff                   	.byte 0xff
+
+00001c9f <.L165>:
+    1c9f:	ff c1                	inc    %ecx
+    1ca1:	e0 05                	loopne 1ca8 <.L165+0x9>
+    1ca3:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    1ca6:	01 c8                	add    %ecx,%eax
+    1ca8:	2d 5c 0c 00 00       	sub    $0xc5c,%eax
+    1cad:	8b 00                	mov    (%eax),%eax
+    1caf:	83 ec 08             	sub    $0x8,%esp
+    1cb2:	50                   	push   %eax
+    1cb3:	8d 83 ee 07 00 00    	lea    0x7ee(%ebx),%eax
+			1cb5: R_386_GOTOFF	.rodata
+    1cb9:	50                   	push   %eax
+    1cba:	e8 fc ff ff ff       	call   1cbb <.L165+0x1c>
+			1cbb: R_386_PLT32	printf
+    1cbf:	83 c4 10             	add    $0x10,%esp
+    1cc2:	8b 85 8c f3 ff ff    	mov    -0xc74(%ebp),%eax
+    1cc8:	c1 e0 05             	shl    $0x5,%eax
+    1ccb:	8d 55 f8             	lea    -0x8(%ebp),%edx
+    1cce:	01 d0                	add    %edx,%eax
+    1cd0:	2d 58 0c 00 00       	sub    $0xc58,%eax
+    1cd5:	8b 00                	mov    (%eax),%eax
+    1cd7:	83 ec 08             	sub    $0x8,%esp
+    1cda:	50                   	push   %eax
+    1cdb:	8d 83 ee 07 00 00    	lea    0x7ee(%ebx),%eax
+			1cdd: R_386_GOTOFF	.rodata
+    1ce1:	50                   	push   %eax
+    1ce2:	e8 fc ff ff ff       	call   1ce3 <.L165+0x44>
+			1ce3: R_386_PLT32	printf
+    1ce7:	83 c4 10             	add    $0x10,%esp
+    1cea:	8b 85 8c f3 ff ff    	mov    -0xc74(%ebp),%eax
+    1cf0:	c1 e0 05             	shl    $0x5,%eax
+    1cf3:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    1cf6:	01 c8                	add    %ecx,%eax
+    1cf8:	2d 54 0c 00 00       	sub    $0xc54,%eax
+    1cfd:	8b 00                	mov    (%eax),%eax
+    1cff:	83 ec 08             	sub    $0x8,%esp
+    1d02:	50                   	push   %eax
+    1d03:	8d 83 f7 0a 00 00    	lea    0xaf7(%ebx),%eax
+			1d05: R_386_GOTOFF	.rodata
+    1d09:	50                   	push   %eax
+    1d0a:	e8 fc ff ff ff       	call   1d0b <.L165+0x6c>
+			1d0b: R_386_PLT32	printf
+    1d0f:	83 c4 10             	add    $0x10,%esp
+    1d12:	8b 85 8c f3 ff ff    	mov    -0xc74(%ebp),%eax
+    1d18:	c1 e0 05             	shl    $0x5,%eax
+    1d1b:	8d 55 f8             	lea    -0x8(%ebp),%edx
+    1d1e:	01 d0                	add    %edx,%eax
+    1d20:	2d 50 0c 00 00       	sub    $0xc50,%eax
+    1d25:	8b 00                	mov    (%eax),%eax
+    1d27:	83 ec 08             	sub    $0x8,%esp
+    1d2a:	50                   	push   %eax
+    1d2b:	8d 83 f7 0a 00 00    	lea    0xaf7(%ebx),%eax
+			1d2d: R_386_GOTOFF	.rodata
+    1d31:	50                   	push   %eax
+    1d32:	e8 fc ff ff ff       	call   1d33 <.L165+0x94>
+			1d33: R_386_PLT32	printf
+    1d37:	83 c4 10             	add    $0x10,%esp
+    1d3a:	8b 85 8c f3 ff ff    	mov    -0xc74(%ebp),%eax
+    1d40:	c1 e0 05             	shl    $0x5,%eax
+    1d43:	8d 4d f8             	lea    -0x8(%ebp),%ecx
+    1d46:	01 c8                	add    %ecx,%eax
+    1d48:	2d 48 0c 00 00       	sub    $0xc48,%eax
+    1d4d:	8b 00                	mov    (%eax),%eax
+    1d4f:	83 ec 08             	sub    $0x8,%esp
+    1d52:	50                   	push   %eax
+    1d53:	8d 83 f7 0a 00 00    	lea    0xaf7(%ebx),%eax
+			1d55: R_386_GOTOFF	.rodata
+    1d59:	50                   	push   %eax
+    1d5a:	e8 fc ff ff ff       	call   1d5b <.L165+0xbc>
+			1d5b: R_386_PLT32	printf
+    1d5f:	83 c4 10             	add    $0x10,%esp
+    1d62:	83 ec 0c             	sub    $0xc,%esp
+    1d65:	6a 0a                	push   $0xa
+    1d67:	e8 fc ff ff ff       	call   1d68 <.L165+0xc9>
+			1d68: R_386_PLT32	putchar
+    1d6c:	83 c4 10             	add    $0x10,%esp
+    1d6f:	83 85 8c f3 ff ff 01 	addl   $0x1,-0xc74(%ebp)
+    1d76:	8b 85 8c f3 ff ff    	mov    -0xc74(%ebp),%eax
+    1d7c:	3b 85 90 f3 ff ff    	cmp    -0xc70(%ebp),%eax
+    1d82:	0f 8c 5b fc ff ff    	jl     19e3 <program_header_32_parse+0xaa>
+    1d88:	90                   	nop
+    1d89:	8b 45 f4             	mov    -0xc(%ebp),%eax
+    1d8c:	65 33 05 14 00 00 00 	xor    %gs:0x14,%eax
+    1d93:	74 05                	je     1d9a <.L165+0xfb>
+    1d95:	e8 fc ff ff ff       	call   1d96 <.L165+0xf7>
+			1d96: R_386_PC32	__stack_chk_fail_local
+    1d9a:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1d9d:	c9                   	leave  
+    1d9e:	c3                   	ret    
+    1d9f:	f3 0f 1e fb          	endbr32 
+    1da3:	55                   	push   %ebp
+    1da4:	89 e5                	mov    %esp,%ebp
+    1da6:	53                   	push   %ebx
+    1da7:	83 ec 04             	sub    $0x4,%esp
+    1daa:	e8 fc ff ff ff       	call   1dab <.L165+0x10c>
+			1dab: R_386_PC32	__x86.get_pc_thunk.bx
+    1daf:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			1db1: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+    1db5:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1db7: R_386_GOT32X	stdout
+    1dbb:	8b 00                	mov    (%eax),%eax
+    1dbd:	83 ec 04             	sub    $0x4,%esp
+    1dc0:	50                   	push   %eax
+    1dc1:	8d 83 40 0b 00 00    	lea    0xb40(%ebx),%eax
+			1dc3: R_386_GOTOFF	.rodata
+    1dc7:	50                   	push   %eax
+    1dc8:	8d 83 42 0b 00 00    	lea    0xb42(%ebx),%eax
+			1dca: R_386_GOTOFF	.rodata
+    1dce:	50                   	push   %eax
+    1dcf:	e8 fc ff ff ff       	call   1dd0 <.L165+0x131>
+			1dd0: R_386_PLT32	freopen
+    1dd4:	83 c4 10             	add    $0x10,%esp
+    1dd7:	83 ec 0c             	sub    $0xc,%esp
+    1dda:	8d                   	.byte 0x8d
+    1ddb:	83 00 00             	addl   $0x0,(%eax)
+			1ddc: R_386_GOTOFF	.bss
+	...
+
+00001ddf <print64>:
+    1ddf:	00 50 8b             	add    %dl,-0x75(%eax)
+    1de2:	45                   	inc    %ebp
+    1de3:	08 ff                	or     %bh,%bh
+    1de5:	d0 83 c4 10 8b 83    	rolb   -0x7c74ef3c(%ebx)
+    1deb:	00 00                	add    %al,(%eax)
+			1deb: R_386_GOT32X	stdout
+    1ded:	00 00                	add    %al,(%eax)
+    1def:	8b 00                	mov    (%eax),%eax
+    1df1:	83 ec 04             	sub    $0x4,%esp
+    1df4:	50                   	push   %eax
+    1df5:	8d 83 46 0b 00 00    	lea    0xb46(%ebx),%eax
+			1df7: R_386_GOTOFF	.rodata
+    1dfb:	50                   	push   %eax
+    1dfc:	8d 83 49 0b 00 00    	lea    0xb49(%ebx),%eax
+			1dfe: R_386_GOTOFF	.rodata
+    1e02:	50                   	push   %eax
+    1e03:	e8 fc ff ff ff       	call   1e04 <print64+0x25>
+			1e04: R_386_PLT32	freopen
+    1e08:	83 c4 10             	add    $0x10,%esp
+    1e0b:	83 ec 0c             	sub    $0xc,%esp
+    1e0e:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			1e10: R_386_GOTOFF	.bss
+    1e14:	50                   	push   %eax
+    1e15:	8b 45 08             	mov    0x8(%ebp),%eax
+    1e18:	ff d0                	call   *%eax
+    1e1a:	83 c4 10             	add    $0x10,%esp
+    1e1d:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1e1f: R_386_GOT32X	stdout
+    1e23:	8b 00                	mov    (%eax),%eax
+    1e25:	83 ec 04             	sub    $0x4,%esp
+    1e28:	50                   	push   %eax
+    1e29:	8d 83 40 0b 00 00    	lea    0xb40(%ebx),%eax
+			1e2b: R_386_GOTOFF	.rodata
+    1e2f:	50                   	push   %eax
+    1e30:	8d 83 42 0b 00 00    	lea    0xb42(%ebx),%eax
+			1e32: R_386_GOTOFF	.rodata
+    1e36:	50                   	push   %eax
+    1e37:	e8 fc ff ff ff       	call   1e38 <print64+0x59>
+			1e38: R_386_PLT32	freopen
+    1e3c:	83 c4 10             	add    $0x10,%esp
+    1e3f:	90                   	nop
+    1e40:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1e43:	c9                   	leave  
+    1e44:	c3                   	ret    
+    1e45:	f3 0f 1e fb          	endbr32 
+    1e49:	55                   	push   %ebp
+    1e4a:	89 e5                	mov    %esp,%ebp
+    1e4c:	53                   	push   %ebx
+    1e4d:	83 ec 04             	sub    $0x4,%esp
+    1e50:	e8 fc ff ff ff       	call   1e51 <print64+0x72>
+			1e51: R_386_PC32	__x86.get_pc_thunk.bx
+    1e55:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			1e57: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+    1e5b:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1e5d: R_386_GOT32X	stdout
+    1e61:	8b 00                	mov    (%eax),%eax
+    1e63:	83 ec 04             	sub    $0x4,%esp
+    1e66:	50                   	push   %eax
+    1e67:	8d 83 40 0b 00 00    	lea    0xb40(%ebx),%eax
+			1e69: R_386_GOTOFF	.rodata
+    1e6d:	50                   	push   %eax
+    1e6e:	8d 83 42 0b 00 00    	lea    0xb42(%ebx),%eax
+			1e70: R_386_GOTOFF	.rodata
+    1e74:	50                   	push   %eax
+    1e75:	e8 fc ff ff ff       	call   1e76 <print64+0x97>
+			1e76: R_386_PLT32	freopen
+    1e7a:	83 c4 10             	add    $0x10,%esp
+    1e7d:	83 ec 0c             	sub    $0xc,%esp
+    1e80:	8d                   	.byte 0x8d
+    1e81:	83 40 00 00          	addl   $0x0,0x0(%eax)
+			1e82: R_386_GOTOFF	.bss
+
+00001e85 <print32>:
+    1e85:	00 50 8b             	add    %dl,-0x75(%eax)
+    1e88:	45                   	inc    %ebp
+    1e89:	08 ff                	or     %bh,%bh
+    1e8b:	d0 83 c4 10 8b 83    	rolb   -0x7c74ef3c(%ebx)
+    1e91:	00 00                	add    %al,(%eax)
+			1e91: R_386_GOT32X	stdout
+    1e93:	00 00                	add    %al,(%eax)
+    1e95:	8b 00                	mov    (%eax),%eax
+    1e97:	83 ec 04             	sub    $0x4,%esp
+    1e9a:	50                   	push   %eax
+    1e9b:	8d 83 46 0b 00 00    	lea    0xb46(%ebx),%eax
+			1e9d: R_386_GOTOFF	.rodata
+    1ea1:	50                   	push   %eax
+    1ea2:	8d 83 49 0b 00 00    	lea    0xb49(%ebx),%eax
+			1ea4: R_386_GOTOFF	.rodata
+    1ea8:	50                   	push   %eax
+    1ea9:	e8 fc ff ff ff       	call   1eaa <print32+0x25>
+			1eaa: R_386_PLT32	freopen
+    1eae:	83 c4 10             	add    $0x10,%esp
+    1eb1:	83 ec 0c             	sub    $0xc,%esp
+    1eb4:	8d 83 40 00 00 00    	lea    0x40(%ebx),%eax
+			1eb6: R_386_GOTOFF	.bss
+    1eba:	50                   	push   %eax
+    1ebb:	8b 45 08             	mov    0x8(%ebp),%eax
+    1ebe:	ff d0                	call   *%eax
+    1ec0:	83 c4 10             	add    $0x10,%esp
+    1ec3:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1ec5: R_386_GOT32X	stdout
+    1ec9:	8b 00                	mov    (%eax),%eax
+    1ecb:	83 ec 04             	sub    $0x4,%esp
+    1ece:	50                   	push   %eax
+    1ecf:	8d 83 40 0b 00 00    	lea    0xb40(%ebx),%eax
+			1ed1: R_386_GOTOFF	.rodata
+    1ed5:	50                   	push   %eax
+    1ed6:	8d 83 42 0b 00 00    	lea    0xb42(%ebx),%eax
+			1ed8: R_386_GOTOFF	.rodata
+    1edc:	50                   	push   %eax
+    1edd:	e8 fc ff ff ff       	call   1ede <print32+0x59>
+			1ede: R_386_PLT32	freopen
+    1ee2:	83 c4 10             	add    $0x10,%esp
+    1ee5:	90                   	nop
+    1ee6:	8b 5d fc             	mov    -0x4(%ebp),%ebx
+    1ee9:	c9                   	leave  
+    1eea:	c3                   	ret    
+    1eeb:	f3 0f 1e fb          	endbr32 
+    1eef:	8d 4c 24 04          	lea    0x4(%esp),%ecx
+    1ef3:	83 e4 f0             	and    $0xfffffff0,%esp
+    1ef6:	ff 71 fc             	pushl  -0x4(%ecx)
+    1ef9:	55                   	push   %ebp
+    1efa:	89 e5                	mov    %esp,%ebp
+    1efc:	53                   	push   %ebx
+    1efd:	51                   	push   %ecx
+    1efe:	83 ec 20             	sub    $0x20,%esp
+    1f01:	e8 fc ff ff ff       	call   1f02 <print32+0x7d>
+			1f02: R_386_PC32	__x86.get_pc_thunk.bx
+    1f06:	81 c3 02 00 00 00    	add    $0x2,%ebx
+			1f08: R_386_GOTPC	_GLOBAL_OFFSET_TABLE_
+    1f0c:	65 a1 14 00 00 00    	mov    %gs:0x14,%eax
+    1f12:	89 45 f4             	mov    %eax,-0xc(%ebp)
+    1f15:	31 c0                	xor    %eax,%eax
+    1f17:	83 ec 0c             	sub    $0xc,%esp
+    1f1a:	8d 83 54 0b 00 00    	lea    0xb54(%ebx),%eax
+			1f1c: R_386_GOTOFF	.rodata
+    1f20:	50                   	push   %eax
+    1f21:	e8 fc ff ff ff       	call   1f22 <print32+0x9d>
+			1f22: R_386_PLT32	puts
+    1f26:	83 c4 10             	add    $0x10,%esp
+    1f29:	83                   	.byte 0x83
+    1f2a:	ec                   	in     (%dx),%al
+
+00001f2b <main>:
+    1f2b:	08 8d 45 e0 50 8d    	or     %cl,-0x72af1fbb(%ebp)
+    1f31:	83 6b 0b 00          	subl   $0x0,0xb(%ebx)
+			1f32: R_386_GOTOFF	.rodata
+    1f35:	00 50 e8             	add    %dl,-0x18(%eax)
+    1f38:	fc                   	cld    
+			1f38: R_386_PLT32	__isoc99_scanf
+    1f39:	ff                   	(bad)  
+    1f3a:	ff                   	(bad)  
+    1f3b:	ff 83 c4 10 8b 83    	incl   -0x7c74ef3c(%ebx)
+    1f41:	00 00                	add    %al,(%eax)
+			1f41: R_386_GOT32X	fname
+    1f43:	00 00                	add    %al,(%eax)
+    1f45:	8d 55 e0             	lea    -0x20(%ebp),%edx
+    1f48:	89 10                	mov    %edx,(%eax)
+    1f4a:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1f4c: R_386_GOT32X	fname
+    1f50:	8b 00                	mov    (%eax),%eax
+    1f52:	83 ec 08             	sub    $0x8,%esp
+    1f55:	8d 93 6e 0b 00 00    	lea    0xb6e(%ebx),%edx
+			1f57: R_386_GOTOFF	.rodata
+    1f5b:	52                   	push   %edx
+    1f5c:	50                   	push   %eax
+    1f5d:	e8 fc ff ff ff       	call   1f5e <main+0x33>
+			1f5e: R_386_PLT32	fopen
+    1f62:	83 c4 10             	add    $0x10,%esp
+    1f65:	8b 93 00 00 00 00    	mov    0x0(%ebx),%edx
+			1f67: R_386_GOT32X	fp
+    1f6b:	89 02                	mov    %eax,(%edx)
+    1f6d:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1f6f: R_386_GOT32X	fp
+    1f73:	8b 00                	mov    (%eax),%eax
+    1f75:	85 c0                	test   %eax,%eax
+    1f77:	75 25                	jne    1f9e <main+0x73>
+    1f79:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1f7b: R_386_GOT32X	fname
+    1f7f:	8b 00                	mov    (%eax),%eax
+    1f81:	83 ec 08             	sub    $0x8,%esp
+    1f84:	50                   	push   %eax
+    1f85:	8d 83 71 0b 00 00    	lea    0xb71(%ebx),%eax
+			1f87: R_386_GOTOFF	.rodata
+    1f8b:	50                   	push   %eax
+    1f8c:	e8 fc ff ff ff       	call   1f8d <main+0x62>
+			1f8d: R_386_PLT32	printf
+    1f91:	83 c4 10             	add    $0x10,%esp
+    1f94:	83 ec 0c             	sub    $0xc,%esp
+    1f97:	6a 01                	push   $0x1
+    1f99:	e8 fc ff ff ff       	call   1f9a <main+0x6f>
+			1f9a: R_386_PLT32	exit
+    1f9e:	83 ec 04             	sub    $0x4,%esp
+    1fa1:	6a 14                	push   $0x14
+    1fa3:	6a 00                	push   $0x0
+    1fa5:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    1fa8:	50                   	push   %eax
+    1fa9:	e8 fc ff ff ff       	call   1faa <main+0x7f>
+			1faa: R_386_PLT32	memset
+    1fae:	83 c4 10             	add    $0x10,%esp
+    1fb1:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1fb3: R_386_GOT32X	fp
+    1fb7:	8b 00                	mov    (%eax),%eax
+    1fb9:	50                   	push   %eax
+    1fba:	6a 05                	push   $0x5
+    1fbc:	6a 01                	push   $0x1
+    1fbe:	8d 45 e0             	lea    -0x20(%ebp),%eax
+    1fc1:	50                   	push   %eax
+    1fc2:	e8 fc ff ff ff       	call   1fc3 <main+0x98>
+			1fc3: R_386_PLT32	fread
+    1fc7:	83 c4 10             	add    $0x10,%esp
+    1fca:	0f b6 45 e0          	movzbl -0x20(%ebp),%eax
+    1fce:	3c 7f                	cmp    $0x7f,%al
+    1fd0:	75 18                	jne    1fea <main+0xbf>
+    1fd2:	0f b6 45 e1          	movzbl -0x1f(%ebp),%eax
+    1fd6:	3c 45                	cmp    $0x45,%al
+    1fd8:	75 10                	jne    1fea <main+0xbf>
+    1fda:	0f b6 45 e2          	movzbl -0x1e(%ebp),%eax
+    1fde:	3c 4c                	cmp    $0x4c,%al
+    1fe0:	75 08                	jne    1fea <main+0xbf>
+    1fe2:	0f b6 45 e3          	movzbl -0x1d(%ebp),%eax
+    1fe6:	3c 46                	cmp    $0x46,%al
+    1fe8:	74 25                	je     200f <main+0xe4>
+    1fea:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			1fec: R_386_GOT32X	fname
+    1ff0:	8b 00                	mov    (%eax),%eax
+    1ff2:	83 ec 08             	sub    $0x8,%esp
+    1ff5:	50                   	push   %eax
+    1ff6:	8d 83 7e 0b 00 00    	lea    0xb7e(%ebx),%eax
+			1ff8: R_386_GOTOFF	.rodata
+    1ffc:	50                   	push   %eax
+    1ffd:	e8 fc ff ff ff       	call   1ffe <main+0xd3>
+			1ffe: R_386_PLT32	printf
+    2002:	83 c4 10             	add    $0x10,%esp
+    2005:	83 ec 0c             	sub    $0xc,%esp
+    2008:	6a 01                	push   $0x1
+    200a:	e8 fc ff ff ff       	call   200b <main+0xe0>
+			200b: R_386_PLT32	exit
+    200f:	0f b6 45 e4          	movzbl -0x1c(%ebp),%eax
+    2013:	3c 01                	cmp    $0x1,%al
+    2015:	75 07                	jne    201e <main+0xf3>
+    2017:	ba 20 00 00 00       	mov    $0x20,%edx
+    201c:	eb 05                	jmp    2023 <main+0xf8>
+    201e:	ba 40 00 00 00       	mov    $0x40,%edx
+    2023:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			2025: R_386_GOT32X	OStype
+    2029:	89 10                	mov    %edx,(%eax)
+    202b:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			202d: R_386_GOT32X	OStype
+    2031:	8b 00                	mov    (%eax),%eax
+    2033:	83 ec 08             	sub    $0x8,%esp
+    2036:	50                   	push   %eax
+    2037:	8d 83 98 0b 00 00    	lea    0xb98(%ebx),%eax
+			2039: R_386_GOTOFF	.rodata
+    203d:	50                   	push   %eax
+    203e:	e8 fc ff ff ff       	call   203f <main+0x114>
+			203f: R_386_PLT32	printf
+    2043:	83 c4 10             	add    $0x10,%esp
+    2046:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			2048: R_386_GOT32X	stdout
+    204c:	8b 00                	mov    (%eax),%eax
+    204e:	83 ec 04             	sub    $0x4,%esp
+    2051:	50                   	push   %eax
+    2052:	8d 83 40 0b 00 00    	lea    0xb40(%ebx),%eax
+			2054: R_386_GOTOFF	.rodata
+    2058:	50                   	push   %eax
+    2059:	8d 83 49 0b 00 00    	lea    0xb49(%ebx),%eax
+			205b: R_386_GOTOFF	.rodata
+    205f:	50                   	push   %eax
+    2060:	e8 fc ff ff ff       	call   2061 <main+0x136>
+			2061: R_386_PLT32	freopen
+    2065:	83 c4 10             	add    $0x10,%esp
+    2068:	8b 83 00 00 00 00    	mov    0x0(%ebx),%eax
+			206a: R_386_GOT32X	OStype
+    206e:	8b 00                	mov    (%eax),%eax
+    2070:	83 f8 40             	cmp    $0x40,%eax
+    2073:	75 38                	jne    20ad <main+0x182>
+    2075:	83 ec 0c             	sub    $0xc,%esp
+    2078:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			207a: R_386_GOTOFF	ELF_header_64_parse
+    207e:	50                   	push   %eax
+    207f:	e8 fc ff ff ff       	call   2080 <main+0x155>
+			2080: R_386_PC32	print64
+    2084:	83 c4 10             	add    $0x10,%esp
+    2087:	83 ec 0c             	sub    $0xc,%esp
+    208a:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			208c: R_386_GOTOFF	section_header_64_parse
+    2090:	50                   	push   %eax
+    2091:	e8 fc ff ff ff       	call   2092 <main+0x167>
+			2092: R_386_PC32	print64
+    2096:	83 c4 10             	add    $0x10,%esp
+    2099:	83 ec 0c             	sub    $0xc,%esp
+    209c:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			209e: R_386_GOTOFF	program_header_64_parse
+    20a2:	50                   	push   %eax
+    20a3:	e8 fc ff ff ff       	call   20a4 <main+0x179>
+			20a4: R_386_PC32	print64
+    20a8:	83 c4 10             	add    $0x10,%esp
+    20ab:	eb 36                	jmp    20e3 <main+0x1b8>
+    20ad:	83 ec 0c             	sub    $0xc,%esp
+    20b0:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			20b2: R_386_GOTOFF	ELF_header_32_parse
+    20b6:	50                   	push   %eax
+    20b7:	e8 fc ff ff ff       	call   20b8 <main+0x18d>
+			20b8: R_386_PC32	print32
+    20bc:	83 c4 10             	add    $0x10,%esp
+    20bf:	83 ec 0c             	sub    $0xc,%esp
+    20c2:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			20c4: R_386_GOTOFF	section_header_32_parse
+    20c8:	50                   	push   %eax
+    20c9:	e8 fc ff ff ff       	call   20ca <main+0x19f>
+			20ca: R_386_PC32	print32
+    20ce:	83 c4 10             	add    $0x10,%esp
+    20d1:	83 ec 0c             	sub    $0xc,%esp
+    20d4:	8d 83 00 00 00 00    	lea    0x0(%ebx),%eax
+			20d6: R_386_GOTOFF	program_header_32_parse
+    20da:	50                   	push   %eax
+    20db:	e8 fc ff ff ff       	call   20dc <main+0x1b1>
+			20dc: R_386_PC32	print32
+    20e0:	83 c4 10             	add    $0x10,%esp
+    20e3:	b8 00 00 00 00       	mov    $0x0,%eax
+    20e8:	8b 4d f4             	mov    -0xc(%ebp),%ecx
+    20eb:	65 33 0d 14 00 00 00 	xor    %gs:0x14,%ecx
+    20f2:	74 05                	je     20f9 <main+0x1ce>
+    20f4:	e8 fc ff ff ff       	call   20f5 <main+0x1ca>
+			20f5: R_386_PC32	__stack_chk_fail_local
+    20f9:	8d 65 f8             	lea    -0x8(%ebp),%esp
+    20fc:	59                   	pop    %ecx
+    20fd:	5b                   	pop    %ebx
+    20fe:	5d                   	pop    %ebp
+    20ff:	8d 61 fc             	lea    -0x4(%ecx),%esp
+    2102:	c3                   	ret    
+
+Disassembly of section .text.__x86.get_pc_thunk.bx:
+
+00000000 <__x86.get_pc_thunk.bx>:
+   0:	8b 1c 24             	mov    (%esp),%ebx
+   3:	c3                   	ret    
