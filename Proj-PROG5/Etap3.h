@@ -7,7 +7,7 @@
 #include <string.h>
 #include <assert.h>
 
-void etap3(Elf32_Ehdr* ehdr, FILE * fp);
+void etap3(Elf32_Ehdr* ehdr, FILE * fp, char *str);
 void affichage_contenu_section(int numero, char* temp, Elf32_Shdr *shdr, FILE * fp);
 
 #endif

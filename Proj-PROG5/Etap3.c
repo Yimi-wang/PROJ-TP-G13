@@ -8,19 +8,26 @@ void affichage_contenu_section(int numero, char* temp, Elf32_Shdr *shdr, FILE * 
 	printf("Nom de cette section: %s\n", temp); 
 	printf("Offset de cette section: %x\n", shdr[numero].sh_offset);
 	printf("Taille de cette section: %x\n", shdr[numero].sh_size);
+	printf("Contenu brut de cette section:");
 	
 	a = fseek(fp, shdr[numero].sh_offset, SEEK_SET);
 	assert(a == 0);
 	a = fread(data_section, sizeof(uint8_t)*shdr[numero].sh_size, 1, fp);
 	assert(a != 0);
 	
-	for (int j = 0; j < shdr[numero].sh_size; j++) 
-		printf("%x", data_section[j]);
-		
+	for (int j = 0; j < shdr[numero].sh_size; j++) {
+		if (j % 16 == 0) {
+			printf("\n");
+			printf("  0x%08x ", j);
+		}	
+		else if (j % 4 == 0) 
+			printf(" ");
+		printf("%02x", data_section[j]);
+	}	
 	free(data_section);
 }
 
-void etap3(Elf32_Ehdr* ehdr, FILE * fp){
+void etap3(Elf32_Ehdr* ehdr, FILE * fp, char *str){
 	int a = 0; // Error flag
 	int numero = -1, count = 0; 
   	
@@ -49,9 +56,9 @@ void etap3(Elf32_Ehdr* ehdr, FILE * fp){
 
 	char *temp = shstrtab;
 	
-	char str[20];
+	/*char str[20];
 	printf("\ndonner le nom de section: ");
-	scanf("%20s", str);
+	scanf("%20s", str);*/
 	
 	numero = atoi(str);
 	if (str[0] != 0 && numero == 0)
