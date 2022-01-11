@@ -1,29 +1,14 @@
 #include "Etap2.h"
+#include "read_data_auxiliaries.h"
 
-void etap2(Elf32_Ehdr* ehdr, FILE * fp){
-    char strtable[9999];
-    int a = 0; //Error flag
-    
-    a = fseek(fp, 0, SEEK_SET);
-    assert(a == 0);
-    
-    a = fread(ehdr, sizeof(Elf32_Ehdr), 1, fp);
-    assert(a != 0);
+void etap2(Elf32_Ehdr* ehdr, FILE * fp, int flag){
+    ehdr = read_header_ELF(fp, flag);
     
     int count = ehdr->e_shnum;    
 
-    Elf32_Shdr *shdr = (Elf32_Shdr*)malloc(sizeof(Elf32_Shdr) * count);
-    assert(shdr != NULL);
-	
-    a = fseek(fp, ehdr->e_shoff, SEEK_SET);
-    assert(a == 0);
-    a = fread(shdr, sizeof(Elf32_Shdr), count, fp);
-    assert(a != 0);
+    Elf32_Shdr *shdr = read_Section_header(fp, ehdr, flag);
     
-    a = fseek(fp, shdr[ehdr->e_shstrndx].sh_offset, SEEK_SET);
-    assert(a == 0);
-    a = fread(strtable, shdr[ehdr->e_shstrndx].sh_size, 1, fp);
-    assert(a != 0);
+    char *strtable = read_sh_str_tab(fp, shdr, ehdr->e_shstrndx);
     
     printf("[numero]\t");
     printf("nom\t\t\t");

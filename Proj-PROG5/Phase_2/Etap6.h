@@ -7,6 +7,6 @@
 #include <elf.h>
 #include <assert.h>
 
-int supprimer_une_section(FILE *fp, char *sec_but);
+int supprimer_une_section(FILE *fp, char *sec_but, int flag);
 
 #endif

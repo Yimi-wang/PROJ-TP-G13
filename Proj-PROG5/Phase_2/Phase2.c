@@ -22,7 +22,7 @@ char *get_nom_rel_corre(char *name_source) {
 	return new_name;
 }
 
-void generer_new_file(FILE *fp_sortie, uint32_t *adresse_donnee, char **str_section) {
+/*void generer_new_file(FILE *fp_sortie, uint32_t *adresse_donnee, char **str_section) {
 	int *index_rels = NULL;
 	char *nom_rel_corre = NULL;	
 
@@ -38,7 +38,7 @@ void generer_new_file(FILE *fp_sortie, uint32_t *adresse_donnee, char **str_sect
 	}
 		
 	free(nom_rel_corre);
-}
+}*/
 
 FILE *init_new_file(FILE *fp_original, char *new_filename) {
 	FILE *fp_out;
@@ -66,7 +66,7 @@ FILE *init_new_file(FILE *fp_original, char *new_filename) {
 }
 
 int main(int argc, char *argv[]) {
-	int opt = 0, index = 0;
+	int opt = 0, index = 0, flag = 0;
 	uint32_t adresse_donnee[MAXSIZE];
 	FILE *fp, *fp_sortie;
 	char str[20];
@@ -74,25 +74,24 @@ int main(int argc, char *argv[]) {
 	char *str_valeur = NULL, *nom_rel_corre = NULL;
 	char *delim = "=";
 	
-	printf("file: %s\n", argv[argc - 1]);
-	struct option longopts[] = {
-		{ "section-start", required_argument, NULL, 's' },
-		{ NULL, 0, NULL, 0 }
-	};
-	
 	str_section = (char **)malloc(sizeof(char *)*MAXSIZE);
+	
+	printf("file: %s\n", argv[argc - 1]);
+	if (argc < 3) {
+		usage(argv[0]);
+		exit(1);
+	}
 	
 	fp = fopen(argv[argc - 1], "rb");
 	if(fp == NULL) {
 		printf("Erreur d'ouverture du fichier: %s\n", argv[argc - 1]);
 		exit(1);
 	}
-
-	fread(str, 1, 5, fp);
-	if(str[0] != 0x7f || str[1] != 'E' || str[2] != 'L' || str[3] != 'F') {
-		printf("%s n'est pas un fichier ELF.\n", argv[argc - 1]);
-		exit(1);
-	}  
+	
+	struct option longopts[] = {
+		{ "section-start", required_argument, NULL, 's' },
+		{ NULL, 0, NULL, 0 }
+	};
 	
 	while ((opt = getopt_long(argc, argv, "s:o:", longopts, NULL)) != -1) {
 		switch (opt) {
@@ -111,33 +110,45 @@ int main(int argc, char *argv[]) {
 			
 			case 'o':
 				printf("-o: %s\n", optarg);
+				printf("Réimplantations pour le fichier: %s\n", optarg);
 				fp_sortie = init_new_file(fp, optarg);
 				break;
 			
 			default :
 				fprintf(stderr, "Unrecognized option %c\n", optopt);
 				usage(argv[0]);
-				fclose(fp);
-				fclose(fp_sortie);
 				exit(1);
 		}
 	}
 	
-	if (fp_sortie != NULL) {
-		for (int i = 0; i < MAXSIZE; i++) 
-			addr_charge(fp_sortie, str_section[i], adresse_donnee[i]);
-
-		proc_reimplants(fp_sortie);
-
-		for (int j = 0; j < MAXSIZE; j++) {
-			nom_rel_corre = get_nom_rel_corre(str_section[j]);
-			int x = supprimer_une_section(fp_sortie, nom_rel_corre);
-			corrige_ndx(fp_sortie, x);
-		}
-		
-		free(nom_rel_corre);
-		printf("Réimplantations est fait dans le fichier:%s\n", optarg);
+	fseek(fp, 0, SEEK_SET);
+	fread(str, 1, 6, fp);
+	if(str[0] != 0x7f || str[1] != 'E' || str[2] != 'L' || str[3] != 'F') {
+		printf("%s n'est pas un fichier ELF.\n", argv[argc - 1]);
+		exit(1);
+	}  
+	
+	if(str[5] == 2) {
+		printf("%s est compilé en boutisme big endian.\n", argv[argc - 1]);
+		printf("Une inversion du lecture des donnée est nécessaire.\n");
+		flag = 1;
 	}
+	
+	for (int i = 0; i < MAXSIZE; i++) 
+		addr_charge(fp_sortie, str_section[i], adresse_donnee[i], flag);
+		
+	proc_reimplants(fp_sortie, flag);
+
+	for (int j = 0; j < MAXSIZE; j++) {
+		nom_rel_corre = get_nom_rel_corre(str_section[j]);
+		printf("Supprimer la section: %s\n", nom_rel_corre);
+		int x = supprimer_une_section(fp_sortie, nom_rel_corre, flag);
+		corrige_ndx(fp_sortie, x, flag);
+	}
+	
+	free(nom_rel_corre);
+	printf("Réimplantations est bien finies.\n");
+
 	
 	free(str_section);
 	fclose(fp);

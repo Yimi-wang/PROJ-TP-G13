@@ -54,22 +54,6 @@ void *inverse_data(void *strct, size_t size, char *str) {
 	return strct;
 }
 
-void my_write(void *strct, size_t size, size_t count, FILE *fp, char *str, int flag) {
-	int a = 0;
-	/* For big endian */
-	if (flag) {
-		inverse_data(strct, size, str);
-	  	a = fwrite(strct, size, count, fp);
-	  	assert(a >= 1);
-	  	// Pour éffectuer notre programme correctement
-	  	inverse_data(strct, size, str);
-	}else{
-		a = fwrite(strct, size, count, fp);
-	  	assert(a >= 1);
-	}
-}
-
-
 int chercher_index_de_section(Elf32_Shdr *shdr, char *shstrtab, int size, char *nom_sec_but) {
 	char *temp = NULL;
 	for (int i = 0; i < size; i++) {

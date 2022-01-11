@@ -14,7 +14,7 @@ static char *nom_section_correspondant(char *source) {
 	return new;
 }
 
-void proc_reimplants(FILE *fp) {
+void proc_reimplants(FILE *fp, int flag) {
 	char *nom_rel = NULL, *nom_sec = NULL;
 	Elf32_Rel *reldr = NULL;
 	int count = 0, index_sec_cor = -1, index_sec_symtab = -1;
@@ -23,43 +23,43 @@ void proc_reimplants(FILE *fp) {
 	uint8_t *data_sec = NULL;
 	unsigned char rel_type = 0, sym_type = 0;
 	int nb_entry_sym_tab = 0, nb_entry_rel = 0;
-	int a = 0; // Error flag
   	
-	Elf32_Ehdr *ehdr = read_header_ELF(fp);
-
-	count = ehdr->e_shnum;
-	
-	Elf32_Shdr *shdr = read_Section_header(fp, ehdr);
+	Elf32_Ehdr *ehdr = read_header_ELF(fp, flag);
     
-	char shstrtab[shdr[ehdr->e_shstrndx].sh_size];
-	a = fseek(fp, shdr[ehdr->e_shstrndx].sh_offset, SEEK_SET);
-	assert(a == 0);
-	a = fread(shstrtab, shdr[ehdr->e_shstrndx].sh_size, 1, fp);
-	assert(a != 0);
+    	count = ehdr->e_shnum;    
+
+    	Elf32_Shdr *shdr = read_Section_header(fp, ehdr, flag);
+    
+	char *shstrtab = read_sh_str_tab(fp, shdr, ehdr->e_shstrndx);
 	
 	index_sec_symtab = chercher_index_de_section(shdr, shstrtab, count, ".symtab");
 	
 	/* Lire les données de '.symtab' */
 	nb_entry_sym_tab = calcul_nombre_entrees(shdr, index_sec_symtab);
-	Elf32_Sym *sym = read_sym_tab(fp, shdr, index_sec_symtab, nb_entry_sym_tab); 
-	
+	Elf32_Sym *sym = read_sym_tab(fp, shdr, index_sec_symtab, nb_entry_sym_tab, flag); 
+		
 	/* Réimplantation */
 	for (int i = 0; i < count; i++) {
+		nom_rel = shstrtab;
+		nom_rel = nom_rel + shdr[i].sh_name;
+		if (strcmp(nom_rel, ".rel.text") != 0 && strcmp(nom_rel, ".rel.data") != 0)
+			continue;
 		// Négliger le type ".rela"
 		if (shdr[i].sh_type == 9) {
-			nom_rel = shstrtab;
-			nom_rel = nom_rel + shdr[i].sh_name;
+			/*nom_rel = shstrtab;
+			nom_rel = nom_rel + shdr[i].sh_name;*/
 			nom_sec = nom_section_correspondant(nom_rel);
 			index_sec_cor = chercher_index_de_section(shdr, shstrtab, count, nom_sec);
 			assert(index_sec_cor >= 0);
 			
 			/* Obetenir les données de '.rel.*' */
 			nb_entry_rel = calcul_nombre_entrees(shdr, i);
-			reldr = read_rel_tab(fp, shdr, i, nb_entry_rel);
+			reldr = read_rel_tab(fp, shdr, i, nb_entry_rel, flag);
 			
 			/* Prendre la section correspondante */
-			data_sec = read_section(fp, shdr, index_sec_cor);
-			
+			data_sec = read_section(fp, shdr, index_sec_cor, flag);
+			printf("Commencer à faire la réimplantations pour la section : ");
+			printf("%s\n", nom_sec);
 			for (int j = 0; j < nb_entry_rel; j++) {	
 				ndx_rel_sym = (reldr[j].r_info >> 8);
 				rel_type = (unsigned char) reldr[j].r_info;
@@ -95,7 +95,8 @@ void proc_reimplants(FILE *fp) {
 			
 			/* Ré-écrit la section (.text) changée à fichier */
 			fseek(fp, shdr[index_sec_cor].sh_offset, SEEK_SET);
-			fwrite(data_sec, shdr[index_sec_cor].sh_size, 1, fp);
+			/*fwrite(data_sec, shdr[index_sec_cor].sh_size, 1, fp);*/
+			my_write(data_sec, shdr[index_sec_cor].sh_size, 1, fp, "normal", flag);
 		} 
 	}
 	

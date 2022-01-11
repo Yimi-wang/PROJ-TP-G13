@@ -1,9 +1,9 @@
 #include "Etap1.h"
+#include "read_data_auxiliaries.h"
 
-void etap1(Elf32_Ehdr* ehdr, FILE * fp){
-  fseek(fp, 0, SEEK_SET);
-  fread(ehdr, sizeof(Elf32_Ehdr), 1, fp);
-
+void etap1(Elf32_Ehdr* ehdr, FILE * fp, int flag) {
+  ehdr = read_header_ELF(fp, flag);
+  
   printf("la plateforme cible:\t\t");
   switch(ehdr->e_machine) {
         case 0 : printf("No machine\n"); break;

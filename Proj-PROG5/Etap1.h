@@ -6,6 +6,6 @@
 #include <string.h>
 #include <elf.h>
 
-void etap1(Elf32_Ehdr* ehdr, FILE * fp);
+void etap1(Elf32_Ehdr* ehdr, FILE * fp, int flag);
 
 #endif

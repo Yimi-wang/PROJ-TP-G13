@@ -11,22 +11,18 @@ static int renumero_index_section(unsigned int index_original, int index_delete)
 		return index_original;
 }
 
-int supprimer_une_section(FILE *fp, char *sec_but) {
+int supprimer_une_section(FILE *fp, char *sec_but, int flag) {
 	uint8_t octet_null = 0;
 	int count = 0, index_sec_but = -1, index_group = 0;
 	int a = 0; // Error flag
   	
-	Elf32_Ehdr *ehdr = read_header_ELF(fp);
-
-	count = ehdr->e_shnum;
-	
-	Elf32_Shdr *shdr = read_Section_header(fp, ehdr);
+	Elf32_Ehdr *ehdr = read_header_ELF(fp, flag);
     
-	char shstrtab[shdr[ehdr->e_shstrndx].sh_size];
-	a = fseek(fp, shdr[ehdr->e_shstrndx].sh_offset, SEEK_SET);
-	assert(a == 0);
-	a = fread(shstrtab, shdr[ehdr->e_shstrndx].sh_size, 1, fp);
-	assert(a != 0);	
+    	count = ehdr->e_shnum;    
+
+    	Elf32_Shdr *shdr = read_Section_header(fp, ehdr, flag);
+    
+	char *shstrtab = read_sh_str_tab(fp, shdr, ehdr->e_shstrndx);	
 	
 	index_sec_but = chercher_index_de_section(shdr, shstrtab, count, sec_but);
 	assert(index_sec_but >= 0);
@@ -38,8 +34,9 @@ int supprimer_une_section(FILE *fp, char *sec_but) {
   	/* Ré-écrit l’en-tête */
   	a = fseek(fp, 0, SEEK_SET);
   	assert(a == 0);
-  	a = fwrite(ehdr, sizeof(Elf32_Ehdr), 1, fp);
-  	assert(a >= 1);
+  	/*a = fwrite(ehdr, sizeof(Elf32_Ehdr), 1, fp);
+  	assert(a >= 1);*/
+  	my_write(ehdr, sizeof(Elf32_Ehdr), 1, fp, "ehdr", flag);
   	
   	/* Ré-écrit la table des sections */
   	fseek(fp, ehdr->e_shoff, SEEK_SET);
@@ -53,7 +50,8 @@ int supprimer_une_section(FILE *fp, char *sec_but) {
 			shdr[i].sh_info = renumero_index_section(shdr[i].sh_info, index_sec_but);
 		
 		// Ré-écrit une entrée de la table des sections
-		fwrite(&shdr[i], sizeof(Elf32_Shdr), 1, fp);
+		//fwrite(&shdr[i], sizeof(Elf32_Shdr), 1, fp);
+		my_write(&shdr[i], sizeof(Elf32_Shdr), 1, fp, "shdr", flag);
   	}
   	// Compléter la table de sections (à cause de la décalage) par 0
 	a = fwrite(&octet_null, 1, sizeof(Elf32_Shdr), fp);
@@ -68,7 +66,7 @@ int supprimer_une_section(FILE *fp, char *sec_but) {
 	/* Ré-écrit la section '.group' (s'il existe) */
 	index_group = chercher_index_de_section(shdr, shstrtab, count, ".group");
 	if (index_group != -1) {
-		uint8_t *data_sec = read_section(fp, shdr, index_group);
+		uint8_t *data_sec = read_section(fp, shdr, index_group, flag);
 		for (int j = 1; j < shdr[index_group].sh_size; j++) {
 			if (data_sec[j] > index_sec_but)
 				data_sec[j] = data_sec[j] - 1;
@@ -77,8 +75,9 @@ int supprimer_une_section(FILE *fp, char *sec_but) {
 		}
 		a = fseek(fp, shdr[index_group].sh_offset, SEEK_SET);
 		assert(a == 0);
-		a = fwrite(data_sec, shdr[index_group].sh_size, 1, fp);
-		assert(a >= 1);
+		/*a = fwrite(data_sec, shdr[index_group].sh_size, 1, fp);
+		assert(a >= 1);*/
+		my_write(data_sec, shdr[index_group].sh_size, 1, fp, "group", flag);
 		free(data_sec);
 	}
 

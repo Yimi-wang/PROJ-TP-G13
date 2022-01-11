@@ -7,6 +7,6 @@
 #include <elf.h>
 #include <assert.h>
 
-void etap2(Elf32_Ehdr* ehdr, FILE * fp);
+void etap2(Elf32_Ehdr* ehdr, FILE * fp, int flag);
 
 #endif

@@ -22,7 +22,7 @@ void usage(char *name) {
 }
 
 int main(int argc, char *argv[]) {
-	int opt = 0/*, index = -1*/;
+	int opt = 0, flag = 0;
 	FILE *fp;
 	char str[20];
 	Elf32_Ehdr *ehdr = (Elf32_Ehdr *)malloc(sizeof(Elf32_Ehdr));
@@ -33,11 +33,17 @@ int main(int argc, char *argv[]) {
 		exit(1);
 	}
 
-	fread(str, 1, 5, fp);
+	fread(str, 1, 6, fp);
 	if(str[0] != 0x7f || str[1] != 'E' || str[2] != 'L' || str[3] != 'F') {
-		printf("%s n'est pas un fichier ELF.\n", argv[1]);
+		printf("%s n'est pas un fichier ELF.\n", argv[argc - 1]);
 		exit(1);
 	}  
+	
+	if(str[5] == 2) {
+		printf("%s est compilé en boutisme big endian. ", argv[argc - 1]);
+		printf("Une inversion du lecture des donnée est nécessaire.\n");
+		flag = 1;
+	}
 	
 	struct option longopts[] = {
 		{ "etape1", no_argument, NULL, 'h' },
@@ -57,18 +63,18 @@ int main(int argc, char *argv[]) {
 		switch (opt){
 			case 'h':
 				printf("Affichage de l'en-tête (header ELF) de '%s':\n", argv[argc - 1]);
-				etap1(ehdr,fp);
+				etap1(ehdr,fp,flag);
 				break;
 
 			case 'S':
 				printf("Affichage de la table des sections (Section header table) de '%s':\n", argv[argc - 1]);
-				etap2(ehdr,fp);
+				etap2(ehdr,fp,flag);
 				break;
 
 			case 'x':
 				if (argc > 3) {
 					printf("Affichage du contenu d'une section du fichier de %s: \n", argv[argc - 1]);
-					etap3(ehdr,fp,optarg);
+					etap3(ehdr,fp,optarg,flag);
 				}	
 				else
 					usage(argv[0]);
@@ -76,12 +82,12 @@ int main(int argc, char *argv[]) {
 
 			case 's':
 				printf("Affichage de la table des symboles du fichier %s: \n", argv[argc - 1]);
-				etap4(ehdr,fp);
+				etap4(ehdr,fp,flag);
 				break;
 
 			case 'r':
 				printf("Affichage des tables de réimplantation du fichier %s: \n", argv[argc - 1]);
-				etap5(ehdr,fp);
+				etap5(ehdr,fp,flag);
 				break;
 
 			default:

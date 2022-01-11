@@ -7,7 +7,7 @@
 #include <elf.h>
 #include <assert.h>
 
-void corrige_ndx(FILE *fp, int index_supprime);
-int addr_charge(FILE *fp, char *sec_charge, unsigned int addr);
+void corrige_ndx(FILE *fp, int index_supprime, int flag);
+int addr_charge(FILE *fp, char *sec_charge, uint32_t addr, int flag);
 
 #endif

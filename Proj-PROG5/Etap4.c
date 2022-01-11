@@ -1,56 +1,35 @@
 #include "Etap4.h"
+#include "read_data_auxiliaries.h"
 
-void etap4(Elf32_Ehdr* ehdr, FILE * fp) {
+void etap4(Elf32_Ehdr* ehdr, FILE * fp, int flag) {
     int a = 0; // Error flag
-    int count = 0, index_SymTab = 0, index_StrTab = 0, nb_entries_SymTab = 0;
+    int count = 0, index_SymTab = -1, index_StrTab = -1, nb_entries_SymTab = 0;
     char *temp = NULL;
-    char *str = ".symtab";
-    char *str2 = ".strtab";
     
-    a = fseek(fp, 0, SEEK_SET);
-    assert(a == 0);
-    a = fread(ehdr, sizeof(Elf32_Ehdr), 1, fp);
-    assert(a != 0);
+    ehdr = read_header_ELF(fp, flag);
+    
+    count = ehdr->e_shnum;    
 
-    count = ehdr->e_shnum;
+    Elf32_Shdr *shdr = read_Section_header(fp, ehdr, flag);
+
+    char *shstrtab = read_sh_str_tab(fp, shdr, ehdr->e_shstrndx);
     
-    Elf32_Shdr *shdr = (Elf32_Shdr *)malloc(sizeof(Elf32_Shdr)*count);
-    assert(shdr != NULL);
-    a = fseek(fp, ehdr->e_shoff, SEEK_SET);
-    assert(a == 0);
-    a = fread(shdr, sizeof(Elf32_Shdr), count, fp);
-    assert(a != 0);
-    
-    char shstrtab[shdr[ehdr->e_shstrndx].sh_size];
-    a = fseek(fp, shdr[ehdr->e_shstrndx].sh_offset, SEEK_SET);
-    assert(a == 0);
-    a = fread(shstrtab, shdr[ehdr->e_shstrndx].sh_size, 1, fp);
-    assert(a != 0);
-    
-    for (int i = 0; i < count; i++) {
-      temp = shstrtab;
-      temp = temp + shdr[i].sh_name;
-      if (strcmp(temp, str) == 0) 
-      	index_SymTab = i;
-      else if (strcmp(temp, str2) == 0)
-      	index_StrTab = i;
-    }
+    index_SymTab = chercher_index_de_section(shdr, shstrtab, count, ".symtab");
+    assert(index_SymTab != -1);
+    index_StrTab = chercher_index_de_section(shdr, shstrtab, count, ".strtab");
+    assert(index_StrTab != -1);
 
     char strtab[shdr[index_StrTab].sh_size];
     a = fseek(fp, shdr[index_StrTab].sh_offset, SEEK_SET);
     assert(a == 0);
     a = fread(strtab, shdr[index_StrTab].sh_size, 1, fp);
     assert(a != 0);
-
+    
+    assert(shdr[index_SymTab].sh_entsize != 0);
     nb_entries_SymTab = shdr[index_SymTab].sh_size / shdr[index_SymTab].sh_entsize;
     printf("\nSymbol table '.symtab' contains %d entries :", nb_entries_SymTab);
 
-    Elf32_Sym *sym = (Elf32_Sym *)malloc(sizeof(Elf32_Sym)*nb_entries_SymTab);
-    assert(sym != NULL);
-    a = fseek(fp, shdr[index_SymTab].sh_offset, SEEK_SET);
-    assert(a == 0);
-    a = fread(sym, sizeof(Elf32_Sym), nb_entries_SymTab, fp);
-    assert(a != 0);
+    Elf32_Sym *sym = read_sym_tab(fp, shdr, index_SymTab, nb_entries_SymTab, flag);
     
     printf("\nValue\t\t");
     printf("Size\t");

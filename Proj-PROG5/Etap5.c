@@ -1,4 +1,5 @@
 #include "Etap5.h"
+#include "read_data_auxiliaries.h"
 
 static void type_reimplantation(unsigned char index, int flag_ARM) {
 	if (flag_ARM == 1) {
@@ -61,30 +62,18 @@ static void type_reimplantation(unsigned char index, int flag_ARM) {
 	}	
 }
 
-void etap5(Elf32_Ehdr* ehdr, FILE * fp) {
+void etap5(Elf32_Ehdr* ehdr, FILE * fp, int flag) {
 	char *temp = NULL;
 	int count = 0, nb_entries_rel_a = 0;
 	int a = 0; // Error flag
 	
-	a = fseek(fp, 0, SEEK_SET);
-  	assert(a == 0);
-	a = fread(ehdr, sizeof(Elf32_Ehdr), 1, fp);
-  	assert(a != 0);
-	
-	count = ehdr->e_shnum;
-	
-	Elf32_Shdr *shdr = (Elf32_Shdr *)malloc(sizeof(Elf32_Shdr)*count);
-  	assert(shdr != NULL);
-	a = fseek(fp, ehdr->e_shoff, SEEK_SET);
-  	assert(a == 0);
-	a = fread(shdr, sizeof(Elf32_Shdr), count, fp);
-  	assert(a != 0);
-	
-	char shstrtab[shdr[ehdr->e_shstrndx].sh_size];
-	a = fseek(fp, shdr[ehdr->e_shstrndx].sh_offset, SEEK_SET);
-  	assert(a == 0);
-	a = fread(shstrtab, shdr[ehdr->e_shstrndx].sh_size, 1, fp);
-  	assert(a != 0);
+	ehdr = read_header_ELF(fp, flag);
+    
+    	count = ehdr->e_shnum;    
+
+    	Elf32_Shdr *shdr = read_Section_header(fp, ehdr, flag);
+
+    	char *shstrtab = read_sh_str_tab(fp, shdr, ehdr->e_shstrndx);
 
 	for (int i = 0; i < count; i++) {
 		if (shdr[i].sh_type == 4 || shdr[i].sh_type == 9) { 
@@ -108,10 +97,7 @@ void etap5(Elf32_Ehdr* ehdr, FILE * fp) {
       			assert(a == 0);
 
 			if (shdr[i].sh_type == 4) { // .rela.*
-				Elf32_Rela *rela = (Elf32_Rela *)malloc(sizeof(Elf32_Rela)*nb_entries_rel_a);
-        			assert(rela != NULL);
-				a = fread(rela, sizeof(Elf32_Rela), nb_entries_rel_a, fp);
-        			assert(a != 0);
+				Elf32_Rela *rela = read_rela_tab(fp, shdr, i, nb_entries_rel_a, flag);
 				for (int j = 0; j < nb_entries_rel_a; j++) {
 					printf("%012x\t", rela[j].r_offset);
 					if (ehdr->e_machine == 40) // si la machine cible est ARM
@@ -123,10 +109,7 @@ void etap5(Elf32_Ehdr* ehdr, FILE * fp) {
 				}
 				free(rela);
 			}else{ // .rel.*
-				Elf32_Rel *rel = (Elf32_Rel *)malloc(sizeof(Elf32_Rel)*nb_entries_rel_a);
-        			assert(rel != NULL);
-				a = fread(rel, sizeof(Elf32_Rel), nb_entries_rel_a, fp);
-        			assert(a != 0);
+				Elf32_Rel *rel = read_rel_tab(fp, shdr, i, nb_entries_rel_a, flag);
 				for (int j = 0; j < nb_entries_rel_a; j++) {
 					printf("%012x\t", rel[j].r_offset);
 					if (ehdr->e_machine == 40) // si la machine cible est ARM

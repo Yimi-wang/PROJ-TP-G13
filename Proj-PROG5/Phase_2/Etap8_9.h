@@ -7,6 +7,6 @@
 #include <elf.h>
 #include <assert.h>
 
-void proc_reimplants(FILE *fp);
+void proc_reimplants(FILE *fp, int flag);
 
 #endif
