@@ -126,6 +126,8 @@ int main(int argc, char *argv[]) {
 		nom_rel_corre = get_nom_rel_corre(str_section[j]);
 		printf("--Supprimer la section: %s\n", nom_rel_corre);
 		int x = supprimer_une_section(fp_sortie, nom_rel_corre, flag);
+		if (x < 0)
+			continue;
 		corrige_ndx(fp_sortie, x, flag);
 	}
 	
