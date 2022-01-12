@@ -13,6 +13,7 @@ void usage(char *name) {
 	fprintf(stderr, "Usage:\n"
 	"%s [options / --numéro_étape] fichier\n" 
 	"Options:\n"
+	"\t-H: Affichage ce manuel.\n"
 	"\t-h: Affichage de l’en-tête (header ELF).\n"
 	"\t-S: Affichage de la table des sections (Section header table).\n"
 	"\t-x nom/index: Affichage du contenu d'une section correspondante.\n"
@@ -56,10 +57,11 @@ int main(int argc, char *argv[]) {
 		{ "4", no_argument, NULL, 's' },
 		{ "etape5", no_argument, NULL, 'r' },
 		{ "5", no_argument, NULL, 'r' },
+		{ "Help", no_argument, NULL, 'H' },
 		{ NULL, 0, NULL, 0 }
 	};
 	
-	while ((opt = getopt_long(argc, argv, "hSx:sr", longopts, NULL)) != -1) {
+	while ((opt = getopt_long(argc, argv, "HhSx:sr", longopts, NULL)) != -1) {
 		switch (opt){
 			case 'h':
 				printf("Affichage de l'en-tête (header ELF) de '%s':\n", argv[argc - 1]);
