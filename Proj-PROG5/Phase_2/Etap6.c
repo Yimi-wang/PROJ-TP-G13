@@ -25,7 +25,8 @@ int supprimer_une_section(FILE *fp, char *sec_but, int flag) {
 	char *shstrtab = read_sh_str_tab(fp, shdr, ehdr->e_shstrndx);	
 	
 	index_sec_but = chercher_index_de_section(shdr, shstrtab, count, sec_but);
-	assert(index_sec_but >= 0);
+	if (index_sec_but < 0)
+		return -1;
 	
 	/* Corriger les données dans l'en-tête étant sur l'indice d'une section */
 	ehdr->e_shstrndx = renumero_index_section(ehdr->e_shstrndx, index_sec_but);
