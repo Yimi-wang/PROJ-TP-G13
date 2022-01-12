@@ -58,7 +58,7 @@ void proc_reimplants(FILE *fp, int flag) {
 			
 			/* Prendre la section correspondante */
 			data_sec = read_section(fp, shdr, index_sec_cor, flag);
-			printf("Commencer à faire la réimplantations pour la section : ");
+			printf("-Commencer à faire la réimplantations pour la section : ");
 			printf("%s\n", nom_sec);
 			for (int j = 0; j < nb_entry_rel; j++) {	
 				ndx_rel_sym = (reldr[j].r_info >> 8);

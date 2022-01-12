@@ -78,7 +78,7 @@ int chercher_index_de_section(Elf32_Shdr *shdr, char *shstrtab, int size, char *
 		if (strcmp(temp, nom_sec_but) == 0) 
 			return i;
 	}	
-	
+
 	return -1;
 }
 
@@ -183,7 +183,7 @@ Elf32_Rela *read_rela_tab(FILE *fp, Elf32_Shdr *shdr, int index, int nb_entree, 
 uint8_t *read_section(FILE *fp, Elf32_Shdr *shdr, int index, int flag) {
 	int a = 0;
 	uint8_t *temp_sec = NULL;
-	
+
 	temp_sec = (uint8_t *)malloc(sizeof(uint8_t)*shdr[index].sh_size);
 	assert(temp_sec != NULL);
 	a = fseek(fp, shdr[index].sh_offset, SEEK_SET);

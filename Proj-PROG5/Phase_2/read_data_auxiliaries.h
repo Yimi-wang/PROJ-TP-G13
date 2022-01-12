@@ -11,7 +11,7 @@
 void inverse_tab(uint8_t *p, int start, int nb);
 void *inverse_data(void *strct, size_t size, char *str);
 
-
+/* Outil pour aider à ré-écrit les données au fichier en boutisme correct */
 void my_write(void *strct, size_t size, size_t count, FILE *fp, char *str, int flag);
 
 /* Trouver l'indice de la section voulue */

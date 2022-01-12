@@ -6,6 +6,7 @@
 #include "Etap6.h"
 #include "Etap7.h"
 #include "Etap8_9.h"
+#include "Etap11.h"
 
 #define MAXSIZE 2
 
@@ -21,24 +22,6 @@ char *get_nom_rel_corre(char *name_source) {
 	strcat(new_name, name_source);
 	return new_name;
 }
-
-/*void generer_new_file(FILE *fp_sortie, uint32_t *adresse_donnee, char **str_section) {
-	int *index_rels = NULL;
-	char *nom_rel_corre = NULL;	
-
-	for (int i = 0; i < MAXSIZE; i++) 
-		addr_charge(fp_sortie, str_section[i], adresse_donnee[i]);
-
-	proc_reimplants(fp_sortie);
-
-	for (int j = 0; j < MAXSIZE; j++) {
-		nom_rel_corre = get_nom_rel_corre(str_section[j]);
-		index_rels[j] = supprimer_une_section(fp_sortie, nom_rel_corre);
-		corrige_ndx(fp_sortie, index_rels[j]);
-	}
-		
-	free(nom_rel_corre);
-}*/
 
 FILE *init_new_file(FILE *fp_original, char *new_filename) {
 	FILE *fp_out;
@@ -96,8 +79,8 @@ int main(int argc, char *argv[]) {
 	while ((opt = getopt_long(argc, argv, "s:o:", longopts, NULL)) != -1) {
 		switch (opt) {
 			case 's':
-				printf("--section-start: %s\n", optarg);
 				str_section[index] = strtok(optarg, delim);
+				printf("Section à charger: %s, ", str_section[index]);
 				str_valeur = strtok(NULL, delim);
 				if (str_valeur[0] != '0' || str_valeur[1] != 'x') {
 					printf("Wrong format of value: %s\n", str_valeur);
@@ -105,12 +88,12 @@ int main(int argc, char *argv[]) {
 					break;
 				}
 				adresse_donnee[index] = strtol(str_valeur, NULL, 16);
+				printf("avec une valeur (adresse): 0x%x\n",adresse_donnee[index]);
 				index++;
 				break;
 			
 			case 'o':
-				printf("-o: %s\n", optarg);
-				printf("Réimplantations pour le fichier: %s\n", optarg);
+				printf("Réimplantations dans le fichier: %s\n", optarg);
 				fp_sortie = init_new_file(fp, optarg);
 				break;
 			
@@ -141,15 +124,18 @@ int main(int argc, char *argv[]) {
 
 	for (int j = 0; j < MAXSIZE; j++) {
 		nom_rel_corre = get_nom_rel_corre(str_section[j]);
-		printf("Supprimer la section: %s\n", nom_rel_corre);
+		printf("--Supprimer la section: %s\n", nom_rel_corre);
 		int x = supprimer_une_section(fp_sortie, nom_rel_corre, flag);
 		corrige_ndx(fp_sortie, x, flag);
 	}
 	
-	free(nom_rel_corre);
 	printf("Réimplantations est bien finies.\n");
-
 	
+	printf("Produire d’un fichier exécutable.\n");
+	produ_executable(fp_sortie, flag);
+	printf("finish.\n");
+	
+	free(nom_rel_corre);
 	free(str_section);
 	fclose(fp);
 	fclose(fp_sortie);

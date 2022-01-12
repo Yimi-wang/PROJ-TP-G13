@@ -4,7 +4,7 @@
 void corrige_ndx(FILE *fp, int index_supprime, int flag) {
 	int count = 0, index_sec_symtab = -1, nb_sym_tab_entry = -1, index = 0;
 	int a = 0; // Error flag
-	printf("%d\n", index_supprime);
+	
 	Elf32_Ehdr *ehdr = read_header_ELF(fp, flag);
     
     	count = ehdr->e_shnum;    
@@ -52,7 +52,6 @@ void corrige_ndx(FILE *fp, int index_supprime, int flag) {
 }
 
 int addr_charge(FILE *fp, char *sec_charge, uint32_t addr, int flag) {
-		printf("%s\n", sec_charge);
 	int count = 0, index_sec_charge = -1, index_sec_symtab = -1, nb_sym_tab_entry = 0;
 	int a = 0; // Error flag
 
