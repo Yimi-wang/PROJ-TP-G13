@@ -91,7 +91,7 @@ int main(int argc, char *argv[]) {
 				printf("Affichage des tables de réimplantation du fichier %s: \n", argv[argc - 1]);
 				etap5(ehdr,fp,flag);
 				break;
-			case 'h':
+			case 'H':
 				printf("-h :Affichage de l'en-tête (header ELF)  (etap 1)\n-S :Affichage du contenu d'une section (etap 2)\n-x :Affichage du contenu d'une section (etap 3)\n-s :Affichage de la table des symboles (etap 4)\n-r :Affichage des tables de réimplantation (etap 5)\n");
 				break;
 			default:
