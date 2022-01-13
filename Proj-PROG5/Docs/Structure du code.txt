@@ -3,7 +3,7 @@ Structure du code
 	- Pharse1.c: Le programme principal (main) pour appeler toutes les fonctionnalités qui doivent être effectuées dans la phase 1. Différentes fonctions peuvent être appelées selon les instructions données par l'utilisateur.
 	- Etap1.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher l'en-tete.
 	- Etap2.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher de la table des sections.
-	- Etap3.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher de la table des sections.(有疑问明天修改）
+	- Etap3.c : Il peut récupérer un fichier de type ELF, trouve une section qui correspond au nom ou l’index qui on donne,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher les contenu des sections.
 	- Etap4.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher de la table des symboles.
 	- Etap5.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher des tables de réimplantation. Aussi il peut regarder type de réimplantation et effectuer différentes fonctions pour avoir différentes tables.
 
