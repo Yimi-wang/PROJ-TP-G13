@@ -1,0 +1,8 @@
+Liste et description des tests effectués 
+	1. Tests:  example1.s example2.s example3.s example4.s
+	2. Phase 1: Comparer les affichages entre “arm-none-eabi-readelf” et notre programme “Pharse1” en même option. Il y a 5 options qu’on doit comparer (-h, -S, -x numéro, -s, -r), sous le cas nos affichages ne sont pas tous pareil que celles de “arm-none-eabi-readelf”, l’on concentrera à vérifier les éléments étant dans nos affichages sont correctes ou non.
+	3. Phase 2: Comparer notre fichier ELF exécutable “prg” avec le fichier exécutable générant par les codes sources en une même fichier source. 
+	(ex: si “prg” est généré par “example1.o”, on doit comparer “prg” avec “example1”), et les commandes utilisées:
+		a. Rénumérotation & Correction sur symboles: “arm-none-eabi-readelf -S” & “arm-none-eabi-readelf -s”
+		b. Réimplantation: “arm-none-eabi-objdump -Dx” (on ne s’interesse qu’à le disassembly de la section “.text” et “.data”).
+		c. Fichier ELF exécutable: “arm-none-eabi-readelf -l” (pour l’info du segment) et “arm-none-eabi-readelf -h” (pour vérifier le type du fichier, le point d’entrée, la position commencée du Program Header….)

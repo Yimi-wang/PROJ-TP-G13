@@ -1,0 +1,32 @@
+Journal et la répartition des tâches 
+*****Journal
+	20/12 diviser le travail
+	21/12 regarder les documents
+	22/12 fini le etap1 et etap2
+	23/12 fini le etap3
+	24/12 fini le etap4 et etap 5
+	28/12 commence le etap6
+	2/1 fini le etap6 
+	4/1 fini le etap7
+	6/1 Réimplantations (Etap 8, 9 ) et une correction sur Etap 7
+	8/1 fini le etap 8 et 9
+	9/1 fini le test 
+	11/1 appliquer big_endian
+	12/1 fini le etap11
+
+*****répartition des tâches
+	- Gérer le groupe -Mingtao Wang
+
+	- Phase1: 	Zhongyuan Wu 
+	  	Mingtao Wang
+		Benoit de-cahard
+	- Phase2:  Zhongyuan Wu
+
+	- Debug: 	Zhongyuan Wu
+		Mingtao Wang
+		Benoit de-cahard
+	 - Test:     -Zhongyuan Wu
+		Benoit de-cahard
+
+	 - Intégration: Zhongyuan Wu
+	        	      Mingtao Wang

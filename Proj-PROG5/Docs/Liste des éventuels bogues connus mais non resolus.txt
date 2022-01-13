@@ -1,0 +1,3 @@
+Liste des éventuels bogues connus mais non resolus
+
+1. Pour l'affichage de commande "arm-none-eabi-readelf -l prg" (prg c'est le fichier ELF exécutable étant construit par "example3.o" et "example4.o" ), la partie "Section to Segment mapping" ne contient que ".text" mais quelques fois il doit contenir ".data" (comparer avec les affichages de arm-none-eabi-readelf -l example3.o / example4.o), par contre la taille du segment bien renferme les 2 sections au cas-là.

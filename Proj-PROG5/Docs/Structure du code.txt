@@ -1,0 +1,19 @@
+Structure du code
+***Il y a 5 fichiers .c spécials pour la phase 1:
+	- Pharse1.c: Le programme principal (main) pour appeler toutes les fonctionnalités qui doivent être effectuées dans la phase 1. Différentes fonctions peuvent être appelées selon les instructions données par l'utilisateur.
+	- Etap1.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher l'en-tete.
+	- Etap2.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher de la table des sections.
+	- Etap3.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher de la table des sections.(有疑问明天修改）
+	- Etap4.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher de la table des symboles.
+	- Etap5.c : Il peut récupérer un fichier de type ELF,  lire les contenus par les fonctions dans read_data_auxilaires.c et afficher des tables de réimplantation. Aussi il peut regarder type de réimplantation et effectuer différentes fonctions pour avoir différentes tables.
+
+***Il y a 5 fichiers .c aussi pour la phase 2:
+	- Phase2.c: Le programme principal (main) pour la phase 2.
+	- Étape 6.c: Contient la fonction “supprimer_une_section()” qui peut modifier une section et réorganiser la table de sections (l’ordre, index…)
+	- Étape 7.c : Contient la fonction “corrige_ndx()” pour corriger les index (correspond à leur sections) des symboles qui sont probablement changé par les travaux de l’étape avant.
+Et une autre fonction “addr_charge” pour charger l’adresse à la section correspondante.
+	- Etap8_9.c : “proc_reimplants()” pour traiter la procédure de réimplantation, cette fonction suivra les indications d’une table de réimplantations et fera des calculs pour mettre une bonne valeur dans les sections de code (instructions ou donnée, “.text” ou “.data”).
+	- Etap11.c : “produ_executable”, finalement pour produire un fichier ELF exécutable. Ici on ne concentre que créer un “Program Header” qui contient un seul type “LOAD” et “mapping” les sections de code (“.text” ou “.data”).
+
+***Il y a un fichier qui nous aide de faire une lecture et une écriture éventuelle des données de étape 1 à 11:
+	read_data_auxiliaries.c : C'est un outil de lecture (et d'écriture pour la phase 2 spécialement). Il contient un ensemble des fonctions qui occupent différents rôles pour lire des données dans le fichier ELF et les retourner aux autres fonctions en type de structure correspondant. Si le programme principal détecte que le fichier étant à traiter est compilé en gros-boutiste (big-endian), les fonctions de ce fichier pourront inverser les données lues.
