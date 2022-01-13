@@ -15,18 +15,19 @@ Journal et la répartition des tâches
 	12/1 fini le etap11
 
 *****répartition des tâches
-	- Gérer le groupe -Mingtao Wang
-
-	- Phase1: 	Zhongyuan Wu 
-	  	Mingtao Wang
-		Benoit de-cahard
-	- Phase2:  Zhongyuan Wu
-
-	- Debug: 	Zhongyuan Wu
-		Mingtao Wang
-		Benoit de-cahard
-	 - Test:     -Zhongyuan Wu
-		Benoit de-cahard
-
-	 - Intégration: Zhongyuan Wu
-	        	      Mingtao Wang
+Gérer le groupe -Mingtao Wang
+Phase1 - Zhongyuan Wu 
+	Mingtao Wang
+	Benoit de-cahard
+Phase2 -Zhongyuan Wu
+Debug -Zhongyuan Wu
+	Mingtao Wang
+	Benoit de-cahard
+	Ye Qi
+Test     -Zhongyuan Wu
+	Benoit de-cahard
+	Zhe zhang	
+Intégration- Zhongyuan Wu
+	     Mingtao Wang		
+	     Yubin Zhu
+	
