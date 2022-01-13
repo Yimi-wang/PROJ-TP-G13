@@ -3,7 +3,7 @@ CFLAGS=-Wall -Werror -g
 SOURCES=$(wildcard *.c)
 OBJ=$(patsubst %.c, %.o, $(SOURCES))
 
-all: Pharse1
+all: Pharse1 clean
 
 Pharse1: Etap1.o Etap2.o Etap3.o Etap4.o Etap5.o Pharse1.o read_data_auxiliaries.o
 	$(CC) $(CFLAGS) -o $@ $^

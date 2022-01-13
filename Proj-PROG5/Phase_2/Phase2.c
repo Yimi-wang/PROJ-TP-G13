@@ -51,10 +51,10 @@ FILE *init_new_file(FILE *fp_original, char *new_filename) {
 int main(int argc, char *argv[]) {
 	int opt = 0, index = 0, flag = 0;
 	uint32_t adresse_donnee[MAXSIZE];
-	FILE *fp, *fp_sortie;
+	FILE *fp = NULL, *fp_sortie = NULL;
 	char str[20];
 	char **str_section = NULL;
-	char *str_valeur = NULL, *nom_rel_corre = NULL;
+	char *str_valeur = NULL, *nom_rel_corre = NULL, *nom_file_exe = NULL;
 	char *delim = "=";
 	
 	str_section = (char **)malloc(sizeof(char *)*MAXSIZE);
@@ -94,7 +94,8 @@ int main(int argc, char *argv[]) {
 			
 			case 'o':
 				printf("Réimplantations dans le fichier: %s\n", optarg);
-				fp_sortie = init_new_file(fp, optarg);
+				nom_file_exe = strdup(optarg);
+				fp_sortie = init_new_file(fp, "temp");
 				break;
 			
 			default :
@@ -103,7 +104,7 @@ int main(int argc, char *argv[]) {
 				exit(1);
 		}
 	}
-	
+
 	fseek(fp, 0, SEEK_SET);
 	fread(str, 1, 6, fp);
 	if(str[0] != 0x7f || str[1] != 'E' || str[2] != 'L' || str[3] != 'F') {
@@ -126,15 +127,16 @@ int main(int argc, char *argv[]) {
 		nom_rel_corre = get_nom_rel_corre(str_section[j]);
 		printf("--Supprimer la section: %s\n", nom_rel_corre);
 		int x = supprimer_une_section(fp_sortie, nom_rel_corre, flag);
-		if (x < 0)
-			continue;
-		corrige_ndx(fp_sortie, x, flag);
+		if (x >= 0)
+			corrige_ndx(fp_sortie, x, flag);
+		else
+			printf("---Il n'y a pas de section %s.\n", nom_rel_corre);	
 	}
 	
 	printf("Réimplantations est bien finies.\n");
 	
 	printf("Produire d’un fichier exécutable.\n");
-	produ_executable(fp_sortie, flag);
+	produ_executable(fp_sortie, flag, nom_file_exe);
 	printf("finish.\n");
 	
 	free(nom_rel_corre);

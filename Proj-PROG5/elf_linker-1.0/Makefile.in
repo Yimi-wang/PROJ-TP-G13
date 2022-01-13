@@ -86,7 +86,8 @@ POST_INSTALL = :
 NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
-bin_PROGRAMS = ARM_runner_example$(EXEEXT)
+bin_PROGRAMS = ARM_runner_example$(EXEEXT) Pharse1$(EXEEXT) \
+	Phase2$(EXEEXT)
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/hostsubdir.m4 \
@@ -110,6 +111,18 @@ am_ARM_runner_example_OBJECTS = $(am__objects_1) $(am__objects_2) \
 ARM_runner_example_OBJECTS = $(am_ARM_runner_example_OBJECTS)
 ARM_runner_example_LDADD = $(LDADD)
 ARM_runner_example_DEPENDENCIES =
+am_Pharse1_OBJECTS = Pharse1.$(OBJEXT) Etap1.$(OBJEXT) Etap2.$(OBJEXT) \
+	Etap3.$(OBJEXT) Etap4.$(OBJEXT) Etap5.$(OBJEXT) \
+	read_data_auxiliaries.$(OBJEXT)
+Pharse1_OBJECTS = $(am_Pharse1_OBJECTS)
+Pharse1_LDADD = $(LDADD)
+Pharse1_DEPENDENCIES =
+am_Phase2_OBJECTS = Phase2.$(OBJEXT) Etap6.$(OBJEXT) Etap7.$(OBJEXT) \
+	Etap8_9.$(OBJEXT) Etap11.$(OBJEXT) \
+	read_data_auxiliaries.$(OBJEXT)
+Phase2_OBJECTS = $(am_Phase2_OBJECTS)
+Phase2_LDADD = $(LDADD)
+Phase2_DEPENDENCIES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -126,9 +139,15 @@ DEFAULT_INCLUDES = -I.@am__isrc@
 depcomp = $(SHELL) $(top_srcdir)/build-aux/depcomp
 am__maybe_remake_depfiles = depfiles
 am__depfiles_remade = ./$(DEPDIR)/ARM_runner_example.Po \
-	./$(DEPDIR)/arm_simulator_interface.Po ./$(DEPDIR)/csapp.Po \
-	./$(DEPDIR)/debug.Po ./$(DEPDIR)/gdb_protocol.Po \
-	./$(DEPDIR)/scanner.Po ./$(DEPDIR)/util.Po
+	./$(DEPDIR)/Etap1.Po ./$(DEPDIR)/Etap11.Po \
+	./$(DEPDIR)/Etap2.Po ./$(DEPDIR)/Etap3.Po ./$(DEPDIR)/Etap4.Po \
+	./$(DEPDIR)/Etap5.Po ./$(DEPDIR)/Etap6.Po ./$(DEPDIR)/Etap7.Po \
+	./$(DEPDIR)/Etap8_9.Po ./$(DEPDIR)/Pharse1.Po \
+	./$(DEPDIR)/Phase2.Po ./$(DEPDIR)/arm_simulator_interface.Po \
+	./$(DEPDIR)/csapp.Po ./$(DEPDIR)/debug.Po \
+	./$(DEPDIR)/gdb_protocol.Po \
+	./$(DEPDIR)/read_data_auxiliaries.Po ./$(DEPDIR)/scanner.Po \
+	./$(DEPDIR)/util.Po
 am__mv = mv -f
 COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
@@ -148,8 +167,10 @@ am__v_LEX_ = $(am__v_LEX_@AM_DEFAULT_V@)
 am__v_LEX_0 = @echo "  LEX     " $@;
 am__v_LEX_1 = 
 YLWRAP = $(top_srcdir)/build-aux/ylwrap
-SOURCES = $(ARM_runner_example_SOURCES)
-DIST_SOURCES = $(ARM_runner_example_SOURCES)
+SOURCES = $(ARM_runner_example_SOURCES) $(Pharse1_SOURCES) \
+	$(Phase2_SOURCES)
+DIST_SOURCES = $(ARM_runner_example_SOURCES) $(Pharse1_SOURCES) \
+	$(Phase2_SOURCES)
 RECURSIVE_TARGETS = all-recursive check-recursive cscopelist-recursive \
 	ctags-recursive dvi-recursive html-recursive info-recursive \
 	install-data-recursive install-dvi-recursive \
@@ -348,6 +369,8 @@ COMMON = debug.h debug.c util.h util.c
 EXTRA_DIST = filtre.pl sample_run.sh
 SIMULATOR_INTERFACE = csapp.h csapp.c scanner.h scanner.l gdb_protocol.h gdb_protocol.c arm_simulator_interface.h arm_simulator_interface.c
 ARM_runner_example_SOURCES = $(COMMON) $(SIMULATOR_INTERFACE) ARM_runner_example.c
+Pharse1_SOURCES = Pharse1.c Etap1.c Etap1.h Etap2.c Etap2.h Etap3.c Etap3.h Etap4.c Etap4.h Etap5.c Etap5.h read_data_auxiliaries.c read_data_auxiliaries.h
+Phase2_SOURCES = Phase2.c Etap6.c Etap6.h Etap7.c Etap7.h Etap8_9.c Etap8_9.h Etap11.c Etap11.h read_data_auxiliaries.c read_data_auxiliaries.h
 all: all-recursive
 
 .SUFFIXES:
@@ -432,6 +455,14 @@ ARM_runner_example$(EXEEXT): $(ARM_runner_example_OBJECTS) $(ARM_runner_example_
 	@rm -f ARM_runner_example$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(ARM_runner_example_OBJECTS) $(ARM_runner_example_LDADD) $(LIBS)
 
+Pharse1$(EXEEXT): $(Pharse1_OBJECTS) $(Pharse1_DEPENDENCIES) $(EXTRA_Pharse1_DEPENDENCIES) 
+	@rm -f Pharse1$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(Pharse1_OBJECTS) $(Pharse1_LDADD) $(LIBS)
+
+Phase2$(EXEEXT): $(Phase2_OBJECTS) $(Phase2_DEPENDENCIES) $(EXTRA_Phase2_DEPENDENCIES) 
+	@rm -f Phase2$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(Phase2_OBJECTS) $(Phase2_LDADD) $(LIBS)
+
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
 
@@ -439,10 +470,22 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ARM_runner_example.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap1.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap11.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap2.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap3.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap4.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap5.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap6.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap7.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Etap8_9.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Pharse1.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/Phase2.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/arm_simulator_interface.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/csapp.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/debug.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gdb_protocol.Po@am__quote@ # am--include-marker
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/read_data_auxiliaries.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/scanner.Po@am__quote@ # am--include-marker
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/util.Po@am__quote@ # am--include-marker
 
@@ -812,10 +855,22 @@ clean-am: clean-binPROGRAMS clean-generic mostlyclean-am
 distclean: distclean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 		-rm -f ./$(DEPDIR)/ARM_runner_example.Po
+	-rm -f ./$(DEPDIR)/Etap1.Po
+	-rm -f ./$(DEPDIR)/Etap11.Po
+	-rm -f ./$(DEPDIR)/Etap2.Po
+	-rm -f ./$(DEPDIR)/Etap3.Po
+	-rm -f ./$(DEPDIR)/Etap4.Po
+	-rm -f ./$(DEPDIR)/Etap5.Po
+	-rm -f ./$(DEPDIR)/Etap6.Po
+	-rm -f ./$(DEPDIR)/Etap7.Po
+	-rm -f ./$(DEPDIR)/Etap8_9.Po
+	-rm -f ./$(DEPDIR)/Pharse1.Po
+	-rm -f ./$(DEPDIR)/Phase2.Po
 	-rm -f ./$(DEPDIR)/arm_simulator_interface.Po
 	-rm -f ./$(DEPDIR)/csapp.Po
 	-rm -f ./$(DEPDIR)/debug.Po
 	-rm -f ./$(DEPDIR)/gdb_protocol.Po
+	-rm -f ./$(DEPDIR)/read_data_auxiliaries.Po
 	-rm -f ./$(DEPDIR)/scanner.Po
 	-rm -f ./$(DEPDIR)/util.Po
 	-rm -f Makefile
@@ -866,10 +921,22 @@ maintainer-clean: maintainer-clean-recursive
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
 		-rm -f ./$(DEPDIR)/ARM_runner_example.Po
+	-rm -f ./$(DEPDIR)/Etap1.Po
+	-rm -f ./$(DEPDIR)/Etap11.Po
+	-rm -f ./$(DEPDIR)/Etap2.Po
+	-rm -f ./$(DEPDIR)/Etap3.Po
+	-rm -f ./$(DEPDIR)/Etap4.Po
+	-rm -f ./$(DEPDIR)/Etap5.Po
+	-rm -f ./$(DEPDIR)/Etap6.Po
+	-rm -f ./$(DEPDIR)/Etap7.Po
+	-rm -f ./$(DEPDIR)/Etap8_9.Po
+	-rm -f ./$(DEPDIR)/Pharse1.Po
+	-rm -f ./$(DEPDIR)/Phase2.Po
 	-rm -f ./$(DEPDIR)/arm_simulator_interface.Po
 	-rm -f ./$(DEPDIR)/csapp.Po
 	-rm -f ./$(DEPDIR)/debug.Po
 	-rm -f ./$(DEPDIR)/gdb_protocol.Po
+	-rm -f ./$(DEPDIR)/read_data_auxiliaries.Po
 	-rm -f ./$(DEPDIR)/scanner.Po
 	-rm -f ./$(DEPDIR)/util.Po
 	-rm -f Makefile

@@ -3,11 +3,13 @@
 void inverse_tab(uint8_t *p, int start, int nb) {
 	uint8_t temp = 0;
 	
+	/* Pour une variable de taille de 2 octets (ex: uint16_t) */
 	if (nb == 2) {
 		temp = p[start];
 		p[start] = p[start + 1];
 		p[start + 1] = temp;
-	}else if(nb == 4) {
+	}/* Pour une variable de taille de 4 octets (ex: uint32_t) */
+	else if(nb == 4) {
 		temp = p[start];
 		p[start] = p[start + 3];
 		p[start + 3] = temp;
@@ -24,15 +26,20 @@ void *inverse_data(void *strct, size_t size, char *str) {
 	memmove(data_inverse, strct, size);
 	
 	while (i < size) {
+		/* Traitement spécial à cause de la structure de l'en-tête ELF */
 		if (strcmp(str, "ehdr") == 0) {
-			if (i == 16 || i == 18 || i >= 40) {
+			if(i < 16) {
+				i++;
+			}
+			else if (i == 16 || i == 18 || i >= 40) {
 				inverse_tab(data_inverse, i, 2);
 				i = i + 2;
 			}else if (i >= 20 || i < 40){
 				inverse_tab(data_inverse, i, 4);
 				i = i + 4;
 			}
-		}else if (strcmp(str, "Symbol") == 0) {
+		}/* Traitement spécial à cause de la structure de la table de symboles */
+		else if (strcmp(str, "Symbol") == 0) {
 			if (i == 12 || i == 13) {
 				i++;
 			}else if(i > 13) {
@@ -68,7 +75,6 @@ void my_write(void *strct, size_t size, size_t count, FILE *fp, char *str, int f
 	  	assert(a >= 1);
 	}
 }
-
 
 int chercher_index_de_section(Elf32_Shdr *shdr, char *shstrtab, int size, char *nom_sec_but) {
 	char *temp = NULL;

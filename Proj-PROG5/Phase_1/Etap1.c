@@ -21,7 +21,7 @@ void etap1(Elf32_Ehdr* ehdr, FILE * fp, int flag) {
   }
 
   printf("la taille des mots:\t\t");
-  switch(ehdr->e_ident[4]){ //4 == EI_CLASS
+  switch(ehdr->e_ident[EI_CLASS]){ //4 == EI_CLASS
     case 0 : printf("Invalid class\n"); break;
     case 1 : printf("32-bit objects\n"); break;
     case 2 : printf("64-bit objects\n"); break;
