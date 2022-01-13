@@ -18,14 +18,14 @@ Journal et la répartition des tâches
 Gérer le groupe -Mingtao Wang
 Phase1 - Zhongyuan Wu 
 	Mingtao Wang
-	Benoit de-cahard
+	Benoit de Cachard
 Phase2 -Zhongyuan Wu
 Debug -Zhongyuan Wu
 	Mingtao Wang
-	Benoit de-cahard
+	Benoit de Cachard
 	Ye Qi
 Test     -Zhongyuan Wu
-	Benoit de-cahard
+	Benoit de Cachard
 	Guizhe zhang	
 Intégration- Zhongyuan Wu
 	     Mingtao Wang		
