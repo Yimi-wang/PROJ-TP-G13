@@ -26,7 +26,7 @@ Debug -Zhongyuan Wu
 	Ye Qi
 Test     -Zhongyuan Wu
 	Benoit de-cahard
-	Zhe zhang	
+	Guizhe zhang	
 Intégration- Zhongyuan Wu
 	     Mingtao Wang		
 	     Yubing Zhu
